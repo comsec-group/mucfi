@@ -1,0 +1,170 @@
+Jasper Apps 2022.09p001 64 bits 2022.10.25 11:32:28 UTC
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2022 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc.
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+Jasper Apps Analysis Session - /data/kceesay/workspace/cellift-formal/pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow/jgproject/sessionLogs/session_0
+
+INFO: successfully checked out license "jasper_fao".
+INFO: reading configuration file "/home/kceesay/.config/cadence/jasper.conf".
+% session -refresh
+%% set designFile /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v
+/data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v
+%% set top ibex_top
+ibex_top
+% analyze -sv12 $designFile
+[-- (VERI-1482)] Analyzing Verilog file '/usr/pack/cadence_jasper-22.09.001-zr/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '/data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v'
+% elaborate -top $top
+INFO (ISW003): Top module name is "ibex_top".
+[WARN (VERI-1330)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(13906): actual bit length 1 differs from formal bit length 32 for port 'inp'
+[WARN (VERI-1330)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(13906): actual bit length 1 differs from formal bit length 32 for port 'inp'
+[WARN (VERI-1330)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(13906): actual bit length 2 differs from formal bit length 32 for port 'inp'
+[WARN (VERI-1330)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(25514): actual bit length 56 differs from formal bit length 64 for port 'inp'
+[WARN (VERI-1330)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(25514): actual bit length 56 differs from formal bit length 64 for port 'inp'
+[INFO (HIER-8002)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(20945): Disabling old hierarchical reference handler
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(13472): port 'data_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(13476): port 'data_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(18058): port 'data_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(18618): port 'data_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14351): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14366): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14377): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14388): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14399): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14423): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14434): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14445): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14456): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14468): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14479): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14490): port 'rd_error_o' remains unconnected for this instance
+[WARN (VERI-1927)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14692): port 'counter_val_upd_o' remains unconnected for this instance
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(23114): compiling module 'prim_clock_gating'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(24922): compiling module 'prim_generic_buf:(Width=4)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(23075): compiling module 'prim_buf:(Width=4)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(24922): compiling module 'prim_generic_buf:(Width=32'sb0100111)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(23075): compiling module 'prim_buf:(Width=32'sb0100111)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(12097): compiling module 'ibex_compressed_decoder'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(29326): compiling module 'prim_secded_inv_39_32_dec'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(16124): compiling module 'ibex_fetch_fifo:(NUM_REQS=32'b010,ResetAll=1'b1)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(19930): compiling module 'ibex_prefetch_buffer:(ResetAll=1'b1)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(25462): compiling module 'prim_lfsr:(LfsrDw=32'b0100000,StateOutDw=32'b010001,DefaultSeed=32'b10101100010100110011101111110100,StatePermEn=1'b1,StatePerm=160'b01111000110101111011001011101001000110011111111101000110110001001011101001010110000001010100101100000001001111101001000011100001111000101010001101101011101101)'
+[WARN (VERI-1330)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(25521): actual bit length 8 differs from formal bit length 32 for port 'inp'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(15842): compiling module 'ibex_dummy_instr:(RndCnstLfsrSeed=32'b10101100010100110011101111110100,RndCnstLfsrPerm=160'b01111000110101111011001011101001000110011111111101000110110001001011101001010110000001010100101100000001001111101001000011100001111000101010001101101011101101)'
+[WARN (VERI-1330)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(15905): actual bit length 1 differs from formal bit length 8 for port 'entropy_i'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(24922): compiling module 'prim_generic_buf:(Width=32)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(23075): compiling module 'prim_buf:(Width=32)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(12046): compiling module 'ibex_branch_predict'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(17825): compiling module 'ibex_if_stage:(DummyInstructions=1'b1,BusSizeECC=32'b0100000,TagSizeECC=32'b010110,LineSizeECC=32'b01000000,PCIncrCheck=1'b1,ResetAll=1'b1,RndCnstLfsrSeed=32'b10101100010100110011101111110100,RndCnstLfsrPerm=160'b01111000110101111011001011101001000110011111111101000110110001001011101001010110000001010100101100000001001111101001000011100001111000101010001101101011101101,BranchPredictor=1'b1,MemECC=1'b1,MemDataWidth=32'b0100111)'
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(18055): missing/open ports on instance u_instr_intg_dec of module prim_secded_inv_39_32_dec
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14964): compiling module 'ibex_decoder:(RV32E=1'b0,RV32M=1,RV32B=0,BranchTargetALU=1'b0)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(12204): compiling module 'ibex_controller:(WritebackStage=1'b1,BranchPredictor=1'b1,MemECC=1'b1)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(17067): compiling module 'ibex_id_stage:(RV32E=1'b0,RV32M=1,RV32B=0,DataIndTiming=1'b1,BranchTargetALU=1'b0,WritebackStage=1'b1,BranchPredictor=1'b1,MemECC=1'b1)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(11285): compiling module 'ibex_alu:(RV32B=0)'
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(11429): expression size 32 truncated to fit in target size 6
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(19518): compiling module 'ibex_multdiv_slow'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(15950): compiling module 'ibex_ex_block:(RV32M=1,RV32B=0,BranchTargetALU=1'b0)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(29380): compiling module 'prim_secded_inv_39_32_enc'
+[WARN (VERI-1330)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(29391): actual bit length 32 differs from formal bit length 39 for port 'inp'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(18374): compiling module 'ibex_load_store_unit:(MemECC=1'b1,MemDataWidth=32'b0100111)'
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(18615): missing/open ports on instance u_data_intg_dec of module prim_secded_inv_39_32_dec
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(20946): compiling module 'ibex_wb_stage:(ResetAll=1'b1,WritebackStage=1'b1,DummyInstructions=1'b1)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14925): compiling module 'ibex_csr:(Width=32'b0110,ResetValue=6'b010000)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14925): compiling module 'ibex_csr:(ResetValue=32'b0)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14925): compiling module 'ibex_csr:(Width=32'b010010,ResetValue=18'b0)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14925): compiling module 'ibex_csr:(Width=32'b0111,ResetValue=7'b0)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14925): compiling module 'ibex_csr:(ResetValue=32'b01)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14925): compiling module 'ibex_csr:(ResetValue=32'b01000000000000000000000000000011)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14925): compiling module 'ibex_csr:(Width=32'b011,ResetValue=3'b100)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(13652): compiling module 'ibex_counter:(CounterWidth=64)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(13652): compiling module 'ibex_counter:(CounterWidth=64,ProvideValUpd=1'b1)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14925): compiling module 'ibex_csr:(Width=32'b01000,ResetValue=8'b0)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(13725): compiling module 'ibex_cs_registers:(DbgTriggerEn=1'b0,DbgHwBreakNum=32'b01,DataIndTiming=1'b1,DummyInstructions=1'b1,MHPMCounterNum=32'b0,MHPMCounterWidth=32'b0101000,PMPEnable=1'b0,PMPGranularity=32'b0,PMPNumRegions=32'b0100,RV32E=1'b0,RV32M=1,RV32B=0)'
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14345): missing/open ports on instance u_mepc_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14360): missing/open ports on instance u_mie_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14371): missing/open ports on instance u_mscratch_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14382): missing/open ports on instance u_mcause_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14393): missing/open ports on instance u_mtval_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14417): missing/open ports on instance u_dcsr_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14428): missing/open ports on instance u_depc_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14439): missing/open ports on instance u_dscratch0_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14450): missing/open ports on instance u_dscratch1_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14462): missing/open ports on instance u_mstack_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14473): missing/open ports on instance u_mstack_epc_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14484): missing/open ports on instance u_mstack_cause_csr of module ibex_csr
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(14684): missing/open ports on instance mcycle_counter_i of module ibex_counter
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(24922): compiling module 'prim_generic_buf:(Width=32'sb01100)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(23075): compiling module 'prim_buf:(Width=32'sb01100)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(12789): compiling module 'ibex_core:(PMPGranularity=32'b0,PMPNumRegions=32'b0100,MHPMCounterNum=32'b0,MHPMCounterWidth=32'b0101000,RV32M=1,RV32B=0,WritebackStage=1'b1,BusSizeECC=32'b0100000,TagSizeECC=32'b010110,LineSizeECC=32'b01000000,BranchPredictor=1'b1,DbgHwBreakNum=32'b01,ResetAll=1'b1,RndCnstLfsrSeed=32'b10101100010100110011101111110100,RndCnstLfsrPerm=160'b01111000110101111011001011101001000110011111111101000110110001001011101001010110000001010100101100000001001111101001000011100001111000101010001101101011101101,SecureIbex=1'b1,DummyInstructions=1'b1,RegFileECC=1'b1,RegFileDataWidth=32'b0100111,MemECC=1'b1,MemDataWidth=32'b0100111)'
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(13469): missing/open ports on instance regfile_ecc_dec_a of module prim_secded_inv_39_32_dec
+[WARN (VERI-8028)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(13473): missing/open ports on instance regfile_ecc_dec_b of module prim_secded_inv_39_32_dec
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(24964): compiling module 'prim_generic_flop:(Width=4,ResetValue=4'b1010)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(24704): compiling module 'prim_flop:(Width=4,ResetValue=4'b1010)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(24922): compiling module 'prim_generic_buf:(Width=32'sb0100000)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(23075): compiling module 'prim_buf:(Width=32'sb0100000)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(26502): compiling module 'prim_onehot_check:(AddrWidth=32'b0101)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(20094): compiling module 'ibex_register_file_ff:(RV32E=1'b0,DataWidth=32'b0100111,DummyInstructions=1'b1,WrenCheck=1'b1,WordZeroVal=39'b010101000000000000000000000000000000000)'
+[WARN (VERI-1330)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(20139): actual bit length 32 differs from formal bit length 5 for port 'inp'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(24922): compiling module 'prim_generic_buf:(Width=7)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(23075): compiling module 'prim_buf:(Width=7)'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_data_flow//designs/sv2v_out.v(20201): compiling module 'ibex_top'
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          47 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (47 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      178 (29 synthesized)
+  Number of analyzed VHDL entities        0 (0 synthesized)
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+ibex_top
+[<embedded>] % get_design_info
+Statistics [for instance "ibex_top"]
+---------------------------
+# Flops:         123 (2520) (0 property flop bits)
+# Latches:       1 (1)
+# Gates:         3927 (40724)
+# Nets:          4609
+# Ports:         42
+# RTL Lines:     9092
+# RTL Instances: 64
+# Embedded Assumptions: 0
+# Embedded Assertions:  0
+# Embedded Covers:      0
+2521
+[<embedded>] % exit -force
+[<embedded>] % INFO (IPL005): Received request to exit from the console.
+INFO (IPL018): The peak resident set memory use for this session was 0.375 GB.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.

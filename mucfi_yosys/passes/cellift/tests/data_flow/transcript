@@ -1,0 +1,120 @@
+# //  Questa Sim-64
+# //  Version 2022.3_1 linux_x86_64 Aug 12 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do sim.tcl
+# .
+# /tmp/kceesay/cellift_data_flow_test
+# gui
+# -debugdb
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 12:26:33 on Apr 05,2024
+# vlog -reportprogress 300 -64 -sv -work /tmp/kceesay/cellift_data_flow_test test_module_cellift_data.v test_module_tb.v 
+# -- Compiling module test_module
+# -- Compiling module test_module_tb
+# 
+# Top level modules:
+# 	test_module_tb
+# End time: 12:26:33 on Apr 05,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -64 -lib /tmp/kceesay/cellift_data_flow_test -debugdb -voptargs="+acc" test_module_tb 
+# Start time: 12:26:33 on Apr 05,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.test_module_tb(fast)
+# Loading work.test_module(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'd2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c1_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.test_module_tb(fast)
+# Loading work.test_module(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'd2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c1_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# ** Note: $finish    : test_module_tb.v(32)
+#    Time: 80 ns  Iteration: 0  Instance: /test_module_tb
+# 1
+# Break in Module test_module_tb at test_module_tb.v line 32
+do sim.tcl
+# .
+# /tmp/kceesay/cellift_data_flow_test
+# gui
+# -debugdb
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 12:28:23 on Apr 05,2024
+# vlog -reportprogress 300 -64 -sv -work /tmp/kceesay/cellift_data_flow_test test_module_cellift_data.v test_module_tb.v 
+# -- Compiling module test_module
+# -- Compiling module test_module_tb
+# 
+# Top level modules:
+# 	test_module_tb
+# End time: 12:28:23 on Apr 05,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:28:31 on Apr 05,2024, Elapsed time: 0:01:58
+# Errors: 0, Warnings: 5
+# vsim -64 -lib /tmp/kceesay/cellift_data_flow_test -debugdb -voptargs="+acc" test_module_tb 
+# Start time: 12:28:31 on Apr 05,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.test_module_tb(fast)
+# Loading work.test_module(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'd2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c1_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.test_module_tb(fast)
+# Loading work.test_module(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'd2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c2_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c1_t0'. The port definition is at: test_module_cellift_data.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /test_module_tb/uut File: test_module_tb.v Line: 10
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# ** Note: $finish    : test_module_tb.v(34)
+#    Time: 90 ns  Iteration: 0  Instance: /test_module_tb
+# 1
+# Break in Module test_module_tb at test_module_tb.v line 34
+# End time: 12:30:48 on Apr 05,2024, Elapsed time: 0:02:17
+# Errors: 0, Warnings: 5

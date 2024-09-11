@@ -1,0 +1,6 @@
+yosys read_verilog -sv sv2v_out.v
+yosys hierarchy -top cellift_scarv
+yosys proc
+yosys opt
+yosys pmuxtree
+yosys write_rtlil scarv_opt_pmuxtree.txt

@@ -1,0 +1,14 @@
+{
+    "marchflags": "-march=rv32im -mabi=ilp32",
+    "bootaddr": "0x80000000",
+    "stopsigaddr": "0x0",
+    "trapsigaddr": "0x8",
+    "regdumpaddr": "0x10",
+    "fpregdumpaddr": "0x18",
+    "bootrom_elf": "",
+    "lead_cycles": 0,
+    "toplevel": "scarv_tiny_soc",
+    "trace_top": "scarv_tiny_soc.i_scarv",
+    "verilatorprefix": "scarv",
+    "memorywordsize": 32
+}

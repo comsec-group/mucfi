@@ -1,0 +1,2753 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000000000044063b, pid=59229, tid=140443725497664
+#
+# JRE version: 6.0_33-b04
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.8-b03 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [jg_session+0x4063b]  __cxa_thread_atexit+0x4063b
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001f5e800):  JavaThread "main" [_thread_in_native, id=59229, stack(0x00007ffe218ab000,0x00007ffe219ab000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x000000000093ab50, RBX=0x0000000000000000, RCX=0x00007fbbb95f3dc0, RDX=0x0000000000000003
+RSP=0x00007ffe219a7410, RBP=0x0000000002bd2ee8, RSI=0x00000000009963f8, RDI=0x0000000000000000
+R8 =0x00000000015ed880, R9 =0x0000000000000002, R10=0x0000000000000000, R11=0x0000000000000000
+R12=0x0000000000996338, R13=0x0000000002bda400, R14=0x0000000000000000, R15=0x0000000000000000
+RIP=0x000000000044063b, EFLAGS=0x0000000000010297, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffe219a7410)
+0x00007ffe219a7410:   00007ffe219a7460 00007fbbbca937d0
+0x00007ffe219a7420:   0000000002bd2eb0 0000000000443de8
+0x00007ffe219a7430:   00000000009963c0 00000000009963f8
+0x00007ffe219a7440:   0000000002b9e9f0 00000000004440eb
+0x00007ffe219a7450:   0000000000000000 00000000009963f8
+0x00007ffe219a7460:   00000000009963c0 000000000043cf67
+0x00007ffe219a7470:   00007fbbb8c456c8 ff007fbbbca957c9
+0x00007ffe219a7480:   0000000000000000 00007fbbb8c456c8
+0x00007ffe219a7490:   0000000000000001 00007fbbb88b7ce9
+0x00007ffe219a74a0:   0000000000000042 0000000000000000
+0x00007ffe219a74b0:   0000000000000000 000000000041bb33
+0x00007ffe219a74c0:   00007ffe219a75b0 00007fbbb88b7d37
+0x00007ffe219a74d0:   0000000000000000 00007fbbb88a055c
+0x00007ffe219a74e0:   000000000000004a 00007ffe219a75b8
+0x00007ffe219a74f0:   0000001c0000004c 000000000041b2c0
+0x00007ffe219a7500:   0000000000000000 068faa3f4d91b2a8
+0x00007ffe219a7510:   000000000041bb33 00007ffe219a75b0
+0x00007ffe219a7520:   0000000000000000 0000000000000000
+0x00007ffe219a7530:   f973e90ba451b2a8 f9f8db2b478bb2a8
+0x00007ffe219a7540:   00007ffe00000000 0000000000000000
+0x00007ffe219a7550:   0000000000000000 00007fbbbddff9c3
+0x00007ffe219a7560:   00007fbbbe013150 00000000000000ad
+0x00007ffe219a7570:   0000000000000000 0000000000000000
+0x00007ffe219a7580:   000000000041bb33 00007ffe219a75b0
+0x00007ffe219a7590:   0000000000000000 000000000041bb5c
+0x00007ffe219a75a0:   00007ffe219a75a8 000000000000001c
+0x00007ffe219a75b0:   000000000000001c 00007ffe219a926d
+0x00007ffe219a75c0:   00007ffe219a92aa 00007ffe219a92b4
+0x00007ffe219a75d0:   00007ffe219a92bc 00007ffe219a92c1
+0x00007ffe219a75e0:   00007ffe219a92d2 00007ffe219a9317
+0x00007ffe219a75f0:   00007ffe219a9369 00007ffe219a936c
+0x00007ffe219a7600:   00007ffe219a9378 00007ffe219a93b9 
+
+Instructions: (pc=0x000000000044063b)
+0x000000000044061b:   00 00 00 00 00 55 48 8d 6f 38 53 48 83 ec 08 48
+0x000000000044062b:   8b 5f 38 48 39 eb 74 15 0f 1f 44 00 00 48 89 df
+0x000000000044063b:   48 8b 1b e8 ad 25 fd ff 48 39 eb 75 f0 48 83 c4
+0x000000000044064b:   08 5b 5d c3 90 e9 9b 25 fd ff 90 66 2e 0f 1f 84 
+
+Register to memory mapping:
+
+RAX=0x000000000093ab50: <offset 0x53ab50> in /usr/pack/cadence_jasper-22.09.001-zr/Linux64/bin/jg_session at 0x0000000000400000
+RBX=0x0000000000000000 is an unknown value
+RCX=0x00007fbbb95f3dc0: <offset 0x2cdc0> in /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libtcmalloc_minimal.so.4 at 0x00007fbbb95c7000
+RDX=0x0000000000000003 is an unknown value
+RSP=0x00007ffe219a7410 is pointing into the stack for thread: 0x0000000001f5e800
+RBP=0x0000000002bd2ee8 is an unknown value
+RSI=0x00000000009963f8: <offset 0x5963f8> in /usr/pack/cadence_jasper-22.09.001-zr/Linux64/bin/jg_session at 0x0000000000400000
+RDI=0x0000000000000000 is an unknown value
+R8 =0x00000000015ed880 is an unknown value
+R9 =0x0000000000000002 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000000 is an unknown value
+R12=0x0000000000996338: _ZGVN5boost6chrono14duration_punctIcE2idE+0 in /usr/pack/cadence_jasper-22.09.001-zr/Linux64/bin/jg_session at 0x0000000000400000
+R13=0x0000000002bda400 is an unknown value
+R14=0x0000000000000000 is an unknown value
+R15=0x0000000000000000 is an unknown value
+
+
+Stack: [0x00007ffe218ab000,0x00007ffe219ab000],  sp=0x00007ffe219a7410,  free space=1009k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [jg_session+0x4063b]  __cxa_thread_atexit+0x4063b
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000009070800 JavaThread "ManagedSystemInStream reader thread" daemon [_thread_blocked, id=59314, stack(0x00007fbb8a67d000,0x00007fbb8a77e000)]
+  0x0000000005a7b000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=59299, stack(0x00007fbb8a8d6000,0x00007fbb8a9d7000)]
+  0x0000000005a7a800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=59298, stack(0x00007fbb8a9d8000,0x00007fbb8aad8000)]
+  0x0000000005a79800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=59297, stack(0x00007fbb8aad9000,0x00007fbb8abd9000)]
+  0x0000000005a79000 JavaThread "Attach Listener" daemon [_thread_blocked, id=59296, stack(0x00007fbb8abd9000,0x00007fbb8acda000)]
+  0x0000000005a78000 JavaThread "Finalizer" daemon [_thread_blocked, id=59295, stack(0x00007fbb8b979000,0x00007fbb8ba7a000)]
+  0x0000000001f5f000 JavaThread "Reference Handler" daemon [_thread_blocked, id=59294, stack(0x00007fbb8ba7a000,0x00007fbb8bb7b000)]
+=>0x0000000001f5e800 JavaThread "main" [_thread_in_native, id=59229, stack(0x00007ffe218ab000,0x00007ffe219ab000)]
+
+Other Threads:
+  0x0000000003105000 VMThread [stack: 0x00007fbb8bb7c000,0x00007fbb8bc7c000] [id=59293]
+  0x0000000003105800 WatcherThread [stack: 0x00007fbb8a7d6000,0x00007fbb8a8d6000] [id=59300]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 611648K, used 31457K [0x00000007aaab0000, 0x00000007d5550000, 0x0000000800000000)
+  eden space 524288K, 6% used [0x00000007aaab0000,0x00000007ac9685a8,0x00000007caab0000)
+  from space 87360K, 0% used [0x00000007d0000000,0x00000007d0000000,0x00000007d5550000)
+  to   space 87360K, 0% used [0x00000007caab0000,0x00000007caab0000,0x00000007d0000000)
+ PSOldGen        total 1398144K, used 0K [0x0000000700000000, 0x0000000755560000, 0x00000007aaab0000)
+  object space 1398144K, 0% used [0x0000000700000000,0x0000000700000000,0x0000000755560000)
+ PSPermGen       total 21248K, used 4208K [0x00000006fae00000, 0x00000006fc2c0000, 0x0000000700000000)
+  object space 21248K, 19% used [0x00000006fae00000,0x00000006fb21c188,0x00000006fc2c0000)
+
+Code Cache  [0x00007fbb8f3e4000, 0x00007fbb8f654000, 0x00007fbb923e4000)
+ total_blobs=211 nmethods=5 adapters=161 free_code_cache=49918144 largest_free_block=6912
+
+Dynamic libraries:
+00400000-00939000 r-xp 00000000 00:2f 15803791                           /usr/pack/cadence_jasper-22.09.001-zr/Linux64/bin/jg_session
+0093a000-0096f000 r-xp 00539000 00:2f 15803791                           /usr/pack/cadence_jasper-22.09.001-zr/Linux64/bin/jg_session
+0096f000-00997000 rwxp 0056e000 00:2f 15803791                           /usr/pack/cadence_jasper-22.09.001-zr/Linux64/bin/jg_session
+00997000-009ee000 rwxp 00000000 00:00 0 
+0158c000-6fa372000 rwxp 00000000 00:00 0                                 [heap]
+6fae00000-6fc2c0000 rwxp 00000000 00:00 0 
+6fc2c0000-700000000 rwxp 00000000 00:00 0 
+700000000-755560000 rwxp 00000000 00:00 0 
+755560000-7aaab0000 rwxp 00000000 00:00 0 
+7aaab0000-7d5550000 rwxp 00000000 00:00 0 
+7d5550000-800000000 rwxp 00000000 00:00 0 
+3ef1c00000-3ef1c25000 r-xp 00000000 00:2f 15802326                       /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libpng12.so.0
+3ef1c25000-3ef1e25000 ---p 00025000 00:2f 15802326                       /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libpng12.so.0
+3ef1e25000-3ef1e26000 rwxp 00025000 00:2f 15802326                       /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libpng12.so.0
+7fb49efe2000-7fb4a6cbe000 rwxp 00000000 00:00 0 
+7fb4a74c0000-7fb4b5e64000 rwxp 00000000 00:00 0 
+7fb4b6666000-7fb4b7666000 rwxp 00000000 00:00 0 
+7fb4b7e68000-7fb4b81ea000 rwxp 00000000 00:00 0 
+7fb4b89ec000-7fb4ba1e0000 rwxp 00000000 00:00 0 
+7fb4ba9e2000-7fb4be97c000 rwxp 00000000 00:00 0 
+7fb4bf17e000-7fb4e7c68000 rwxp 00000000 00:00 0 
+7fb4e946c000-7fb4ea608000 rwxp 00000000 00:00 0 
+7fb4eb60a000-7fb510e56000 rwxp 00000000 00:00 0 
+7fb511658000-7fb511e58000 rwxp 00000000 00:00 0 
+7fb512e5a000-7fb513724000 rwxp 00000000 00:00 0 
+7fb513f26000-7fb51726a000 rwxp 00000000 00:00 0 
+7fb517a6c000-7fb51b548000 rwxp 00000000 00:00 0 
+7fb51bd4a000-7fb52a1a8000 rwxp 00000000 00:00 0 
+7fb52b9ac000-7fb549102000 rwxp 00000000 00:00 0 
+7fb54a906000-7fb54df4e000 rwxp 00000000 00:00 0 
+7fb54e750000-7fb580d94000 rwxp 00000000 00:00 0 
+7fb581596000-7fb582c1c000 rwxp 00000000 00:00 0 
+7fb58341e000-7fb583ee0000 rwxp 00000000 00:00 0 
+7fb5846e2000-7fb58beec000 rwxp 00000000 00:00 0 
+7fb58c6ee000-7fb58f97c000 rwxp 00000000 00:00 0 
+7fb59097e000-7fb59f39c000 rwxp 00000000 00:00 0 
+7fb59fb9e000-7fb5e5594000 rwxp 00000000 00:00 0 
+7fb5e5d96000-7fb60cb9a000 rwxp 00000000 00:00 0 
+7fb60d39c000-7fb636f1a000 rwxp 00000000 00:00 0 
+7fb63771c000-7fb6548b0000 rwxp 00000000 00:00 0 
+7fb6550b2000-7fb675780000 rwxp 00000000 00:00 0 
+7fb675f82000-7fb6798cc000 rwxp 00000000 00:00 0 
+7fb67a0ce000-7fb6b21e2000 rwxp 00000000 00:00 0 
+7fb6b29e4000-7fb707402000 rwxp 00000000 00:00 0 
+7fb707c04000-7fb708a0a000 rwxp 00000000 00:00 0 
+7fb70920c000-7fb7190de000 rwxp 00000000 00:00 0 
+7fb7198e0000-7fb81f8c6000 rwxp 00000000 00:00 0 
+7fb8200c8000-7fb87f144000 rwxp 00000000 00:00 0 
+7fb87f946000-7fb91bec8000 rwxp 00000000 00:00 0 
+7fb91ceca000-7fb9300b0000 rwxp 00000000 00:00 0 
+7fb9310b2000-7fb9377c0000 rwxp 00000000 00:00 0 
+7fb9387c2000-7fb94ab28000 rwxp 00000000 00:00 0 
+7fb94bb2a000-7fb991106000 rwxp 00000000 00:00 0 
+7fb99390a000-7fb9ab66e000 rwxp 00000000 00:00 0 
+7fb9ac670000-7fb9e307e000 rwxp 00000000 00:00 0 
+7fb9e3880000-7fb9e54b0000 rwxp 00000000 00:00 0 
+7fb9e5cb2000-7fb9fcf72000 rwxp 00000000 00:00 0 
+7fb9fdf74000-7fba2df44000 rwxp 00000000 00:00 0 
+7fba2ff48000-7fba36dd8000 rwxp 00000000 00:00 0 
+7fba38dda000-7fba5d622000 rwxp 00000000 00:00 0 
+7fba5e624000-7fba7c472000 rwxp 00000000 00:00 0 
+7fba7d474000-7fba95eae000 rwxp 00000000 00:00 0 
+7fba966b0000-7fbabc1a4000 rwxp 00000000 00:00 0 
+7fbabc9a6000-7fbace7ba000 rwxp 00000000 00:00 0 
+7fbacf7bc000-7fbaefb18000 rwxp 00000000 00:00 0 
+7fbaf0b1a000-7fbb1a890000 rwxp 00000000 00:00 0 
+7fbb1b892000-7fbb2a8ba000 rwxp 00000000 00:00 0 
+7fbb2b0bc000-7fbb3c1d6000 rwxp 00000000 00:00 0 
+7fbb64a07000-7fbb64a08000 ---p 00000000 00:00 0 
+7fbb64a08000-7fbb65208000 rwxp 00000000 00:00 0 
+7fbb82a28000-7fbb82a29000 ---p 00000000 00:00 0 
+7fbb82a29000-7fbb83a29000 rwxp 00000000 00:00 0 
+7fbb83a29000-7fbb83a4f000 r-xp 00000000 fd:00 34327628                   /usr/share/locale/de/LC_MESSAGES/libc.mo
+7fbb88258000-7fbb88259000 ---p 00000000 00:00 0 
+7fbb88259000-7fbb88a59000 rwxp 00000000 00:00 0 
+7fbb88a59000-7fbb88a5a000 ---p 00000000 00:00 0 
+7fbb88a5a000-7fbb8925a000 rwxp 00000000 00:00 0 
+7fbb8925a000-7fbb8925b000 ---p 00000000 00:00 0 
+7fbb8925b000-7fbb89a5b000 rwxp 00000000 00:00 0 
+7fbb89a5b000-7fbb89a5c000 ---p 00000000 00:00 0 
+7fbb89a5c000-7fbb89a5f000 ---p 00000000 00:00 0 
+7fbb89a5f000-7fbb8a25c000 rwxp 00000000 00:00 0 
+7fbb8a25c000-7fbb8a272000 r-xp 00000000 fd:00 33630236                   /usr/lib64/libresolv-2.17.so
+7fbb8a272000-7fbb8a472000 ---p 00016000 fd:00 33630236                   /usr/lib64/libresolv-2.17.so
+7fbb8a472000-7fbb8a473000 r-xp 00016000 fd:00 33630236                   /usr/lib64/libresolv-2.17.so
+7fbb8a473000-7fbb8a474000 rwxp 00017000 fd:00 33630236                   /usr/lib64/libresolv-2.17.so
+7fbb8a474000-7fbb8a476000 rwxp 00000000 00:00 0 
+7fbb8a476000-7fbb8a47c000 r-xp 00000000 fd:00 33630221                   /usr/lib64/libnss_dns-2.17.so
+7fbb8a47c000-7fbb8a67b000 ---p 00006000 fd:00 33630221                   /usr/lib64/libnss_dns-2.17.so
+7fbb8a67b000-7fbb8a67c000 r-xp 00005000 fd:00 33630221                   /usr/lib64/libnss_dns-2.17.so
+7fbb8a67c000-7fbb8a67d000 rwxp 00006000 fd:00 33630221                   /usr/lib64/libnss_dns-2.17.so
+7fbb8a67d000-7fbb8a680000 ---p 00000000 00:00 0 
+7fbb8a680000-7fbb8a77e000 rwxp 00000000 00:00 0 
+7fbb8a77e000-7fbb8a7a7000 r-xs 004f2000 00:2f 15801793                   /usr/pack/cadence_jasper-22.09.001-zr/lib/Linux64/jar/jtcl-2.6.0.jar
+7fbb8a7a7000-7fbb8a7d5000 r-xs 00192000 00:2f 15802058                   /usr/pack/cadence_jasper-22.09.001-zr/lib/Linux64/jar/quest.jar
+7fbb8a7d5000-7fbb8a7d6000 ---p 00000000 00:00 0 
+7fbb8a7d6000-7fbb8a8d6000 rwxp 00000000 00:00 0 
+7fbb8a8d6000-7fbb8a8d9000 ---p 00000000 00:00 0 
+7fbb8a8d9000-7fbb8a9d7000 rwxp 00000000 00:00 0 
+7fbb8a9d7000-7fbb8a9db000 ---p 00000000 00:00 0 
+7fbb8a9db000-7fbb8aad8000 rwxp 00000000 00:00 0 
+7fbb8aad8000-7fbb8aadc000 ---p 00000000 00:00 0 
+7fbb8aadc000-7fbb8abd9000 rwxp 00000000 00:00 0 
+7fbb8abd9000-7fbb8abdc000 ---p 00000000 00:00 0 
+7fbb8abdc000-7fbb8acda000 rwxp 00000000 00:00 0 
+7fbb8acda000-7fbb8b545000 r-xs 00000000 fd:00 982628                     /var/lib/sss/mc/passwd
+7fbb8b545000-7fbb8b54d000 r-xp 00000000 fd:00 34728361                   /usr/lib64/libnss_sss.so.2
+7fbb8b54d000-7fbb8b74c000 ---p 00008000 fd:00 34728361                   /usr/lib64/libnss_sss.so.2
+7fbb8b74c000-7fbb8b74d000 r-xp 00007000 fd:00 34728361                   /usr/lib64/libnss_sss.so.2
+7fbb8b74d000-7fbb8b74e000 rwxp 00008000 fd:00 34728361                   /usr/lib64/libnss_sss.so.2
+7fbb8b74e000-7fbb8b75a000 r-xp 00000000 fd:00 33630224                   /usr/lib64/libnss_files-2.17.so
+7fbb8b75a000-7fbb8b959000 ---p 0000c000 fd:00 33630224                   /usr/lib64/libnss_files-2.17.so
+7fbb8b959000-7fbb8b95a000 r-xp 0000b000 fd:00 33630224                   /usr/lib64/libnss_files-2.17.so
+7fbb8b95a000-7fbb8b95b000 rwxp 0000c000 fd:00 33630224                   /usr/lib64/libnss_files-2.17.so
+7fbb8b95b000-7fbb8b961000 rwxp 00000000 00:00 0 
+7fbb8b962000-7fbb8b96a000 rwxs 00000000 00:2c 1171850656                 /data/kceesay/workspace/cellift-formal/pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_opentitan_pr2166/experiments/20240606_2008_41_ibex_top/jgproject/sessionLogs/session_0/db/Ampa.db-shm
+7fbb8b96a000-7fbb8b971000 r-xs 00000000 fd:00 67180416                   /usr/lib64/gconv/gconv-modules.cache
+7fbb8b971000-7fbb8b979000 rwxs 00000000 00:2c 1171850618                 /data/kceesay/workspace/cellift-formal/pc_taint_check/ibex_top_opentitan_941315_rst_sec1_slow_no_ls_opentitan_pr2166/experiments/20240606_2008_41_ibex_top/jgproject/sessionLogs/session_0/db/Ampa_proof_PropertyStatusCore.db-shm
+7fbb8b979000-7fbb8b97c000 ---p 00000000 00:00 0 
+7fbb8b97c000-7fbb8ba7a000 rwxp 00000000 00:00 0 
+7fbb8ba7a000-7fbb8ba7d000 ---p 00000000 00:00 0 
+7fbb8ba7d000-7fbb8bb7b000 rwxp 00000000 00:00 0 
+7fbb8bb7b000-7fbb8bb7c000 ---p 00000000 00:00 0 
+7fbb8bb7c000-7fbb8bc7c000 rwxp 00000000 00:00 0 
+7fbb8bc7c000-7fbb8be13000 r-xs 0307a000 00:2f 15809413                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/rt.jar
+7fbb8be13000-7fbb8be14000 ---p 00000000 00:00 0 
+7fbb8be14000-7fbb8bf14000 rwxp 00000000 00:00 0 
+7fbb8bf14000-7fbb8bf15000 ---p 00000000 00:00 0 
+7fbb8bf15000-7fbb8c015000 rwxp 00000000 00:00 0 
+7fbb8c015000-7fbb8c016000 ---p 00000000 00:00 0 
+7fbb8c016000-7fbb8c116000 rwxp 00000000 00:00 0 
+7fbb8c116000-7fbb8c117000 ---p 00000000 00:00 0 
+7fbb8c117000-7fbb8c217000 rwxp 00000000 00:00 0 
+7fbb8c217000-7fbb8c218000 ---p 00000000 00:00 0 
+7fbb8c218000-7fbb8c318000 rwxp 00000000 00:00 0 
+7fbb8c318000-7fbb8c319000 ---p 00000000 00:00 0 
+7fbb8c319000-7fbb8c419000 rwxp 00000000 00:00 0 
+7fbb8c419000-7fbb8c41a000 ---p 00000000 00:00 0 
+7fbb8c41a000-7fbb8c51a000 rwxp 00000000 00:00 0 
+7fbb8c51a000-7fbb8c51b000 ---p 00000000 00:00 0 
+7fbb8c51b000-7fbb8c61b000 rwxp 00000000 00:00 0 
+7fbb8c61b000-7fbb8c61c000 ---p 00000000 00:00 0 
+7fbb8c61c000-7fbb8c71c000 rwxp 00000000 00:00 0 
+7fbb8c71c000-7fbb8c71d000 ---p 00000000 00:00 0 
+7fbb8c71d000-7fbb8c81d000 rwxp 00000000 00:00 0 
+7fbb8c81d000-7fbb8c81e000 ---p 00000000 00:00 0 
+7fbb8c81e000-7fbb8c91e000 rwxp 00000000 00:00 0 
+7fbb8c91e000-7fbb8c91f000 ---p 00000000 00:00 0 
+7fbb8c91f000-7fbb8ca1f000 rwxp 00000000 00:00 0 
+7fbb8ca1f000-7fbb8ca20000 ---p 00000000 00:00 0 
+7fbb8ca20000-7fbb8cb20000 rwxp 00000000 00:00 0 
+7fbb8cb20000-7fbb8cb21000 ---p 00000000 00:00 0 
+7fbb8cb21000-7fbb8cc21000 rwxp 00000000 00:00 0 
+7fbb8cc21000-7fbb8cc22000 ---p 00000000 00:00 0 
+7fbb8cc22000-7fbb8cd22000 rwxp 00000000 00:00 0 
+7fbb8cd22000-7fbb8cd23000 ---p 00000000 00:00 0 
+7fbb8cd23000-7fbb8ce23000 rwxp 00000000 00:00 0 
+7fbb8ce23000-7fbb8ce24000 ---p 00000000 00:00 0 
+7fbb8ce24000-7fbb8cf24000 rwxp 00000000 00:00 0 
+7fbb8cf24000-7fbb8cf25000 ---p 00000000 00:00 0 
+7fbb8cf25000-7fbb8d025000 rwxp 00000000 00:00 0 
+7fbb8d025000-7fbb8d026000 ---p 00000000 00:00 0 
+7fbb8d026000-7fbb8d126000 rwxp 00000000 00:00 0 
+7fbb8d126000-7fbb8d127000 ---p 00000000 00:00 0 
+7fbb8d127000-7fbb8d227000 rwxp 00000000 00:00 0 
+7fbb8d227000-7fbb8d228000 ---p 00000000 00:00 0 
+7fbb8d228000-7fbb8d328000 rwxp 00000000 00:00 0 
+7fbb8d328000-7fbb8d329000 ---p 00000000 00:00 0 
+7fbb8d329000-7fbb8d429000 rwxp 00000000 00:00 0 
+7fbb8d429000-7fbb8d42a000 ---p 00000000 00:00 0 
+7fbb8d42a000-7fbb8d52a000 rwxp 00000000 00:00 0 
+7fbb8d52a000-7fbb8d52b000 ---p 00000000 00:00 0 
+7fbb8d52b000-7fbb8d62b000 rwxp 00000000 00:00 0 
+7fbb8d62b000-7fbb8d62c000 ---p 00000000 00:00 0 
+7fbb8d62c000-7fbb8d72c000 rwxp 00000000 00:00 0 
+7fbb8d72c000-7fbb8d72d000 ---p 00000000 00:00 0 
+7fbb8d72d000-7fbb8d82d000 rwxp 00000000 00:00 0 
+7fbb8d82d000-7fbb8d82e000 ---p 00000000 00:00 0 
+7fbb8d82e000-7fbb8d92e000 rwxp 00000000 00:00 0 
+7fbb8d92e000-7fbb8d92f000 ---p 00000000 00:00 0 
+7fbb8d92f000-7fbb8da2f000 rwxp 00000000 00:00 0 
+7fbb8da2f000-7fbb8da30000 ---p 00000000 00:00 0 
+7fbb8da30000-7fbb8db30000 rwxp 00000000 00:00 0 
+7fbb8db30000-7fbb8db31000 ---p 00000000 00:00 0 
+7fbb8db31000-7fbb8dc31000 rwxp 00000000 00:00 0 
+7fbb8dc31000-7fbb8dc32000 ---p 00000000 00:00 0 
+7fbb8dc32000-7fbb8dd32000 rwxp 00000000 00:00 0 
+7fbb8dd32000-7fbb8dd33000 ---p 00000000 00:00 0 
+7fbb8dd33000-7fbb8de33000 rwxp 00000000 00:00 0 
+7fbb8de33000-7fbb8de34000 ---p 00000000 00:00 0 
+7fbb8de34000-7fbb8df34000 rwxp 00000000 00:00 0 
+7fbb8df34000-7fbb8df35000 ---p 00000000 00:00 0 
+7fbb8df35000-7fbb8e035000 rwxp 00000000 00:00 0 
+7fbb8e035000-7fbb8e036000 ---p 00000000 00:00 0 
+7fbb8e036000-7fbb8e136000 rwxp 00000000 00:00 0 
+7fbb8e136000-7fbb8e137000 ---p 00000000 00:00 0 
+7fbb8e137000-7fbb8e237000 rwxp 00000000 00:00 0 
+7fbb8e237000-7fbb8e238000 ---p 00000000 00:00 0 
+7fbb8e238000-7fbb8e338000 rwxp 00000000 00:00 0 
+7fbb8e338000-7fbb8e339000 ---p 00000000 00:00 0 
+7fbb8e339000-7fbb8e439000 rwxp 00000000 00:00 0 
+7fbb8e439000-7fbb8e43a000 ---p 00000000 00:00 0 
+7fbb8e43a000-7fbb8e53a000 rwxp 00000000 00:00 0 
+7fbb8e53a000-7fbb8e53b000 ---p 00000000 00:00 0 
+7fbb8e53b000-7fbb8e646000 rwxp 00000000 00:00 0 
+7fbb8e646000-7fbb8e664000 rwxp 00000000 00:00 0 
+7fbb8e664000-7fbb8e90f000 rwxp 00000000 00:00 0 
+7fbb8e90f000-7fbb8ebba000 rwxp 00000000 00:00 0 
+7fbb8ebba000-7fbb8ebc5000 rwxp 00000000 00:00 0 
+7fbb8ebc5000-7fbb8ebe3000 rwxp 00000000 00:00 0 
+7fbb8ebe3000-7fbb8ee8e000 rwxp 00000000 00:00 0 
+7fbb8ee8e000-7fbb8f138000 rwxp 00000000 00:00 0 
+7fbb8f138000-7fbb8f28e000 rwxp 00000000 00:00 0 
+7fbb8f28e000-7fbb8f3e3000 rwxp 00000000 00:00 0 
+7fbb8f3e3000-7fbb8f654000 rwxp 00000000 00:00 0 
+7fbb8f654000-7fbb923e4000 rwxp 00000000 00:00 0 
+7fbb923e4000-7fbb923f2000 r-xp 00000000 00:2f 15808160                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/libzip.so
+7fbb923f2000-7fbb924f4000 ---p 0000e000 00:2f 15808160                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/libzip.so
+7fbb924f4000-7fbb924f7000 rwxp 00010000 00:2f 15808160                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/libzip.so
+7fbb924f7000-7fbb924f8000 rwxp 00000000 00:00 0 
+7fbb924f8000-7fbb9250f000 r-xp 00000000 fd:00 33629534                   /usr/lib64/libnsl-2.17.so
+7fbb9250f000-7fbb9270e000 ---p 00017000 fd:00 33629534                   /usr/lib64/libnsl-2.17.so
+7fbb9270e000-7fbb9270f000 r-xp 00016000 fd:00 33629534                   /usr/lib64/libnsl-2.17.so
+7fbb9270f000-7fbb92710000 rwxp 00017000 fd:00 33629534                   /usr/lib64/libnsl-2.17.so
+7fbb92710000-7fbb92712000 rwxp 00000000 00:00 0 
+7fbb92712000-7fbb9273b000 r-xp 00000000 00:2f 15807832                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/libjava.so
+7fbb9273b000-7fbb9283a000 ---p 00029000 00:2f 15807832                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/libjava.so
+7fbb9283a000-7fbb92841000 rwxp 00028000 00:2f 15807832                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/libjava.so
+7fbb92841000-7fbb92842000 ---p 00000000 00:00 0 
+7fbb92842000-7fbb93042000 rwxp 00000000 00:00 0 
+7fbb93843000-7fbb99d80000 r-xp 00000000 fd:00 3399                       /usr/lib/locale/locale-archive
+7fbb99d80000-7fbb9a400000 rwxp 00000000 00:00 0 
+7fbb9a403000-7fbb9a415000 r-xp 00000000 00:2f 15803799                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/plugins/sqldrivers/libqsqlite.so
+7fbb9a415000-7fbb9a416000 r-xp 00011000 00:2f 15803799                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/plugins/sqldrivers/libqsqlite.so
+7fbb9a416000-7fbb9a417000 rwxp 00012000 00:2f 15803799                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/plugins/sqldrivers/libqsqlite.so
+7fbb9a417000-7fbb9a421000 rwxp 00000000 00:00 0 
+7fbb9a421000-7fbb9a4d7000 rwxp 00000000 00:00 0 
+7fbb9a4d7000-7fbb9a4e4000 r-xp 00000000 00:2f 15808420                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/libverify.so
+7fbb9a4e4000-7fbb9a5e3000 ---p 0000d000 00:2f 15808420                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/libverify.so
+7fbb9a5e3000-7fbb9a5e6000 rwxp 0000c000 00:2f 15808420                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/libverify.so
+7fbb9a5e6000-7fbb9a5fd000 rwxp 00000000 00:00 0 
+7fbb9a5fd000-7fbb9a5ff000 r-xp 00000000 fd:00 33639956                   /usr/lib64/libXau.so.6.0.0
+7fbb9a5ff000-7fbb9a7ff000 ---p 00002000 fd:00 33639956                   /usr/lib64/libXau.so.6.0.0
+7fbb9a7ff000-7fbb9a800000 r-xp 00002000 fd:00 33639956                   /usr/lib64/libXau.so.6.0.0
+7fbb9a800000-7fbb9a801000 rwxp 00003000 fd:00 33639956                   /usr/lib64/libXau.so.6.0.0
+7fbb9a801000-7fbb9a8c0000 r-xp 00000000 00:2f 15803557                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libCDSTcl8.4.so
+7fbb9a8c0000-7fbb9aac0000 ---p 000bf000 00:2f 15803557                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libCDSTcl8.4.so
+7fbb9aac0000-7fbb9aac9000 rwxp 000bf000 00:2f 15803557                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libCDSTcl8.4.so
+7fbb9aac9000-7fbb9aacb000 rwxp 00000000 00:00 0 
+7fbb9aacb000-7fbb9ab7e000 r-xp 00000000 00:2f 15802212                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdcapi.so
+7fbb9ab7e000-7fbb9ab7f000 ---p 000b3000 00:2f 15802212                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdcapi.so
+7fbb9ab7f000-7fbb9ab80000 r-xp 000b3000 00:2f 15802212                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdcapi.so
+7fbb9ab80000-7fbb9ab8b000 rwxp 000b4000 00:2f 15802212                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdcapi.so
+7fbb9ab8b000-7fbb9ab8c000 rwxp 00000000 00:00 0 
+7fbb9ab8c000-7fbb9aba5000 r-xp 00000000 00:2f 15801839                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libz_sh.so
+7fbb9aba5000-7fbb9aba6000 r-xp 00018000 00:2f 15801839                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libz_sh.so
+7fbb9aba6000-7fbb9aba7000 rwxp 00019000 00:2f 15801839                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libz_sh.so
+7fbb9aba7000-7fbb9aba8000 rwxp 00000000 00:00 0 
+7fbb9aba8000-7fbb9abcc000 r-xp 00000000 00:2f 15802202                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libxcb.so.1
+7fbb9abcc000-7fbb9adcc000 ---p 00024000 00:2f 15802202                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libxcb.so.1
+7fbb9adcc000-7fbb9adcd000 rwxp 00024000 00:2f 15802202                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libxcb.so.1
+7fbb9adcd000-7fbb9adce000 rwxp 00000000 00:00 0 
+7fbb9adce000-7fbb9ae23000 r-xp 00000000 00:2f 15804042                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Svg.so.5
+7fbb9ae23000-7fbb9ae24000 ---p 00055000 00:2f 15804042                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Svg.so.5
+7fbb9ae24000-7fbb9ae26000 r-xp 00055000 00:2f 15804042                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Svg.so.5
+7fbb9ae26000-7fbb9ae27000 rwxp 00057000 00:2f 15804042                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Svg.so.5
+7fbb9ae27000-7fbb9ae45000 r-xp 00000000 00:2f 15803668                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_iostreams.so.1.73.0
+7fbb9ae45000-7fbb9b045000 ---p 0001e000 00:2f 15803668                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_iostreams.so.1.73.0
+7fbb9b045000-7fbb9b046000 r-xp 0001e000 00:2f 15803668                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_iostreams.so.1.73.0
+7fbb9b046000-7fbb9b047000 rwxp 0001f000 00:2f 15803668                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_iostreams.so.1.73.0
+7fbb9b047000-7fbb9b048000 rwxp 00000000 00:00 0 
+7fbb9b048000-7fbb9b04f000 r-xp 00000000 00:2f 15803186                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Concurrent.so.5
+7fbb9b04f000-7fbb9b050000 r-xp 00006000 00:2f 15803186                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Concurrent.so.5
+7fbb9b050000-7fbb9b051000 rwxp 00007000 00:2f 15803186                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Concurrent.so.5
+7fbb9b051000-7fbb9b0d6000 r-xp 00000000 00:2f 15801955                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libcudd.so
+7fbb9b0d6000-7fbb9b0d7000 r-xp 00084000 00:2f 15801955                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libcudd.so
+7fbb9b0d7000-7fbb9b0d8000 rwxp 00085000 00:2f 15801955                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libcudd.so
+7fbb9b0d8000-7fbb9b0d9000 rwxp 00000000 00:00 0 
+7fbb9b0d9000-7fbb9b127000 r-xp 00000000 00:2f 15802097                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjAdaptor.so
+7fbb9b127000-7fbb9b12b000 r-xp 0004d000 00:2f 15802097                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjAdaptor.so
+7fbb9b12b000-7fbb9b12c000 rwxp 00051000 00:2f 15802097                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjAdaptor.so
+7fbb9b12c000-7fbb9b12d000 rwxp 00000000 00:00 0 
+7fbb9b12d000-7fbb9b1d3000 r-xp 00000000 00:2f 15802577                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperBinExpr.so
+7fbb9b1d3000-7fbb9b1e0000 r-xp 000a5000 00:2f 15802577                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperBinExpr.so
+7fbb9b1e0000-7fbb9b1e2000 rwxp 000b2000 00:2f 15802577                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperBinExpr.so
+7fbb9b1e2000-7fbb9b20e000 r-xp 00000000 00:2f 15801952                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libVCDStateMapManager.so
+7fbb9b20e000-7fbb9b20f000 r-xp 0002b000 00:2f 15801952                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libVCDStateMapManager.so
+7fbb9b20f000-7fbb9b210000 rwxp 0002c000 00:2f 15801952                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libVCDStateMapManager.so
+7fbb9b210000-7fbb9b412000 rwxp 00000000 00:00 0 
+7fbb9b412000-7fbb9b629000 r-xp 00000000 00:2f 15801453                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDynamo.so
+7fbb9b629000-7fbb9b62a000 ---p 00217000 00:2f 15801453                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDynamo.so
+7fbb9b62a000-7fbb9b62e000 r-xp 00217000 00:2f 15801453                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDynamo.so
+7fbb9b62e000-7fbb9b632000 rwxp 0021b000 00:2f 15801453                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDynamo.so
+7fbb9b632000-7fbb9b648000 rwxp 00000000 00:00 0 
+7fbb9b648000-7fbb9b674000 r-xp 00000000 00:2f 15803083                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofApi.so
+7fbb9b674000-7fbb9b675000 ---p 0002c000 00:2f 15803083                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofApi.so
+7fbb9b675000-7fbb9b676000 r-xp 0002c000 00:2f 15803083                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofApi.so
+7fbb9b676000-7fbb9b677000 rwxp 0002d000 00:2f 15803083                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofApi.so
+7fbb9b677000-7fbb9b678000 rwxp 00000000 00:00 0 
+7fbb9b678000-7fbb9c1c1000 r-xp 00000000 00:2f 15801958                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libperfDpi.so
+7fbb9c1c1000-7fbb9c3c0000 ---p 00b49000 00:2f 15801958                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libperfDpi.so
+7fbb9c3c0000-7fbb9c42a000 r-xp 00b48000 00:2f 15801958                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libperfDpi.so
+7fbb9c42a000-7fbb9c4f6000 rwxp 00bb2000 00:2f 15801958                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libperfDpi.so
+7fbb9c4f6000-7fbb9cbcc000 rwxp 00000000 00:00 0 
+7fbb9cbcc000-7fbb9cdea000 r-xp 00000000 00:2f 15803670                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnsys.so
+7fbb9cdea000-7fbb9cfe9000 ---p 0021e000 00:2f 15803670                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnsys.so
+7fbb9cfe9000-7fbb9cff2000 r-xp 0021d000 00:2f 15803670                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnsys.so
+7fbb9cff2000-7fbb9cff6000 rwxp 00226000 00:2f 15803670                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnsys.so
+7fbb9cff6000-7fbb9d00d000 rwxp 00000000 00:00 0 
+7fbb9d00d000-7fbb9d1d5000 r-xp 00000000 00:2f 15801840                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnffw.so
+7fbb9d1d5000-7fbb9d3d4000 ---p 001c8000 00:2f 15801840                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnffw.so
+7fbb9d3d4000-7fbb9d3d6000 r-xp 001c7000 00:2f 15801840                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnffw.so
+7fbb9d3d6000-7fbb9d3da000 rwxp 001c9000 00:2f 15801840                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnffw.so
+7fbb9d3da000-7fbb9d3db000 rwxp 00000000 00:00 0 
+7fbb9d3db000-7fbb9db56000 r-xp 00000000 00:2f 15802213                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnffr.so
+7fbb9db56000-7fbb9dd55000 ---p 0077b000 00:2f 15802213                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnffr.so
+7fbb9dd55000-7fbb9dd7b000 r-xp 0077a000 00:2f 15802213                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnffr.so
+7fbb9dd7b000-7fbb9dd85000 rwxp 007a0000 00:2f 15802213                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libnffr.so
+7fbb9dd85000-7fbb9e82a000 rwxp 00000000 00:00 0 
+7fbb9e82a000-7fbb9e89d000 r-xp 00000000 00:2f 15801956                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdwapi.so
+7fbb9e89d000-7fbb9e89e000 ---p 00073000 00:2f 15801956                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdwapi.so
+7fbb9e89e000-7fbb9e8a1000 r-xp 00073000 00:2f 15801956                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdwapi.so
+7fbb9e8a1000-7fbb9e8a2000 rwxp 00076000 00:2f 15801956                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdwapi.so
+7fbb9e8a2000-7fbb9e8a3000 rwxp 00000000 00:00 0 
+7fbb9e8a3000-7fbb9ed94000 r-xp 00000000 00:2f 15801829                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdac.so
+7fbb9ed94000-7fbb9ed95000 ---p 004f1000 00:2f 15801829                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdac.so
+7fbb9ed95000-7fbb9edc4000 r-xp 004f1000 00:2f 15801829                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdac.so
+7fbb9edc4000-7fbb9eddd000 rwxp 00520000 00:2f 15801829                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libdac.so
+7fbb9eddd000-7fbb9ee8b000 rwxp 00000000 00:00 0 
+7fbb9ee8b000-7fbb9eec4000 r-xp 00000000 00:2f 15803087                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libutilradix.so
+7fbb9eec4000-7fbb9eec5000 ---p 00039000 00:2f 15803087                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libutilradix.so
+7fbb9eec5000-7fbb9eec7000 r-xp 00039000 00:2f 15803087                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libutilradix.so
+7fbb9eec7000-7fbb9eec9000 rwxp 0003b000 00:2f 15803087                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libutilradix.so
+7fbb9eec9000-7fbb9ef69000 r-xp 00000000 00:2f 15802972                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjetmining.so
+7fbb9ef69000-7fbb9ef6a000 ---p 000a0000 00:2f 15802972                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjetmining.so
+7fbb9ef6a000-7fbb9ef6c000 r-xp 000a0000 00:2f 15802972                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjetmining.so
+7fbb9ef6c000-7fbb9ef6e000 rwxp 000a2000 00:2f 15802972                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjetmining.so
+7fbb9ef6e000-7fbb9ef70000 rwxp 00000000 00:00 0 
+7fbb9ef70000-7fbb9efd0000 r-xp 00000000 fd:00 33631050                   /usr/lib64/libpcre.so.1.2.0
+7fbb9efd0000-7fbb9f1d0000 ---p 00060000 fd:00 33631050                   /usr/lib64/libpcre.so.1.2.0
+7fbb9f1d0000-7fbb9f1d1000 r-xp 00060000 fd:00 33631050                   /usr/lib64/libpcre.so.1.2.0
+7fbb9f1d1000-7fbb9f1d2000 rwxp 00061000 fd:00 33631050                   /usr/lib64/libpcre.so.1.2.0
+7fbb9f1d2000-7fbb9f1d3000 rwxp 00000000 00:00 0 
+7fbb9f1d3000-7fbb9f417000 r-xp 00000000 00:2f 15802460                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDA.so
+7fbb9f417000-7fbb9f43c000 r-xp 00243000 00:2f 15802460                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDA.so
+7fbb9f43c000-7fbb9f443000 rwxp 00268000 00:2f 15802460                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDA.so
+7fbb9f443000-7fbb9f448000 rwxp 00000000 00:00 0 
+7fbb9f448000-7fbb9f49d000 r-xp 00000000 00:2f 15802969                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSdcNetlist.so
+7fbb9f49d000-7fbb9f4a1000 r-xp 00054000 00:2f 15802969                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSdcNetlist.so
+7fbb9f4a1000-7fbb9f4a3000 rwxp 00058000 00:2f 15802969                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSdcNetlist.so
+7fbb9f4a3000-7fbb9f4d7000 r-xp 00000000 00:2f 15801835                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFileLocker.so
+7fbb9f4d7000-7fbb9f4d9000 r-xp 00033000 00:2f 15801835                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFileLocker.so
+7fbb9f4d9000-7fbb9f4db000 rwxp 00035000 00:2f 15801835                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFileLocker.so
+7fbb9f4db000-7fbb9f4dc000 rwxp 00000000 00:00 0 
+7fbb9f4dc000-7fbb9f672000 r-xp 00000000 00:2f 15802966                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperLPVDb.so
+7fbb9f672000-7fbb9f676000 r-xp 00195000 00:2f 15802966                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperLPVDb.so
+7fbb9f676000-7fbb9f67a000 rwxp 00199000 00:2f 15802966                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperLPVDb.so
+7fbb9f67a000-7fbb9fa0b000 r-xp 00000000 00:2f 15802959                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5XmlPatterns.so.5
+7fbb9fa0b000-7fbb9fa41000 r-xp 00390000 00:2f 15802959                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5XmlPatterns.so.5
+7fbb9fa41000-7fbb9fa42000 rwxp 003c6000 00:2f 15802959                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5XmlPatterns.so.5
+7fbb9fa42000-7fbb9fa44000 rwxp 00000000 00:00 0 
+7fbb9fa44000-7fbb9fa57000 r-xp 00000000 00:2f 15802970                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTraceReplay.so
+7fbb9fa57000-7fbb9fa58000 r-xp 00012000 00:2f 15802970                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTraceReplay.so
+7fbb9fa58000-7fbb9fa59000 rwxp 00013000 00:2f 15802970                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTraceReplay.so
+7fbb9fa59000-7fbb9ff7f000 r-xp 00000000 00:2f 15803202                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libwifCS.so
+7fbb9ff7f000-7fbb9ff90000 r-xp 00525000 00:2f 15803202                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libwifCS.so
+7fbb9ff90000-7fbb9ff99000 rwxp 00536000 00:2f 15803202                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libwifCS.so
+7fbb9ff99000-7fbb9ff9c000 rwxp 00000000 00:00 0 
+7fbb9ff9c000-7fbb9ffdb000 r-xp 00000000 00:2f 15802958                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libgmp.so.3
+7fbb9ffdb000-7fbba01db000 ---p 0003f000 00:2f 15802958                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libgmp.so.3
+7fbba01db000-7fbba01dc000 rwxp 0003f000 00:2f 15802958                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libgmp.so.3
+7fbba01dc000-7fbba1999000 r-xp 00000000 00:2f 15803326                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAg.so
+7fbba1999000-7fbba199a000 ---p 017bd000 00:2f 15803326                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAg.so
+7fbba199a000-7fbba19d7000 r-xp 017bd000 00:2f 15803326                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAg.so
+7fbba19d7000-7fbba1a89000 rwxp 017fa000 00:2f 15803326                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAg.so
+7fbba1a89000-7fbba24bd000 rwxp 00000000 00:00 0 
+7fbba24bd000-7fbba24ef000 r-xp 00000000 00:2f 15801834                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperEquivAnalysis.so
+7fbba24ef000-7fbba24f0000 ---p 00032000 00:2f 15801834                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperEquivAnalysis.so
+7fbba24f0000-7fbba24f3000 r-xp 00032000 00:2f 15801834                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperEquivAnalysis.so
+7fbba24f3000-7fbba24f5000 rwxp 00035000 00:2f 15801834                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperEquivAnalysis.so
+7fbba24f5000-7fbba24f7000 rwxp 00000000 00:00 0 
+7fbba24f7000-7fbba2b2c000 r-xp 00000000 00:2f 15801450                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Widgets.so.5
+7fbba2b2c000-7fbba2b2d000 ---p 00635000 00:2f 15801450                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Widgets.so.5
+7fbba2b2d000-7fbba2b59000 r-xp 00635000 00:2f 15801450                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Widgets.so.5
+7fbba2b59000-7fbba2b5e000 rwxp 00661000 00:2f 15801450                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Widgets.so.5
+7fbba2b5e000-7fbba2b5f000 rwxp 00000000 00:00 0 
+7fbba2b5f000-7fbba2bbe000 r-xp 00000000 00:2f 15804041                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5PrintSupport.so.5
+7fbba2bbe000-7fbba2bc1000 r-xp 0005e000 00:2f 15804041                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5PrintSupport.so.5
+7fbba2bc1000-7fbba2bc3000 rwxp 00061000 00:2f 15804041                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5PrintSupport.so.5
+7fbba2bc3000-7fbba2d24000 r-xp 00000000 00:2f 15802327                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libndna.so
+7fbba2d24000-7fbba2f23000 ---p 00161000 00:2f 15802327                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libndna.so
+7fbba2f23000-7fbba2f2a000 r-xp 00160000 00:2f 15802327                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libndna.so
+7fbba2f2a000-7fbba2f2d000 rwxp 00167000 00:2f 15802327                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libndna.so
+7fbba2f2d000-7fbba2f34000 rwxp 00000000 00:00 0 
+7fbba2f34000-7fbba3004000 r-xp 00000000 00:2f 15804052                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libzmq.so.5
+7fbba3004000-7fbba300b000 r-xp 000cf000 00:2f 15804052                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libzmq.so.5
+7fbba300b000-7fbba300c000 rwxp 000d6000 00:2f 15804052                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libzmq.so.5
+7fbba300c000-7fbba300d000 rwxp 00000000 00:00 0 
+7fbba300d000-7fbba3145000 r-xp 00000000 fd:00 33630939                   /usr/lib64/libX11.so.6.3.0
+7fbba3145000-7fbba3345000 ---p 00138000 fd:00 33630939                   /usr/lib64/libX11.so.6.3.0
+7fbba3345000-7fbba3346000 r-xp 00138000 fd:00 33630939                   /usr/lib64/libX11.so.6.3.0
+7fbba3346000-7fbba334b000 rwxp 00139000 fd:00 33630939                   /usr/lib64/libX11.so.6.3.0
+7fbba334b000-7fbba3499000 r-xp 00000000 00:2f 15803201                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libqwt.so.6
+7fbba3499000-7fbba349a000 ---p 0014e000 00:2f 15803201                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libqwt.so.6
+7fbba349a000-7fbba34a3000 r-xp 0014e000 00:2f 15803201                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libqwt.so.6
+7fbba34a3000-7fbba34a7000 rwxp 00157000 00:2f 15803201                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libqwt.so.6
+7fbba34a7000-7fbba34c2000 r-xp 00000000 00:2f 15803448                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQjdax.so.1
+7fbba34c2000-7fbba34c3000 ---p 0001b000 00:2f 15803448                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQjdax.so.1
+7fbba34c3000-7fbba34c4000 r-xp 0001b000 00:2f 15803448                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQjdax.so.1
+7fbba34c4000-7fbba34c5000 rwxp 0001c000 00:2f 15803448                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQjdax.so.1
+7fbba34c5000-7fbba3506000 r-xp 00000000 00:2f 15802210                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSourceInfoFlow.so
+7fbba3506000-7fbba3507000 ---p 00041000 00:2f 15802210                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSourceInfoFlow.so
+7fbba3507000-7fbba3509000 r-xp 00041000 00:2f 15802210                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSourceInfoFlow.so
+7fbba3509000-7fbba350b000 rwxp 00043000 00:2f 15802210                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSourceInfoFlow.so
+7fbba350b000-7fbba350c000 rwxp 00000000 00:00 0 
+7fbba350c000-7fbba351f000 r-xp 00000000 00:2f 15802860                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRadixProvider.so
+7fbba351f000-7fbba3520000 ---p 00013000 00:2f 15802860                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRadixProvider.so
+7fbba3520000-7fbba3521000 r-xp 00013000 00:2f 15802860                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRadixProvider.so
+7fbba3521000-7fbba3522000 rwxp 00014000 00:2f 15802860                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRadixProvider.so
+7fbba3522000-7fbba35fc000 r-xp 00000000 00:2f 15803327                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperGraphDb.so
+7fbba35fc000-7fbba35ff000 r-xp 000d9000 00:2f 15803327                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperGraphDb.so
+7fbba35ff000-7fbba3602000 rwxp 000dc000 00:2f 15803327                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperGraphDb.so
+7fbba3602000-7fbba3603000 rwxp 00000000 00:00 0 
+7fbba3603000-7fbba3ca4000 r-xp 00000000 00:2f 15803332                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libprotobuf.so.23
+7fbba3ca4000-7fbba3ea3000 ---p 006a1000 00:2f 15803332                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libprotobuf.so.23
+7fbba3ea3000-7fbba3eac000 r-xp 006a0000 00:2f 15803332                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libprotobuf.so.23
+7fbba3eac000-7fbba3ec9000 rwxp 006a9000 00:2f 15803332                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libprotobuf.so.23
+7fbba3ec9000-7fbba3ecb000 rwxp 00000000 00:00 0 
+7fbba3ecb000-7fbba41b5000 r-xp 00000000 00:2f 15802465                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSymSim.so
+7fbba41b5000-7fbba41b6000 ---p 002ea000 00:2f 15802465                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSymSim.so
+7fbba41b6000-7fbba41c5000 r-xp 002ea000 00:2f 15802465                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSymSim.so
+7fbba41c5000-7fbba41cb000 rwxp 002f9000 00:2f 15802465                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSymSim.so
+7fbba41cb000-7fbba41ce000 rwxp 00000000 00:00 0 
+7fbba41ce000-7fbba41d6000 r-xp 00000000 00:2f 15803555                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libunicovdirmgr.so
+7fbba41d6000-7fbba41d7000 r-xp 00007000 00:2f 15803555                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libunicovdirmgr.so
+7fbba41d7000-7fbba41d8000 rwxp 00008000 00:2f 15803555                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libunicovdirmgr.so
+7fbba41d8000-7fbba41f4000 r-xp 00000000 00:2f 15802968                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperPropPartition.so
+7fbba41f4000-7fbba41f6000 r-xp 0001b000 00:2f 15802968                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperPropPartition.so
+7fbba41f6000-7fbba41f7000 rwxp 0001d000 00:2f 15802968                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperPropPartition.so
+7fbba41f7000-7fbba41f8000 rwxp 00000000 00:00 0 
+7fbba41f8000-7fbba4216000 r-xp 00000000 00:2f 15801837                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libcdsCommon_sh.so
+7fbba4216000-7fbba4217000 r-xp 0001d000 00:2f 15801837                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libcdsCommon_sh.so
+7fbba4217000-7fbba4218000 rwxp 0001e000 00:2f 15801837                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libcdsCommon_sh.so
+7fbba4218000-7fbba421c000 rwxp 00000000 00:00 0 
+7fbba421c000-7fbba4326000 r-xp 00000000 00:2f 15803191                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConnectivityOracle.so
+7fbba4326000-7fbba4327000 ---p 0010a000 00:2f 15803191                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConnectivityOracle.so
+7fbba4327000-7fbba432e000 r-xp 0010a000 00:2f 15803191                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConnectivityOracle.so
+7fbba432e000-7fbba4331000 rwxp 00111000 00:2f 15803191                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConnectivityOracle.so
+7fbba4331000-7fbba4333000 rwxp 00000000 00:00 0 
+7fbba4333000-7fbba4646000 r-xp 00000000 00:2f 15801454                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSimExport.so
+7fbba4646000-7fbba4647000 ---p 00313000 00:2f 15801454                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSimExport.so
+7fbba4647000-7fbba4664000 r-xp 00313000 00:2f 15801454                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSimExport.so
+7fbba4664000-7fbba4678000 rwxp 00330000 00:2f 15801454                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSimExport.so
+7fbba4678000-7fbba467d000 rwxp 00000000 00:00 0 
+7fbba467d000-7fbba54bd000 r-xp 00000000 00:2f 15802967                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMiter.so
+7fbba54bd000-7fbba559e000 r-xp 00e3f000 00:2f 15802967                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMiter.so
+7fbba559e000-7fbba55b2000 rwxp 00f20000 00:2f 15802967                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMiter.so
+7fbba55b2000-7fbba55f3000 rwxp 00000000 00:00 0 
+7fbba55f3000-7fbba5c92000 r-xp 00000000 00:2f 15802583                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libedg.so
+7fbba5c92000-7fbba5c95000 r-xp 0069e000 00:2f 15802583                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libedg.so
+7fbba5c95000-7fbba5cea000 rwxp 006a1000 00:2f 15802583                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libedg.so
+7fbba5cea000-7fbba5d30000 rwxp 00000000 00:00 0 
+7fbba5d30000-7fbba8d2d000 r-xp 00000000 00:2f 15803669                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/librtlc.so
+7fbba8d2d000-7fbba8f69000 r-xp 02ffc000 00:2f 15803669                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/librtlc.so
+7fbba8f69000-7fbba902a000 rwxp 03238000 00:2f 15803669                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/librtlc.so
+7fbba902a000-7fbba9093000 rwxp 00000000 00:00 0 
+7fbba9093000-7fbba934d000 r-xp 00000000 00:2f 15802463                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperInformal.so
+7fbba934d000-7fbba935b000 r-xp 002b9000 00:2f 15802463                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperInformal.so
+7fbba935b000-7fbba9363000 rwxp 002c7000 00:2f 15802463                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperInformal.so
+7fbba9363000-7fbba9364000 rwxp 00000000 00:00 0 
+7fbba9364000-7fbba93d0000 r-xp 00000000 00:2f 15803451                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libDynamoForJasperGold.so
+7fbba93d0000-7fbba93d1000 ---p 0006c000 00:2f 15803451                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libDynamoForJasperGold.so
+7fbba93d1000-7fbba93d6000 r-xp 0006c000 00:2f 15803451                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libDynamoForJasperGold.so
+7fbba93d6000-7fbba93db000 rwxp 00071000 00:2f 15803451                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libDynamoForJasperGold.so
+7fbba93db000-7fbba93de000 rwxp 00000000 00:00 0 
+7fbba93de000-7fbba95cc000 r-xp 00000000 00:2f 15802209                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperOrchestration.so
+7fbba95cc000-7fbba95dc000 r-xp 001ed000 00:2f 15802209                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperOrchestration.so
+7fbba95dc000-7fbba95e1000 rwxp 001fd000 00:2f 15802209                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperOrchestration.so
+7fbba95e1000-7fbba95e2000 rwxp 00000000 00:00 0 
+7fbba95e2000-7fbba9628000 r-xp 00000000 00:2f 15802705                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libhaldefGUIAPI.so
+7fbba9628000-7fbba9828000 ---p 00046000 00:2f 15802705                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libhaldefGUIAPI.so
+7fbba9828000-7fbba9835000 rwxp 00046000 00:2f 15802705                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libhaldefGUIAPI.so
+7fbba9835000-7fbba9858000 rwxp 00000000 00:00 0 
+7fbba9858000-7fbba986d000 r-xp 00000000 00:2f 15801836                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRTLDSUtil.so
+7fbba986d000-7fbba986e000 ---p 00015000 00:2f 15801836                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRTLDSUtil.so
+7fbba986e000-7fbba986f000 r-xp 00015000 00:2f 15801836                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRTLDSUtil.so
+7fbba986f000-7fbba9870000 rwxp 00016000 00:2f 15801836                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRTLDSUtil.so
+7fbba9870000-7fbba9871000 r-xp 00000000 00:2f 15804044                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSlCustomRulesUtil.so
+7fbba9871000-7fbba9872000 r-xp 00000000 00:2f 15804044                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSlCustomRulesUtil.so
+7fbba9872000-7fbba9873000 rwxp 00001000 00:2f 15804044                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSlCustomRulesUtil.so
+7fbba9873000-7fbba988b000 r-xp 00000000 00:2f 15802697                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAflRulesUtil.so
+7fbba988b000-7fbba988c000 ---p 00018000 00:2f 15802697                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAflRulesUtil.so
+7fbba988c000-7fbba988d000 r-xp 00018000 00:2f 15802697                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAflRulesUtil.so
+7fbba988d000-7fbba988e000 rwxp 00019000 00:2f 15802697                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAflRulesUtil.so
+7fbba988e000-7fbba988f000 rwxp 00000000 00:00 0 
+7fbba988f000-7fbba9a12000 r-xp 00000000 00:2f 15802208                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperNetlistDb.so
+7fbba9a12000-7fbba9a1a000 r-xp 00182000 00:2f 15802208                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperNetlistDb.so
+7fbba9a1a000-7fbba9a1e000 rwxp 0018a000 00:2f 15802208                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperNetlistDb.so
+7fbba9a1e000-7fbba9a1f000 rwxp 00000000 00:00 0 
+7fbba9a1f000-7fbbaa817000 r-xp 00000000 00:2f 15803200                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libflatten.so
+7fbbaa817000-7fbbaa88c000 r-xp 00df7000 00:2f 15803200                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libflatten.so
+7fbbaa88c000-7fbbaa8a4000 rwxp 00e6c000 00:2f 15803200                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libflatten.so
+7fbbaa8a4000-7fbbaa8a8000 rwxp 00000000 00:00 0 
+7fbbaa8a8000-7fbbaa8f1000 r-xp 00000000 00:2f 15802458                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Sql.so.5
+7fbbaa8f1000-7fbbaa8f3000 r-xp 00048000 00:2f 15802458                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Sql.so.5
+7fbbaa8f3000-7fbbaa8f4000 rwxp 0004a000 00:2f 15802458                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Sql.so.5
+7fbbaa8f4000-7fbbaaa42000 r-xp 00000000 00:2f 15803554                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libsqlite3.so.0
+7fbbaaa42000-7fbbaaa43000 ---p 0014e000 00:2f 15803554                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libsqlite3.so.0
+7fbbaaa43000-7fbbaaa46000 r-xp 0014e000 00:2f 15803554                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libsqlite3.so.0
+7fbbaaa46000-7fbbaaa4b000 rwxp 00151000 00:2f 15803554                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libsqlite3.so.0
+7fbbaaa4b000-7fbbaaa4d000 rwxp 00000000 00:00 0 
+7fbbaaa4d000-7fbbaab61000 r-xp 00000000 fd:00 34133333                   /usr/lib64/libglib-2.0.so.0.5600.1
+7fbbaab61000-7fbbaad60000 ---p 00114000 fd:00 34133333                   /usr/lib64/libglib-2.0.so.0.5600.1
+7fbbaad60000-7fbbaad61000 r-xp 00113000 fd:00 34133333                   /usr/lib64/libglib-2.0.so.0.5600.1
+7fbbaad61000-7fbbaad62000 rwxp 00114000 fd:00 34133333                   /usr/lib64/libglib-2.0.so.0.5600.1
+7fbbaad62000-7fbbaad63000 rwxp 00000000 00:00 0 
+7fbbaad63000-7fbbaad64000 r-xp 00000000 fd:00 34133342                   /usr/lib64/libgthread-2.0.so.0.5600.1
+7fbbaad64000-7fbbaaf63000 ---p 00001000 fd:00 34133342                   /usr/lib64/libgthread-2.0.so.0.5600.1
+7fbbaaf63000-7fbbaaf64000 r-xp 00000000 fd:00 34133342                   /usr/lib64/libgthread-2.0.so.0.5600.1
+7fbbaaf64000-7fbbaaf65000 rwxp 00001000 fd:00 34133342                   /usr/lib64/libgthread-2.0.so.0.5600.1
+7fbbaaf65000-7fbbaaf8c000 r-xp 00000000 00:2f 15802207                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMsgControl.so
+7fbbaaf8c000-7fbbaaf8d000 ---p 00027000 00:2f 15802207                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMsgControl.so
+7fbbaaf8d000-7fbbaaf99000 r-xp 00027000 00:2f 15802207                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMsgControl.so
+7fbbaaf99000-7fbbaaf9a000 rwxp 00033000 00:2f 15802207                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMsgControl.so
+7fbbaaf9a000-7fbbaaf9b000 rwxp 00000000 00:00 0 
+7fbbaaf9b000-7fbbaaf9e000 r-xp 00000000 00:2f 15801954                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libcsv.so
+7fbbaaf9e000-7fbbab19d000 ---p 00003000 00:2f 15801954                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libcsv.so
+7fbbab19d000-7fbbab19e000 rwxp 00002000 00:2f 15801954                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libcsv.so
+7fbbab19e000-7fbbab1b3000 r-xp 00000000 fd:00 33630929                   /usr/lib64/libz.so.1.2.7
+7fbbab1b3000-7fbbab3b2000 ---p 00015000 fd:00 33630929                   /usr/lib64/libz.so.1.2.7
+7fbbab3b2000-7fbbab3b3000 r-xp 00014000 fd:00 33630929                   /usr/lib64/libz.so.1.2.7
+7fbbab3b3000-7fbbab3b4000 rwxp 00015000 fd:00 33630929                   /usr/lib64/libz.so.1.2.7
+7fbbab3b4000-7fbbab3b9000 r-xp 00000000 00:2f 15803321                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libmd5.so
+7fbbab3b9000-7fbbab5b9000 ---p 00005000 00:2f 15803321                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libmd5.so
+7fbbab5b9000-7fbbab5ba000 r-xp 00005000 00:2f 15803321                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libmd5.so
+7fbbab5ba000-7fbbab5bb000 rwxp 00006000 00:2f 15803321                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libmd5.so
+7fbbab5bb000-7fbbab5bc000 rwxp 00000000 00:00 0 
+7fbbab5bc000-7fbbab65d000 r-xp 00000000 00:2f 15802703                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjetparser.so
+7fbbab65d000-7fbbab65f000 r-xp 000a0000 00:2f 15802703                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjetparser.so
+7fbbab65f000-7fbbab660000 rwxp 000a2000 00:2f 15802703                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjetparser.so
+7fbbab660000-7fbbab662000 rwxp 00000000 00:00 0 
+7fbbab662000-7fbbab6a6000 r-xp 00000000 00:2f 15802319                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Xml.so.5
+7fbbab6a6000-7fbbab6a8000 r-xp 00043000 00:2f 15802319                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Xml.so.5
+7fbbab6a8000-7fbbab6a9000 rwxp 00045000 00:2f 15802319                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Xml.so.5
+7fbbab6a9000-7fbbabc7c000 r-xp 00000000 00:2f 15803080                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Gui.so.5
+7fbbabc7c000-7fbbabc8c000 r-xp 005d2000 00:2f 15803080                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Gui.so.5
+7fbbabc8c000-7fbbabc90000 rwxp 005e2000 00:2f 15803080                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Gui.so.5
+7fbbabc90000-7fbbabc9b000 rwxp 00000000 00:00 0 
+7fbbabc9b000-7fbbabe3f000 r-xp 00000000 00:2f 15804040                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTcl8.6.so
+7fbbabe3f000-7fbbac03e000 ---p 001a4000 00:2f 15804040                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTcl8.6.so
+7fbbac03e000-7fbbac04c000 r-xp 001a3000 00:2f 15804040                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTcl8.6.so
+7fbbac04c000-7fbbac04e000 rwxp 001b1000 00:2f 15804040                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTcl8.6.so
+7fbbac04e000-7fbbac050000 rwxp 00000000 00:00 0 
+7fbbac050000-7fbbac2c2000 r-xp 00000000 00:2f 15801957                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libliberty.so
+7fbbac2c2000-7fbbac2d3000 r-xp 00271000 00:2f 15801957                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libliberty.so
+7fbbac2d3000-7fbbac2db000 rwxp 00282000 00:2f 15801957                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libliberty.so
+7fbbac2db000-7fbbac2dd000 rwxp 00000000 00:00 0 
+7fbbac2dd000-7fbbacbe6000 r-xp 00000000 00:2f 15802582                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperXProp.so
+7fbbacbe6000-7fbbacc77000 r-xp 00908000 00:2f 15802582                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperXProp.so
+7fbbacc77000-7fbbacc9d000 rwxp 00999000 00:2f 15802582                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperXProp.so
+7fbbacc9d000-7fbbaccb0000 rwxp 00000000 00:00 0 
+7fbbaccb0000-7fbbacd85000 r-xp 00000000 00:2f 15802702                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperVisualizeFlow.so
+7fbbacd85000-7fbbacd8c000 r-xp 000d4000 00:2f 15802702                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperVisualizeFlow.so
+7fbbacd8c000-7fbbacd91000 rwxp 000db000 00:2f 15802702                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperVisualizeFlow.so
+7fbbacd91000-7fbbacd93000 rwxp 00000000 00:00 0 
+7fbbacd93000-7fbbacdbf000 r-xp 00000000 00:2f 15803452                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUNRDebug.so
+7fbbacdbf000-7fbbacdc0000 ---p 0002c000 00:2f 15803452                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUNRDebug.so
+7fbbacdc0000-7fbbacdc1000 r-xp 0002c000 00:2f 15803452                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUNRDebug.so
+7fbbacdc1000-7fbbacdc2000 rwxp 0002d000 00:2f 15803452                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUNRDebug.so
+7fbbacdc2000-7fbbacdc3000 rwxp 00000000 00:00 0 
+7fbbacdc3000-7fbbad0b5000 r-xp 00000000 00:2f 15803198                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUnr.so
+7fbbad0b5000-7fbbad0b6000 ---p 002f2000 00:2f 15803198                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUnr.so
+7fbbad0b6000-7fbbad0c9000 r-xp 002f2000 00:2f 15803198                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUnr.so
+7fbbad0c9000-7fbbad0d1000 rwxp 00305000 00:2f 15803198                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUnr.so
+7fbbad0d1000-7fbbad0d2000 rwxp 00000000 00:00 0 
+7fbbad0d2000-7fbbad0ea000 r-xp 00000000 00:2f 15803085                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTraceReplayWriter.so
+7fbbad0ea000-7fbbad0ec000 r-xp 00017000 00:2f 15803085                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTraceReplayWriter.so
+7fbbad0ec000-7fbbad0ed000 rwxp 00019000 00:2f 15803085                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTraceReplayWriter.so
+7fbbad0ed000-7fbbad0ef000 rwxp 00000000 00:00 0 
+7fbbad0ef000-7fbbad171000 r-xp 00000000 00:2f 15804050                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTimingException.so
+7fbbad171000-7fbbad172000 ---p 00082000 00:2f 15804050                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTimingException.so
+7fbbad172000-7fbbad177000 r-xp 00082000 00:2f 15804050                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTimingException.so
+7fbbad177000-7fbbad179000 rwxp 00087000 00:2f 15804050                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTimingException.so
+7fbbad179000-7fbbad17a000 rwxp 00000000 00:00 0 
+7fbbad17a000-7fbbad44a000 r-xp 00000000 00:2f 15801951                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTclNative.so
+7fbbad44a000-7fbbad44b000 ---p 002d0000 00:2f 15801951                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTclNative.so
+7fbbad44b000-7fbbad450000 r-xp 002d0000 00:2f 15801951                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTclNative.so
+7fbbad450000-7fbbad453000 rwxp 002d5000 00:2f 15801951                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTclNative.so
+7fbbad453000-7fbbad454000 rwxp 00000000 00:00 0 
+7fbbad454000-7fbbad47b000 r-xp 00000000 00:2f 15801950                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperStructExplorer.so
+7fbbad47b000-7fbbad47c000 ---p 00027000 00:2f 15801950                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperStructExplorer.so
+7fbbad47c000-7fbbad47e000 r-xp 00027000 00:2f 15801950                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperStructExplorer.so
+7fbbad47e000-7fbbad47f000 rwxp 00029000 00:2f 15801950                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperStructExplorer.so
+7fbbad47f000-7fbbad481000 rwxp 00000000 00:00 0 
+7fbbad481000-7fbbad8f5000 r-xp 00000000 00:2f 15803550                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSPV.so
+7fbbad8f5000-7fbbad95d000 r-xp 00473000 00:2f 15803550                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSPV.so
+7fbbad95d000-7fbbad96d000 rwxp 004db000 00:2f 15803550                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSPV.so
+7fbbad96d000-7fbbad976000 rwxp 00000000 00:00 0 
+7fbbad976000-7fbbad9d1000 r-xp 00000000 00:2f 15803667                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSignalBrowser.so
+7fbbad9d1000-7fbbad9d5000 r-xp 0005a000 00:2f 15803667                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSignalBrowser.so
+7fbbad9d5000-7fbbad9da000 rwxp 0005e000 00:2f 15803667                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSignalBrowser.so
+7fbbad9da000-7fbbad9dc000 rwxp 00000000 00:00 0 
+7fbbad9dc000-7fbbadec8000 r-xp 00000000 00:2f 15803797                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSecEquiv.so
+7fbbadec8000-7fbbadec9000 ---p 004ec000 00:2f 15803797                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSecEquiv.so
+7fbbadec9000-7fbbadf13000 r-xp 004ec000 00:2f 15803797                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSecEquiv.so
+7fbbadf13000-7fbbadf25000 rwxp 00536000 00:2f 15803797                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSecEquiv.so
+7fbbadf25000-7fbbadf2d000 rwxp 00000000 00:00 0 
+7fbbadf2d000-7fbbadf88000 r-xp 00000000 00:2f 15803084                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSdcNamingStyle.so
+7fbbadf88000-7fbbadf8d000 r-xp 0005a000 00:2f 15803084                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSdcNamingStyle.so
+7fbbadf8d000-7fbbadf8f000 rwxp 0005f000 00:2f 15803084                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSdcNamingStyle.so
+7fbbadf8f000-7fbbadf90000 rwxp 00000000 00:00 0 
+7fbbadf90000-7fbbae096000 r-xp 00000000 00:2f 15802701                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSessionSdcInterface.so
+7fbbae096000-7fbbae097000 ---p 00106000 00:2f 15802701                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSessionSdcInterface.so
+7fbbae097000-7fbbae0a0000 r-xp 00106000 00:2f 15802701                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSessionSdcInterface.so
+7fbbae0a0000-7fbbae0a5000 rwxp 0010f000 00:2f 15802701                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSessionSdcInterface.so
+7fbbae0a5000-7fbbae0a7000 rwxp 00000000 00:00 0 
+7fbbae0a7000-7fbbae10c000 r-xp 00000000 00:2f 15803331                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSDCConstraintManager.so
+7fbbae10c000-7fbbae10d000 ---p 00065000 00:2f 15803331                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSDCConstraintManager.so
+7fbbae10d000-7fbbae10f000 r-xp 00065000 00:2f 15803331                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSDCConstraintManager.so
+7fbbae10f000-7fbbae111000 rwxp 00067000 00:2f 15803331                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSDCConstraintManager.so
+7fbbae111000-7fbbae116000 rwxp 00000000 00:00 0 
+7fbbae116000-7fbbae12e000 r-xp 00000000 00:2f 15804049                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSchematic.so
+7fbbae12e000-7fbbae12f000 ---p 00018000 00:2f 15804049                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSchematic.so
+7fbbae12f000-7fbbae131000 r-xp 00018000 00:2f 15804049                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSchematic.so
+7fbbae131000-7fbbae132000 rwxp 0001a000 00:2f 15804049                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSchematic.so
+7fbbae132000-7fbbae182000 r-xp 00000000 00:2f 15802325                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSaveRestore.so
+7fbbae182000-7fbbae184000 r-xp 0004f000 00:2f 15802325                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSaveRestore.so
+7fbbae184000-7fbbae186000 rwxp 00051000 00:2f 15802325                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSaveRestore.so
+7fbbae186000-7fbbae1c6000 r-xp 00000000 00:2f 15802861                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSage.so
+7fbbae1c6000-7fbbae1c9000 r-xp 0003f000 00:2f 15802861                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSage.so
+7fbbae1c9000-7fbbae1cb000 rwxp 00042000 00:2f 15802861                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSage.so
+7fbbae1cb000-7fbbae1cc000 rwxp 00000000 00:00 0 
+7fbbae1cc000-7fbbae56c000 r-xp 00000000 00:2f 15803330                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRTLDS.so
+7fbbae56c000-7fbbae56d000 ---p 003a0000 00:2f 15803330                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRTLDS.so
+7fbbae56d000-7fbbae57f000 r-xp 003a0000 00:2f 15803330                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRTLDS.so
+7fbbae57f000-7fbbae58a000 rwxp 003b2000 00:2f 15803330                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperRTLDS.so
+7fbbae58a000-7fbbae592000 rwxp 00000000 00:00 0 
+7fbbae592000-7fbbae64e000 r-xp 00000000 00:2f 15803666                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperResetInfo.so
+7fbbae64e000-7fbbae64f000 ---p 000bc000 00:2f 15803666                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperResetInfo.so
+7fbbae64f000-7fbbae655000 r-xp 000bc000 00:2f 15803666                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperResetInfo.so
+7fbbae655000-7fbbae658000 rwxp 000c2000 00:2f 15803666                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperResetInfo.so
+7fbbae658000-7fbbae689000 r-xp 00000000 00:2f 15802699                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIrun.so
+7fbbae689000-7fbbae68a000 ---p 00031000 00:2f 15802699                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIrun.so
+7fbbae68a000-7fbbae68b000 r-xp 00031000 00:2f 15802699                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIrun.so
+7fbbae68b000-7fbbae68c000 rwxp 00032000 00:2f 15802699                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIrun.so
+7fbbae68c000-7fbbae68f000 rwxp 00000000 00:00 0 
+7fbbae68f000-7fbbae93c000 r-xp 00000000 00:2f 15803796                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofStructure.so
+7fbbae93c000-7fbbae93d000 ---p 002ad000 00:2f 15803796                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofStructure.so
+7fbbae93d000-7fbbae94e000 r-xp 002ad000 00:2f 15803796                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofStructure.so
+7fbbae94e000-7fbbae957000 rwxp 002be000 00:2f 15803796                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofStructure.so
+7fbbae957000-7fbbae959000 rwxp 00000000 00:00 0 
+7fbbae959000-7fbbae9f4000 r-xp 00000000 00:2f 15803196                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperOckham.so
+7fbbae9f4000-7fbbae9f5000 ---p 0009b000 00:2f 15803196                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperOckham.so
+7fbbae9f5000-7fbbae9f9000 r-xp 0009b000 00:2f 15803196                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperOckham.so
+7fbbae9f9000-7fbbae9fb000 rwxp 0009f000 00:2f 15803196                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperOckham.so
+7fbbae9fb000-7fbbae9fc000 rwxp 00000000 00:00 0 
+7fbbae9fc000-7fbbaea02000 r-xp 00000000 00:2f 15802581                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMsgHelp.so
+7fbbaea02000-7fbbaea03000 r-xp 00005000 00:2f 15802581                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMsgHelp.so
+7fbbaea03000-7fbbaea04000 rwxp 00006000 00:2f 15802581                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMsgHelp.so
+7fbbaea04000-7fbbaea05000 rwxp 00000000 00:00 0 
+7fbbaea05000-7fbbaec87000 r-xp 00000000 00:2f 15802459                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCaseSplit.so
+7fbbaec87000-7fbbaec88000 ---p 00282000 00:2f 15802459                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCaseSplit.so
+7fbbaec88000-7fbbaec96000 r-xp 00282000 00:2f 15802459                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCaseSplit.so
+7fbbaec96000-7fbbaec9e000 rwxp 00290000 00:2f 15802459                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCaseSplit.so
+7fbbaec9e000-7fbbaeca0000 rwxp 00000000 00:00 0 
+7fbbaeca0000-7fbbaed09000 r-xp 00000000 00:2f 15803548                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMemory.so
+7fbbaed09000-7fbbaed0c000 r-xp 00068000 00:2f 15803548                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMemory.so
+7fbbaed0c000-7fbbaed0e000 rwxp 0006b000 00:2f 15803548                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMemory.so
+7fbbaed0e000-7fbbaf084000 r-xp 00000000 00:2f 15803920                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperLPV.so
+7fbbaf084000-7fbbaf09e000 r-xp 00375000 00:2f 15803920                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperLPV.so
+7fbbaf09e000-7fbbaf0a6000 rwxp 0038f000 00:2f 15803920                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperLPV.so
+7fbbaf0a6000-7fbbaf0aa000 rwxp 00000000 00:00 0 
+7fbbaf0aa000-7fbbaf1ea000 r-xp 00000000 00:2f 15802857                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIPXACT.so
+7fbbaf1ea000-7fbbaf1ee000 r-xp 0013f000 00:2f 15802857                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIPXACT.so
+7fbbaf1ee000-7fbbaf1f3000 rwxp 00143000 00:2f 15802857                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIPXACT.so
+7fbbaf1f3000-7fbbaf1fc000 rwxp 00000000 00:00 0 
+7fbbaf1fc000-7fbbaf231000 r-xp 00000000 00:2f 15802096                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIPK.so
+7fbbaf231000-7fbbaf232000 ---p 00035000 00:2f 15802096                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIPK.so
+7fbbaf232000-7fbbaf233000 r-xp 00035000 00:2f 15802096                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIPK.so
+7fbbaf233000-7fbbaf234000 rwxp 00036000 00:2f 15802096                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperIPK.so
+7fbbaf234000-7fbbaf235000 rwxp 00000000 00:00 0 
+7fbbaf235000-7fbbaf23e000 r-xp 00000000 00:2f 15803329                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperISUtil.so
+7fbbaf23e000-7fbbaf23f000 r-xp 00008000 00:2f 15803329                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperISUtil.so
+7fbbaf23f000-7fbbaf240000 rwxp 00009000 00:2f 15803329                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperISUtil.so
+7fbbaf240000-7fbbaf241000 rwxp 00000000 00:00 0 
+7fbbaf241000-7fbbaf248000 r-xp 00000000 00:2f 15802858                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperISMLInterface.so
+7fbbaf248000-7fbbaf249000 r-xp 00006000 00:2f 15802858                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperISMLInterface.so
+7fbbaf249000-7fbbaf24a000 rwxp 00007000 00:2f 15802858                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperISMLInterface.so
+7fbbaf24a000-7fbbaf264000 r-xp 00000000 00:2f 15803328                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperInfoQueryAPI.so
+7fbbaf264000-7fbbaf265000 ---p 0001a000 00:2f 15803328                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperInfoQueryAPI.so
+7fbbaf265000-7fbbaf266000 r-xp 0001a000 00:2f 15803328                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperInfoQueryAPI.so
+7fbbaf266000-7fbbaf267000 rwxp 0001b000 00:2f 15803328                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperInfoQueryAPI.so
+7fbbaf267000-7fbbaf29c000 r-xp 00000000 00:2f 15802464                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofMaster.so
+7fbbaf29c000-7fbbaf29e000 r-xp 00034000 00:2f 15802464                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofMaster.so
+7fbbaf29e000-7fbbaf2a0000 rwxp 00036000 00:2f 15802464                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofMaster.so
+7fbbaf2a0000-7fbbaf2a1000 rwxp 00000000 00:00 0 
+7fbbaf2a1000-7fbbaf2e7000 r-xp 00000000 00:2f 15803193                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFlowControlOrchestration.so
+7fbbaf2e7000-7fbbaf2e8000 ---p 00046000 00:2f 15803193                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFlowControlOrchestration.so
+7fbbaf2e8000-7fbbaf2e9000 r-xp 00046000 00:2f 15803193                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFlowControlOrchestration.so
+7fbbaf2e9000-7fbbaf2eb000 rwxp 00047000 00:2f 15803193                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFlowControlOrchestration.so
+7fbbaf2eb000-7fbbaf303000 r-xp 00000000 00:2f 15804048                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofLemma.so
+7fbbaf303000-7fbbaf305000 r-xp 00017000 00:2f 15804048                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofLemma.so
+7fbbaf305000-7fbbaf306000 rwxp 00019000 00:2f 15804048                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofLemma.so
+7fbbaf306000-7fbbaf307000 rwxp 00000000 00:00 0 
+7fbbaf307000-7fbbaf75e000 r-xp 00000000 00:2f 15803549                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofFlow.so
+7fbbaf75e000-7fbbaf75f000 ---p 00457000 00:2f 15803549                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofFlow.so
+7fbbaf75f000-7fbbaf775000 r-xp 00457000 00:2f 15803549                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofFlow.so
+7fbbaf775000-7fbbaf77e000 rwxp 0046d000 00:2f 15803549                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofFlow.so
+7fbbaf77e000-7fbbaf780000 rwxp 00000000 00:00 0 
+7fbbaf780000-7fbbaf925000 r-xp 00000000 00:2f 15803921                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofControl.so
+7fbbaf925000-7fbbaf926000 ---p 001a5000 00:2f 15803921                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofControl.so
+7fbbaf926000-7fbbaf92b000 r-xp 001a5000 00:2f 15803921                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofControl.so
+7fbbaf92b000-7fbbaf92f000 rwxp 001aa000 00:2f 15803921                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperProofControl.so
+7fbbaf92f000-7fbbaf930000 rwxp 00000000 00:00 0 
+7fbbaf930000-7fbbaf957000 r-xp 00000000 00:2f 15802700                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMachineLearning.so
+7fbbaf957000-7fbbaf958000 ---p 00027000 00:2f 15802700                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMachineLearning.so
+7fbbaf958000-7fbbaf959000 r-xp 00027000 00:2f 15802700                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMachineLearning.so
+7fbbaf959000-7fbbaf95a000 rwxp 00028000 00:2f 15802700                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperMachineLearning.so
+7fbbaf95a000-7fbbafb15000 r-xp 00000000 00:2f 15803665                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperHunt.so
+7fbbafb15000-7fbbafb1d000 r-xp 001ba000 00:2f 15803665                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperHunt.so
+7fbbafb1d000-7fbbafb21000 rwxp 001c2000 00:2f 15803665                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperHunt.so
+7fbbafb21000-7fbbafb24000 rwxp 00000000 00:00 0 
+7fbbafb24000-7fbbb01d1000 r-xp 00000000 00:2f 15802323                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperHls.so
+7fbbb01d1000-7fbbb0218000 r-xp 006ac000 00:2f 15802323                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperHls.so
+7fbbb0218000-7fbbb022d000 rwxp 006f3000 00:2f 15802323                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperHls.so
+7fbbb022d000-7fbbb0237000 rwxp 00000000 00:00 0 
+7fbbb0237000-7fbbb0245000 r-xp 00000000 00:2f 15802462                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperHashTarget.so
+7fbbb0245000-7fbbb0246000 ---p 0000e000 00:2f 15802462                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperHashTarget.so
+7fbbb0246000-7fbbb0247000 r-xp 0000e000 00:2f 15802462                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperHashTarget.so
+7fbbb0247000-7fbbb0248000 rwxp 0000f000 00:2f 15802462                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperHashTarget.so
+7fbbb0248000-7fbbb0268000 r-xp 00000000 00:2f 15803194                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFpvOrchestration.so
+7fbbb0268000-7fbbb0269000 ---p 00020000 00:2f 15803194                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFpvOrchestration.so
+7fbbb0269000-7fbbb026a000 r-xp 00020000 00:2f 15803194                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFpvOrchestration.so
+7fbbb026a000-7fbbb026b000 rwxp 00021000 00:2f 15803194                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFpvOrchestration.so
+7fbbb026b000-7fbbb026c000 rwxp 00000000 00:00 0 
+7fbbb026c000-7fbbb2730000 r-xp 00000000 00:2f 15802584                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjaspergui.so
+7fbbb2730000-7fbbb284e000 r-xp 024c3000 00:2f 15802584                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjaspergui.so
+7fbbb284e000-7fbbb28a3000 rwxp 025e1000 00:2f 15802584                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libjaspergui.so
+7fbbb28a3000-7fbbb28cd000 rwxp 00000000 00:00 0 
+7fbbb28cd000-7fbbb296b000 r-xp 00000000 00:2f 15802580                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperGraph.so
+7fbbb296b000-7fbbb296c000 ---p 0009e000 00:2f 15802580                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperGraph.so
+7fbbb296c000-7fbbb2970000 r-xp 0009e000 00:2f 15802580                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperGraph.so
+7fbbb2970000-7fbbb2973000 rwxp 000a2000 00:2f 15802580                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperGraph.so
+7fbbb2973000-7fbbb2f91000 r-xp 00000000 00:2f 15802461                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFsv.so
+7fbbb2f91000-7fbbb2fc9000 r-xp 0061d000 00:2f 15802461                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFsv.so
+7fbbb2fc9000-7fbbb2fd8000 rwxp 00655000 00:2f 15802461                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperFsv.so
+7fbbb2fd8000-7fbbb3044000 rwxp 00000000 00:00 0 
+7fbbb3044000-7fbbb3423000 r-xp 00000000 00:2f 15802698                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDFV.so
+7fbbb3423000-7fbbb3424000 ---p 003df000 00:2f 15802698                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDFV.so
+7fbbb3424000-7fbbb342f000 r-xp 003df000 00:2f 15802698                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDFV.so
+7fbbb342f000-7fbbb3438000 rwxp 003ea000 00:2f 15802698                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDFV.so
+7fbbb3438000-7fbbb343b000 rwxp 00000000 00:00 0 
+7fbbb343b000-7fbbb343c000 r-xp 00000000 00:2f 15802579                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDataComm.so
+7fbbb343c000-7fbbb343d000 r-xp 00000000 00:2f 15802579                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDataComm.so
+7fbbb343d000-7fbbb343e000 rwxp 00001000 00:2f 15802579                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDataComm.so
+7fbbb343e000-7fbbb344e000 r-xp 00000000 00:2f 15803195                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperGameplan.so
+7fbbb344e000-7fbbb344f000 r-xp 0000f000 00:2f 15803195                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperGameplan.so
+7fbbb344f000-7fbbb3450000 rwxp 00010000 00:2f 15803195                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperGameplan.so
+7fbbb3450000-7fbbb3451000 rwxp 00000000 00:00 0 
+7fbbb3451000-7fbbb3460000 r-xp 00000000 00:2f 15803919                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperExpertSystemAPI.so
+7fbbb3460000-7fbbb3461000 r-xp 0000e000 00:2f 15803919                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperExpertSystemAPI.so
+7fbbb3461000-7fbbb3462000 rwxp 0000f000 00:2f 15803919                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperExpertSystemAPI.so
+7fbbb3462000-7fbbb3468000 r-xp 00000000 00:2f 15803918                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperEngineProfile.so
+7fbbb3468000-7fbbb3469000 ---p 00006000 00:2f 15803918                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperEngineProfile.so
+7fbbb3469000-7fbbb346a000 r-xp 00006000 00:2f 15803918                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperEngineProfile.so
+7fbbb346a000-7fbbb346b000 rwxp 00007000 00:2f 15803918                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperEngineProfile.so
+7fbbb346b000-7fbbb351f000 r-xp 00000000 00:2f 15801833                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDebugHandoffFlow.so
+7fbbb351f000-7fbbb3520000 ---p 000b4000 00:2f 15801833                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDebugHandoffFlow.so
+7fbbb3520000-7fbbb3525000 r-xp 000b4000 00:2f 15801833                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDebugHandoffFlow.so
+7fbbb3525000-7fbbb352a000 rwxp 000b9000 00:2f 15801833                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperDebugHandoffFlow.so
+7fbbb352a000-7fbbb352c000 rwxp 00000000 00:00 0 
+7fbbb352c000-7fbbb3570000 r-xp 00000000 00:2f 15803917                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConsoleSocketServer.so
+7fbbb3570000-7fbbb3571000 ---p 00044000 00:2f 15803917                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConsoleSocketServer.so
+7fbbb3571000-7fbbb3572000 r-xp 00044000 00:2f 15803917                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConsoleSocketServer.so
+7fbbb3572000-7fbbb3573000 rwxp 00045000 00:2f 15803917                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConsoleSocketServer.so
+7fbbb3573000-7fbbb35a8000 r-xp 00000000 00:2f 15801832                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCustomEngines.so
+7fbbb35a8000-7fbbb35a9000 ---p 00035000 00:2f 15801832                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCustomEngines.so
+7fbbb35a9000-7fbbb35aa000 r-xp 00035000 00:2f 15801832                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCustomEngines.so
+7fbbb35aa000-7fbbb35ab000 rwxp 00036000 00:2f 15801832                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCustomEngines.so
+7fbbb35ab000-7fbbb3f39000 r-xp 00000000 00:2f 15803082                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverage.so
+7fbbb3f39000-7fbbb3f3a000 ---p 0098e000 00:2f 15803082                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverage.so
+7fbbb3f3a000-7fbbb3f63000 r-xp 0098e000 00:2f 15803082                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverage.so
+7fbbb3f63000-7fbbb3f75000 rwxp 009b7000 00:2f 15803082                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverage.so
+7fbbb3f75000-7fbbb3fd1000 rwxp 00000000 00:00 0 
+7fbbb3fd1000-7fbbb4010000 r-xp 00000000 00:2f 15802322                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverGen.so
+7fbbb4010000-7fbbb4011000 ---p 0003f000 00:2f 15802322                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverGen.so
+7fbbb4011000-7fbbb4013000 r-xp 0003f000 00:2f 15802322                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverGen.so
+7fbbb4013000-7fbbb4015000 rwxp 00041000 00:2f 15802322                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverGen.so
+7fbbb4015000-7fbbb4422000 r-xp 00000000 00:2f 15802964                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConnectivity.so
+7fbbb4422000-7fbbb4423000 ---p 0040d000 00:2f 15802964                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConnectivity.so
+7fbbb4423000-7fbbb4438000 r-xp 0040d000 00:2f 15802964                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConnectivity.so
+7fbbb4438000-7fbbb4443000 rwxp 00422000 00:2f 15802964                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperConnectivity.so
+7fbbb4443000-7fbbb4445000 rwxp 00000000 00:00 0 
+7fbbb4445000-7fbbb474b000 r-xp 00000000 00:2f 15802965                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverGroupSynth.so
+7fbbb474b000-7fbbb475a000 r-xp 00305000 00:2f 15802965                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverGroupSynth.so
+7fbbb475a000-7fbbb4763000 rwxp 00314000 00:2f 15802965                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCoverGroupSynth.so
+7fbbb4763000-7fbbb4767000 rwxp 00000000 00:00 0 
+7fbbb4767000-7fbbb497a000 r-xp 00000000 00:2f 15803190                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperComplexityManager.so
+7fbbb497a000-7fbbb4989000 r-xp 00212000 00:2f 15803190                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperComplexityManager.so
+7fbbb4989000-7fbbb4991000 rwxp 00221000 00:2f 15803190                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperComplexityManager.so
+7fbbb4991000-7fbbb4993000 rwxp 00000000 00:00 0 
+7fbbb4993000-7fbbb4b39000 r-xp 00000000 00:2f 15801831                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperComboLoop.so
+7fbbb4b39000-7fbbb4b3a000 ---p 001a6000 00:2f 15801831                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperComboLoop.so
+7fbbb4b3a000-7fbbb4b48000 r-xp 001a6000 00:2f 15801831                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperComboLoop.so
+7fbbb4b48000-7fbbb4b4d000 rwxp 001b4000 00:2f 15801831                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperComboLoop.so
+7fbbb4b4d000-7fbbb4b4e000 rwxp 00000000 00:00 0 
+7fbbb4b4e000-7fbbb4cf9000 r-xp 00000000 00:2f 15801830                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperClockInfo.so
+7fbbb4cf9000-7fbbb4cfa000 ---p 001ab000 00:2f 15801830                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperClockInfo.so
+7fbbb4cfa000-7fbbb4d04000 r-xp 001ab000 00:2f 15801830                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperClockInfo.so
+7fbbb4d04000-7fbbb4d09000 rwxp 001b5000 00:2f 15801830                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperClockInfo.so
+7fbbb4d09000-7fbbb4d0b000 rwxp 00000000 00:00 0 
+7fbbb4d0b000-7fbbb4e7e000 r-xp 00000000 00:2f 15802578                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCSR.so
+7fbbb4e7e000-7fbbb4e83000 r-xp 00172000 00:2f 15802578                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCSR.so
+7fbbb4e83000-7fbbb4e87000 rwxp 00177000 00:2f 15802578                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCSR.so
+7fbbb4e87000-7fbbb4e88000 rwxp 00000000 00:00 0 
+7fbbb4e88000-7fbbb6346000 r-xp 00000000 00:2f 15804045                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCDC.so
+7fbbb6346000-7fbbb63ac000 r-xp 014bd000 00:2f 15804045                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCDC.so
+7fbbb63ac000-7fbbb63cf000 rwxp 01523000 00:2f 15804045                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCDC.so
+7fbbb63cf000-7fbbb6427000 rwxp 00000000 00:00 0 
+7fbbb6427000-7fbbb6586000 r-xp 00000000 00:2f 15802095                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCaptureTestcase.so
+7fbbb6586000-7fbbb658f000 r-xp 0015e000 00:2f 15802095                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCaptureTestcase.so
+7fbbb658f000-7fbbb6595000 rwxp 00167000 00:2f 15802095                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCaptureTestcase.so
+7fbbb6595000-7fbbb6598000 rwxp 00000000 00:00 0 
+7fbbb6598000-7fbbb6da3000 r-xp 00000000 00:2f 15803189                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperC2Rtl.so
+7fbbb6da3000-7fbbb6df9000 r-xp 0080a000 00:2f 15803189                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperC2Rtl.so
+7fbbb6df9000-7fbbb6e1f000 rwxp 00860000 00:2f 15803189                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperC2Rtl.so
+7fbbb6e1f000-7fbbb6e2b000 rwxp 00000000 00:00 0 
+7fbbb6e2b000-7fbbb7064000 r-xp 00000000 00:2f 15801949                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAutoProve.so
+7fbbb7064000-7fbbb7065000 ---p 00239000 00:2f 15801949                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAutoProve.so
+7fbbb7065000-7fbbb7077000 r-xp 00239000 00:2f 15801949                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAutoProve.so
+7fbbb7077000-7fbbb707d000 rwxp 0024b000 00:2f 15801949                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAutoProve.so
+7fbbb707d000-7fbbb707e000 rwxp 00000000 00:00 0 
+7fbbb707e000-7fbbb771f000 r-xp 00000000 00:2f 15802094                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAp.so
+7fbbb771f000-7fbbb7720000 ---p 006a1000 00:2f 15802094                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAp.so
+7fbbb7720000-7fbbb7730000 r-xp 006a1000 00:2f 15802094                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAp.so
+7fbbb7730000-7fbbb773a000 rwxp 006b1000 00:2f 15802094                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAp.so
+7fbbb773a000-7fbbb77a7000 rwxp 00000000 00:00 0 
+7fbbb77a7000-7fbbb77b0000 r-xp 00000000 00:2f 15802856                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAlgorithmSelection.so
+7fbbb77b0000-7fbbb77b1000 ---p 00009000 00:2f 15802856                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAlgorithmSelection.so
+7fbbb77b1000-7fbbb77b2000 r-xp 00009000 00:2f 15802856                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAlgorithmSelection.so
+7fbbb77b2000-7fbbb77b3000 rwxp 0000a000 00:2f 15802856                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAlgorithmSelection.so
+7fbbb77b3000-7fbbb8264000 r-xp 00000000 00:2f 15803325                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAfl.so
+7fbbb8264000-7fbbb82b2000 r-xp 00ab0000 00:2f 15803325                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAfl.so
+7fbbb82b2000-7fbbb82c7000 rwxp 00afe000 00:2f 15803325                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAfl.so
+7fbbb82c7000-7fbbb8337000 rwxp 00000000 00:00 0 
+7fbbb8337000-7fbbb83b5000 r-xp 00000000 00:2f 15803664                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAtg.so
+7fbbb83b5000-7fbbb83b6000 ---p 0007e000 00:2f 15803664                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAtg.so
+7fbbb83b6000-7fbbb83ba000 r-xp 0007e000 00:2f 15803664                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAtg.so
+7fbbb83ba000-7fbbb83bc000 rwxp 00082000 00:2f 15803664                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperAtg.so
+7fbbb83bc000-7fbbb83bd000 rwxp 00000000 00:00 0 
+7fbbb83bd000-7fbbb84d2000 r-xp 00000000 00:2f 15803795                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasper7.so
+7fbbb84d2000-7fbbb84da000 r-xp 00114000 00:2f 15803795                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasper7.so
+7fbbb84da000-7fbbb84dd000 rwxp 0011c000 00:2f 15803795                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasper7.so
+7fbbb84dd000-7fbbb84de000 rwxp 00000000 00:00 0 
+7fbbb84de000-7fbbb8714000 r-xp 00000000 00:2f 15803081                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasper4.so
+7fbbb8714000-7fbbb8722000 r-xp 00235000 00:2f 15803081                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasper4.so
+7fbbb8722000-7fbbb8727000 rwxp 00243000 00:2f 15803081                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasper4.so
+7fbbb8727000-7fbbb8728000 rwxp 00000000 00:00 0 
+7fbbb8728000-7fbbb8729000 r-xp 00000000 00:2f 15803333                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libenvcfg.so
+7fbbb8729000-7fbbb872a000 r-xp 00000000 00:2f 15803333                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libenvcfg.so
+7fbbb872a000-7fbbb872b000 rwxp 00001000 00:2f 15803333                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libenvcfg.so
+7fbbb872b000-7fbbb8876000 r-xp 00000000 00:2f 15802574                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Network.so.5
+7fbbb8876000-7fbbb887c000 r-xp 0014a000 00:2f 15802574                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Network.so.5
+7fbbb887c000-7fbbb887e000 rwxp 00150000 00:2f 15802574                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Network.so.5
+7fbbb887e000-7fbbb8a42000 r-xp 00000000 fd:00 33629524                   /usr/lib64/libc-2.17.so
+7fbbb8a42000-7fbbb8c41000 ---p 001c4000 fd:00 33629524                   /usr/lib64/libc-2.17.so
+7fbbb8c41000-7fbbb8c45000 r-xp 001c3000 fd:00 33629524                   /usr/lib64/libc-2.17.so
+7fbbb8c45000-7fbbb8c47000 rwxp 001c7000 fd:00 33629524                   /usr/lib64/libc-2.17.so
+7fbbb8c47000-7fbbb8c4c000 rwxp 00000000 00:00 0 
+7fbbb8c4c000-7fbbb8d4d000 r-xp 00000000 fd:00 33629532                   /usr/lib64/libm-2.17.so
+7fbbb8d4d000-7fbbb8f4c000 ---p 00101000 fd:00 33629532                   /usr/lib64/libm-2.17.so
+7fbbb8f4c000-7fbbb8f4d000 r-xp 00100000 fd:00 33629532                   /usr/lib64/libm-2.17.so
+7fbbb8f4d000-7fbbb8f4e000 rwxp 00101000 fd:00 33629532                   /usr/lib64/libm-2.17.so
+7fbbb8f4e000-7fbbb95b3000 r-xp 00000000 00:2f 15803546                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Core.so.5
+7fbbb95b3000-7fbbb95c4000 rwxp 00664000 00:2f 15803546                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libQt5Core.so.5
+7fbbb95c4000-7fbbb95c7000 rwxp 00000000 00:00 0 
+7fbbb95c7000-7fbbb95ee000 r-xp 00000000 00:2f 15803334                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libtcmalloc_minimal.so.4
+7fbbb95ee000-7fbbb95ef000 r-xp 00026000 00:2f 15803334                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libtcmalloc_minimal.so.4
+7fbbb95ef000-7fbbb95f0000 rwxp 00027000 00:2f 15803334                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libtcmalloc_minimal.so.4
+7fbbb95f0000-7fbbb9799000 rwxp 00000000 00:00 0 
+7fbbb9799000-7fbbb97a0000 r-xp 00000000 fd:00 33630239                   /usr/lib64/librt-2.17.so
+7fbbb97a0000-7fbbb999f000 ---p 00007000 fd:00 33630239                   /usr/lib64/librt-2.17.so
+7fbbb999f000-7fbbb99a0000 r-xp 00006000 fd:00 33630239                   /usr/lib64/librt-2.17.so
+7fbbb99a0000-7fbbb99a1000 rwxp 00007000 fd:00 33630239                   /usr/lib64/librt-2.17.so
+7fbbb99a1000-7fbbb99e2000 r-xp 00000000 00:2f 15801455                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTickle.so
+7fbbb99e2000-7fbbb99e4000 r-xp 00040000 00:2f 15801455                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTickle.so
+7fbbb99e4000-7fbbb99e5000 rwxp 00042000 00:2f 15801455                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperTickle.so
+7fbbb99e5000-7fbbb99e7000 r-xp 00000000 fd:00 33629530                   /usr/lib64/libdl-2.17.so
+7fbbb99e7000-7fbbb9be7000 ---p 00002000 fd:00 33629530                   /usr/lib64/libdl-2.17.so
+7fbbb9be7000-7fbbb9be8000 r-xp 00002000 fd:00 33629530                   /usr/lib64/libdl-2.17.so
+7fbbb9be8000-7fbbb9be9000 rwxp 00003000 fd:00 33629530                   /usr/lib64/libdl-2.17.so
+7fbbb9be9000-7fbbb9c04000 r-xp 00000000 00:2f 15803914                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libfmt.so.7
+7fbbb9c04000-7fbbb9e03000 ---p 0001b000 00:2f 15803914                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libfmt.so.7
+7fbbb9e03000-7fbbb9e04000 r-xp 0001a000 00:2f 15803914                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libfmt.so.7
+7fbbb9e04000-7fbbb9e05000 rwxp 0001b000 00:2f 15803914                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libfmt.so.7
+7fbbb9e05000-7fbbb9e09000 r-xp 00000000 00:2f 15801948                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libDatestamp.so
+7fbbb9e09000-7fbbb9e0a000 r-xp 00003000 00:2f 15801948                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libDatestamp.so
+7fbbb9e0a000-7fbbb9e0b000 rwxp 00004000 00:2f 15801948                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libDatestamp.so
+7fbbb9e0b000-7fbbb9e96000 r-xp 00000000 00:2f 15803794                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasper0.so
+7fbbb9e96000-7fbbb9e98000 r-xp 0008a000 00:2f 15803794                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasper0.so
+7fbbb9e98000-7fbbb9e99000 rwxp 0008c000 00:2f 15803794                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasper0.so
+7fbbb9e99000-7fbbb9eb5000 rwxp 00000000 00:00 0 
+7fbbb9eb5000-7fbbb9fd0000 r-xp 00000000 00:2f 15803199                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUtil.so
+7fbbb9fd0000-7fbbb9fd6000 r-xp 0011a000 00:2f 15803199                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUtil.so
+7fbbb9fd6000-7fbbb9fd9000 rwxp 00120000 00:2f 15803199                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperUtil.so
+7fbbb9fd9000-7fbbb9fdb000 rwxp 00000000 00:00 0 
+7fbbb9fdb000-7fbbba03c000 r-xp 00000000 00:2f 15803192                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCrashHandler.so
+7fbbba03c000-7fbbba03d000 r-xp 00060000 00:2f 15803192                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCrashHandler.so
+7fbbba03d000-7fbbba040000 rwxp 00061000 00:2f 15803192                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperCrashHandler.so
+7fbbba040000-7fbbbc654000 r-xp 00000000 00:2f 15803197                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSession.so
+7fbbbc654000-7fbbbc88b000 r-xp 02613000 00:2f 15803197                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSession.so
+7fbbbc88b000-7fbbbc8c3000 rwxp 0284a000 00:2f 15803197                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperSession.so
+7fbbbc8c3000-7fbbbc952000 rwxp 00000000 00:00 0 
+7fbbbc952000-7fbbbca1e000 r-xp 00000000 00:2f 15802324                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperJJS.so
+7fbbbca1e000-7fbbbca22000 r-xp 000cb000 00:2f 15802324                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperJJS.so
+7fbbbca22000-7fbbbca25000 rwxp 000cf000 00:2f 15802324                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperJJS.so
+7fbbbca25000-7fbbbca26000 rwxp 00000000 00:00 0 
+7fbbbca26000-7fbbbca42000 r-xp 00000000 00:2f 15802859                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperJNI.so
+7fbbbca42000-7fbbbca43000 ---p 0001c000 00:2f 15802859                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperJNI.so
+7fbbbca43000-7fbbbca44000 r-xp 0001c000 00:2f 15802859                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperJNI.so
+7fbbbca44000-7fbbbca45000 rwxp 0001d000 00:2f 15802859                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperJNI.so
+7fbbbca45000-7fbbbca84000 r-xp 00000000 00:2f 15804047                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperJGConfig.so
+7fbbbca84000-7fbbbca86000 r-xp 0003e000 00:2f 15804047                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperJGConfig.so
+7fbbbca86000-7fbbbca87000 rwxp 00040000 00:2f 15804047                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libJasperJGConfig.so
+7fbbbca87000-7fbbbca9e000 r-xp 00000000 fd:00 33630234                   /usr/lib64/libpthread-2.17.so
+7fbbbca9e000-7fbbbcc9d000 ---p 00017000 fd:00 33630234                   /usr/lib64/libpthread-2.17.so
+7fbbbcc9d000-7fbbbcc9e000 r-xp 00016000 fd:00 33630234                   /usr/lib64/libpthread-2.17.so
+7fbbbcc9e000-7fbbbcc9f000 rwxp 00017000 fd:00 33630234                   /usr/lib64/libpthread-2.17.so
+7fbbbcc9f000-7fbbbccb3000 rwxp 00000000 00:00 0 
+7fbbbccb3000-7fbbbccb4000 rwxp 00000000 00:00 0 
+7fbbbccb8000-7fbbbccb9000 r-xp 00000000 00:00 0 
+7fbbbccb9000-7fbbbccba000 rwxp 00000000 00:00 0 
+7fbbbccba000-7fbbbccbb000 r-xp 00000000 00:00 0 
+7fbbbccbb000-7fbbbccbd000 r-xp 00000000 00:2f 15807938                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/server/libjsig.so
+7fbbbccbd000-7fbbbcdbc000 ---p 00002000 00:2f 15807938                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/server/libjsig.so
+7fbbbcdbc000-7fbbbcdbd000 rwxp 00001000 00:2f 15807938                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/server/libjsig.so
+7fbbbcdbd000-7fbbbcdbe000 rwxp 00000000 00:00 0 
+7fbbbcdbe000-7fbbbd6d9000 r-xp 00000000 00:2f 15808651                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/server/libjvm.so
+7fbbbd6d9000-7fbbbd7da000 ---p 0091b000 00:2f 15808651                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/server/libjvm.so
+7fbbbd7da000-7fbbbd98f000 rwxp 0091c000 00:2f 15808651                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/jre/lib/amd64/server/libjvm.so
+7fbbbd98f000-7fbbbd9c9000 rwxp 00000000 00:00 0 
+7fbbbd9c9000-7fbbbd9e5000 r-xp 00000000 00:2f 15803552                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_thread.so.1.73.0
+7fbbbd9e5000-7fbbbdbe4000 ---p 0001c000 00:2f 15803552                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_thread.so.1.73.0
+7fbbbdbe4000-7fbbbdbe6000 r-xp 0001b000 00:2f 15803552                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_thread.so.1.73.0
+7fbbbdbe6000-7fbbbdbe7000 rwxp 0001d000 00:2f 15803552                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_thread.so.1.73.0
+7fbbbdbe7000-7fbbbdbef000 r-xp 00000000 00:2f 15803551                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_chrono.so.1.73.0
+7fbbbdbef000-7fbbbddee000 ---p 00008000 00:2f 15803551                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_chrono.so.1.73.0
+7fbbbddee000-7fbbbddef000 r-xp 00007000 00:2f 15803551                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_chrono.so.1.73.0
+7fbbbddef000-7fbbbddf0000 rwxp 00008000 00:2f 15803551                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libboost_chrono.so.1.73.0
+7fbbbddf0000-7fbbbde12000 r-xp 00000000 fd:00 34327639                   /usr/lib64/ld-2.17.so
+7fbbbde12000-7fbbbde1b000 rwxp 00000000 00:00 0 
+7fbbbde1b000-7fbbbde33000 r-xp 00000000 00:2f 15803663                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libgcc_s.so.1
+7fbbbde33000-7fbbbde34000 r-xp 00017000 00:2f 15803663                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libgcc_s.so.1
+7fbbbde34000-7fbbbde35000 rwxp 00018000 00:2f 15803663                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libgcc_s.so.1
+7fbbbde35000-7fbbbde36000 rwxp 00000000 00:00 0 
+7fbbbde36000-7fbbbdfff000 r-xp 00000000 00:2f 15801825                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libstdc++.so.6
+7fbbbdfff000-7fbbbe00a000 r-xp 001c8000 00:2f 15801825                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libstdc++.so.6
+7fbbbe00a000-7fbbbe00d000 rwxp 001d3000 00:2f 15801825                   /usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib/libstdc++.so.6
+7fbbbe00d000-7fbbbe011000 rwxp 00000000 00:00 0 
+7fbbbe011000-7fbbbe012000 r-xp 00021000 fd:00 34327639                   /usr/lib64/ld-2.17.so
+7fbbbe012000-7fbbbe013000 rwxp 00022000 fd:00 34327639                   /usr/lib64/ld-2.17.so
+7fbbbe013000-7fbbbe014000 rwxp 00000000 00:00 0 
+7ffe218ab000-7ffe218ae000 ---p 00000000 00:00 0 
+7ffe218ae000-7ffe219ab000 rwxp 00000000 00:00 0                          [stack]
+7ffe219f4000-7ffe219f6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx4096m -Xbatch -Xrs -XX:-UsePerfData -Djava.util.prefs.PreferencesFactory=COM.tfi.util.PreferencesFactory 
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+PATH=/usr/pack/cadence_jasper-22.09.001-zr/Linux64/bin:/usr/pack/cadence_jasper-22.09.001-zr/Linux64/bin:/usr/pack/cadence_jasper-22.09.001-zr/Linux64/bin:/usr/pack/cadence_jasper-22.09.001-zr/bin:/usr/pack/cadence_jasper-22.09.001-zr/STARTUP:/home/kceesay/prefix-cellift/.cargo/bin:/usr/sepp/sbin:/usr/sepp/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/kceesay/.local/bin:/home/kceesay/bin
+LD_LIBRARY_PATH=/usr/pack/cadence_jasper-22.09.001-zr/Linux64/lib
+SHELL=/bin/bash
+DISPLAY=localhost:10.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x860350], sa_mask[0]=0x7fffffff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x860350], sa_mask[0]=0x7fffffff, sa_flags=0x10000004
+SIGFPE: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGPIPE: SIG_IGN, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGXFSZ: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGILL: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x711de0], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [jg_session+0x46bc0], sa_mask[0]=0x00000000, sa_flags=0x10000000
+SIGINT: [jg_session+0x46bc0], sa_mask[0]=0x00000000, sa_flags=0x10000000
+SIGTERM: [jg_session+0x46bc0], sa_mask[0]=0x00000000, sa_flags=0x10000000
+SIGQUIT: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+
+
+---------------  S Y S T E M  ---------------
+
+OS:CentOS Linux release 7.9.2009 (Core)
+
+uname:Linux 3.10.0-1160.118.1.el7.x86_64 #1 SMP Wed Apr 24 16:01:50 UTC 2024 x86_64
+libc:glibc 2.17 NPTL 2.17 
+rlimit: STACK 8192k, CORE 0k, NPROC 4096, NOFILE 100000, AS infinity
+load average:11.42 155.64 246.48
+
+/proc/meminfo:
+MemTotal:       1341508284 kB
+MemFree:        1264654684 kB
+MemAvailable:   1268061516 kB
+Buffers:            1072 kB
+Cached:          6122704 kB
+SwapCached:            0 kB
+Active:         57069952 kB
+Inactive:        4255864 kB
+Active(anon):   55202168 kB
+Inactive(anon):    20368 kB
+Active(file):    1867784 kB
+Inactive(file):  4235496 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:      10485756 kB
+SwapFree:       10485756 kB
+Dirty:               772 kB
+Writeback:           480 kB
+AnonPages:      55205132 kB
+Mapped:           328792 kB
+Shmem:             21172 kB
+Slab:             942348 kB
+SReclaimable:     720788 kB
+SUnreclaim:       221560 kB
+KernelStack:       17232 kB
+PageTables:       133920 kB
+NFS_Unstable:         12 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    681239896 kB
+Committed_AS:   61692572 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:     3403604 kB
+VmallocChunk:   34356230140 kB
+Percpu:            28416 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:  28030976 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      214872 kB
+DirectMap2M:     5027840 kB
+DirectMap1G:    1360003072 kB
+
+
+CPU:total 60 (1 cores per cpu, 1 threads per core) family 6 model 85 stepping 6, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 1
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 2
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 3
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 4
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 5
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 6
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 7
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 8
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 9
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 10
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 11
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 12
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 12
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 12
+initial apicid	: 12
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 13
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 13
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 13
+initial apicid	: 13
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 14
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 14
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 14
+initial apicid	: 14
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 15
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 15
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 15
+initial apicid	: 15
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 16
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 16
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 16
+initial apicid	: 16
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 17
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 17
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 17
+initial apicid	: 17
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 18
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 18
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 18
+initial apicid	: 18
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 19
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 19
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 19
+initial apicid	: 19
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 20
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 20
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 20
+initial apicid	: 20
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 21
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 21
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 21
+initial apicid	: 21
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 22
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 22
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 22
+initial apicid	: 22
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 23
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 23
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 23
+initial apicid	: 23
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 24
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 24
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 24
+initial apicid	: 24
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 25
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 25
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 25
+initial apicid	: 25
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 26
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 26
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 26
+initial apicid	: 26
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 27
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 27
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 27
+initial apicid	: 27
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 28
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 28
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 28
+initial apicid	: 28
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 29
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 29
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 29
+initial apicid	: 29
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 30
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 30
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 30
+initial apicid	: 30
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 31
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 31
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 31
+initial apicid	: 31
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 32
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 32
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 32
+initial apicid	: 32
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 33
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 33
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 33
+initial apicid	: 33
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 34
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 34
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 34
+initial apicid	: 34
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 35
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 35
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 35
+initial apicid	: 35
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 36
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 36
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 36
+initial apicid	: 36
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 37
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 37
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 37
+initial apicid	: 37
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 38
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 38
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 38
+initial apicid	: 38
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 39
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 39
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 39
+initial apicid	: 39
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 40
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 40
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 40
+initial apicid	: 40
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 41
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 41
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 41
+initial apicid	: 41
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 42
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 42
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 42
+initial apicid	: 42
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 43
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 43
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 43
+initial apicid	: 43
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 44
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 44
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 44
+initial apicid	: 44
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 45
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 45
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 45
+initial apicid	: 45
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 46
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 46
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 46
+initial apicid	: 46
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 47
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 47
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 47
+initial apicid	: 47
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 48
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 48
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 48
+initial apicid	: 48
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 49
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 49
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 49
+initial apicid	: 49
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 50
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 50
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 50
+initial apicid	: 50
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 51
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 51
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 51
+initial apicid	: 51
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 52
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 52
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 52
+initial apicid	: 52
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 53
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 53
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 53
+initial apicid	: 53
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 54
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 54
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 54
+initial apicid	: 54
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 55
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 55
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 55
+initial apicid	: 55
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 56
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 56
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 56
+initial apicid	: 56
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 57
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 57
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 57
+initial apicid	: 57
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 58
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 58
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 58
+initial apicid	: 58
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 59
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel Xeon Processor (Cascadelake)
+stepping	: 6
+microcode	: 0x1
+cpu MHz		: 3392.030
+cache size	: 16384 KB
+physical id	: 59
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 59
+initial apicid	: 59
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat umip pku ospke avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+bogomips	: 6784.06
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 1341508284k(1264654684k free), swap 10485756k(10485756k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (20.8-b03) for linux-amd64 JRE (1.6.0_33-b04), built on Jun 21 2012 16:28:12 by "java_re" with gcc 3.2.2 (SuSE Linux)
+
+time: Fri Jun  7 14:02:12 2024
+elapsed time: 64410 seconds
+

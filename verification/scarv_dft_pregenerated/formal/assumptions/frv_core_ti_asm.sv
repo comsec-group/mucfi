@@ -1,0 +1,16 @@
+    asm_no_taint_top_dmem_error_t0: assume property(dmem_error_t0 == 0);
+    asm_no_taint_top_dmem_gnt_t0: assume property(dmem_gnt_t0 == 0);
+    asm_no_taint_top_dmem_rdata_t0: assume property(dmem_rdata_t0 == 0);
+    asm_no_taint_top_dmem_recv_t0: assume property(dmem_recv_t0 == 0);
+    asm_no_taint_top_imem_error_t0: assume property(imem_error_t0 == 0);
+    asm_no_taint_top_imem_gnt_t0: assume property(imem_gnt_t0 == 0);
+    asm_no_taint_top_imem_rdata_t0: assume property(imem_rdata_t0 == 0);
+    asm_no_taint_top_imem_recv_t0: assume property(imem_recv_t0 == 0);
+    asm_no_taint_top_int_extern_cause_t0: assume property(int_extern_cause_t0 == 0);
+    asm_no_taint_top_int_external_t0: assume property(int_external_t0 == 0);
+    asm_no_taint_top_int_nmi_t0: assume property(int_nmi_t0 == 0);
+    asm_no_taint_top_int_software_t0: assume property(int_software_t0 == 0);
+    asm_no_taint_top_rng_req_ready_t0: assume property(rng_req_ready_t0 == 0);
+    asm_no_taint_top_rng_rsp_data_t0: assume property(rng_rsp_data_t0 == 0);
+    asm_no_taint_top_rng_rsp_status_t0: assume property(rng_rsp_status_t0 == 0);
+    asm_no_taint_top_rng_rsp_valid_t0: assume property(rng_rsp_valid_t0 == 0);

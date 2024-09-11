@@ -1,0 +1,8 @@
+asm_declass_i_pipeline__i_pipeline_s4_writeback__gpr_wdata_t0: assume property(!i_pipeline__i_pipeline_s4_writeback__gpr_wdata_t0);
+asm_declass_i_pipeline__i_pipeline_s4_writeback__gpr_wdata_hi_t0: assume property(!i_pipeline__i_pipeline_s4_writeback__gpr_wdata_hi_t0);
+asm_declass_i_pipeline__gpr_wdata_t0: assume property(!i_pipeline__gpr_wdata_t0);
+asm_declass_i_pipeline__fwd_s3_wdata_t0: assume property(!i_pipeline__fwd_s3_wdata_t0);
+asm_declass_i_pipeline__fwd_s2_wdata_t0: assume property(!i_pipeline__fwd_s2_wdata_t0);
+asm_declass_i_pipeline__gpr_wdata_hi_t0: assume property(!i_pipeline__gpr_wdata_hi_t0);
+asm_declass_i_pipeline__fwd_s3_wdata_hi_t0: assume property(!i_pipeline__fwd_s3_wdata_hi_t0);
+asm_declass_i_pipeline__fwd_s2_wdata_hi_t0: assume property(!i_pipeline__fwd_s2_wdata_hi_t0);

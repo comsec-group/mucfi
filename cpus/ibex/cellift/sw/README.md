@@ -1,0 +1,2 @@
+Ibex fetches first from boot address + 0x80.
+If boot address is set to 0x80000080 in the dv testbench, then the start address in the linker script (link.ld in one of the software sub directories) must be 0x80000080.

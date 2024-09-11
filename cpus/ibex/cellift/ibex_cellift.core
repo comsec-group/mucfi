@@ -1,0 +1,37 @@
+CAPI=2:
+# Copyright lowRISC contributors.
+# Licensed under the Apache License, Version 2.0, see LICENSE for details.
+# SPDX-License-Identifier: Apache-2.0
+name: "::ibex_cellift:0.1"
+description: "Regroup all ibex sources for IFT instrumentation"
+
+filesets:
+  files_rtl:
+    depend:
+      - lowrisc:ip:rv_core_ibex
+      - lowrisc:prim:ram_1p
+      - lowrisc:prim:assert
+      - lowrisc:prim:mubi:0.1
+    files:
+      - src/noerr_tlul_adapter_sram.sv
+      - src/noerr_rv_core_ibex.sv
+      - src/cellift_rv_core_ibex_mem_top.sv
+      - src/prim_util_memload.svh: {is_include_file: true}
+      # - src/cellift_prim_subreg_arb.sv
+    file_type: systemVerilogSource
+
+targets:
+  synth:
+    filesets:
+      - files_rtl
+    default_tool: verilator
+    toplevel: cellift_rv_core_ibex_mem_top
+    tools:
+      verilator:
+        mode: lint-only
+        verilator_options:
+          - "-Wall"
+          - "-Wno-fatal"
+          # RAM primitives wider than 64bit (required for ECC) fail to build in
+          # Verilator without increasing the unroll count (see Verilator#1266)
+          - "--unroll-count 72"

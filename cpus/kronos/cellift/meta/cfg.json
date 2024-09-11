@@ -1,0 +1,17 @@
+{
+    "misaligned_data_supported": false,
+    "privlvs": "mu",
+    "mmu": "",
+    "marchflags": "-march=rv32i -mabi=ilp32",
+    "bootaddr": "0x80000000",
+    "stopsigaddr": "0x0",
+    "trapsigaddr": "0x8",
+    "regdumpaddr": "0x10",
+    "fpregdumpaddr": "0x18",
+    "bootrom_elf": "",
+    "lead_cycles": 0,
+    "toplevel": "kronos_tiny_soc",
+    "trace_top": "kronos_tiny_soc.i_kronos",
+    "verilatorprefix": "kronos",
+    "memorywordsize": 32
+}

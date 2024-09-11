@@ -1,0 +1,122 @@
+Jasper Apps 2022.09p001 64 bits 2022.10.25 11:32:28 UTC
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2022 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc.
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+Jasper Apps Analysis Session - /data/kceesay/workspace/cellift-formal/pc_taint_check/picorv32_ift_w_compressed/jgproject/sessionLogs/session_0
+
+INFO: successfully checked out license "jasper_fao".
+INFO: reading configuration file "/home/kceesay/.config/cadence/jasper.conf".
+% session -refresh
+%% set designFile /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v
+/data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v
+%% set top cellift_picorv32
+cellift_picorv32
+% analyze -sv12 $designFile
+[-- (VERI-1482)] Analyzing Verilog file '/usr/pack/cadence_jasper-22.09.001-zr/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '/data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v'
+% elaborate -top $top
+INFO (ISW003): Top module name is "cellift_picorv32".
+[INFO (HIER-8002)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1811): Disabling old hierarchical reference handler
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1837): compiling module 'picorv32_pcpi_mul'
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1947): expression size 32 truncated to fit in target size 7
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1960): expression size 64 truncated to fit in target size 32
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(2055): compiling module 'picorv32_pcpi_div'
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(2130): expression size 63 truncated to fit in target size 32
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1): compiling module 'cellift_picorv32'
+[WARN (VERI-1060)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(181): 'initial' construct is ignored
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(259): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1173)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(314): synthesis - simulation differences may occur when using full_case directive
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(622): expression size 72 truncated to fit in target size 64
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1000): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1115): expression size 33 truncated to fit in target size 32
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1120): expression size 32 truncated to fit in target size 1
+[WARN (VERI-1173)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1122): synthesis - simulation differences may occur when using full_case directive
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1122): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1173)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1132): synthesis - simulation differences may occur when using full_case directive
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1132): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1161): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1184): expression size 32 truncated to fit in target size 5
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1198): expression size 32 truncated to fit in target size 5
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1216): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1279): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1363): expression size 32 truncated to fit in target size 5
+[WARN (VERI-1173)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1395): synthesis - simulation differences may occur when using full_case directive
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1395): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1484): expression size 32 truncated to fit in target size 5
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1489): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1355): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1512): expression size 32 truncated to fit in target size 5
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1517): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1173)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1586): synthesis - simulation differences may occur when using full_case directive
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1586): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1591): expression size 32 truncated to fit in target size 5
+[WARN (VERI-1173)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1595): synthesis - simulation differences may occur when using full_case directive
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1595): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1209)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1600): expression size 32 truncated to fit in target size 5
+[WARN (VERI-1173)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1609): synthesis - simulation differences may occur when using full_case directive
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1609): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1173)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1633): synthesis - simulation differences may occur when using full_case directive
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1633): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1173)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1650): synthesis - simulation differences may occur when using full_case directive
+[WARN (VERI-1174)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1650): synthesis - simulation differences may occur when using parallel_case directive
+[WARN (VERI-1173)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/sv2v_out.v(1272): synthesis - simulation differences may occur when using full_case directive
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          3 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (3 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      9 (3 synthesized)
+  Number of analyzed VHDL entities        0 (0 synthesized)
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+cellift_picorv32
+[<embedded>] % get_design_info
+Statistics [for instance "cellift_picorv32"]
+---------------------------
+# Flops:         238 (3220) (0 property flop bits)
+# Latches:       0 (0)
+# Gates:         1463 (26964)
+# Nets:          1565
+# Ports:         56
+# RTL Lines:     2021
+# RTL Instances: 3
+# Embedded Assumptions: 0
+# Embedded Assertions:  0
+# Embedded Covers:      0
+3220
+[<embedded>] % exit -force
+[<embedded>] % INFO (IPL005): Received request to exit from the console.
+INFO (IPL018): The peak resident set memory use for this session was 0.390 GB.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.

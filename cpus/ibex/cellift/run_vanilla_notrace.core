@@ -1,0 +1,62 @@
+CAPI=2:
+# Copyright 2022 Flavien Solt, ETH Zurich.
+# Licensed under the General Public License, Version 3.0, see LICENSE for details.
+# SPDX-License-Identifier: GPL-3.0-only
+name: "::run_vanilla_notrace_:0.1"
+description: "Run on vanilla Ibex"
+
+filesets:
+  files_cells:
+    depend:
+      - lowrisc:ibex:ibex_simple_system_core
+      - lowrisc:ip:rv_core_ibex
+    files:
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/src/ift_sram_mem_notaint.sv
+      - src/ibex_tiny_soc.sv
+      - generated/out/vanilla.sv
+    file_type: systemVerilogSource
+
+  files_dv:
+    files:
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/elf.h : {is_include_file: true}
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/taintloader.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/elfloader.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/common_functions.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/ticks.h : {is_include_file: true}
+      - dv/testbench.h : {is_include_file: true}
+      - dv/toplevel.cc
+    file_type: cppSource
+
+targets:
+  default:
+    default_tool: verilator
+    filesets:
+      - files_cells
+      - files_dv
+    toplevel: ibex_tiny_soc
+    tools:
+      verilator:
+        mode: cc
+        verilator_options:
+          - '-CFLAGS "-std=c++11 -Wall -DIS_VANILLA -DTOPLEVEL_NAME=ibex_tiny_soc -g -O0"'
+          - '-LDFLAGS "-pthread -lutil -lelf"'
+          - "-Wall"
+          - "-Wno-PINCONNECTEMPTY"
+          - "-Wno-fatal"
+          - "-Wno-DECLFILENAME"
+          - "-Wno-PINMISSING"
+          - "-Wno-VARHIDDEN"
+          - "-Wno-IMPLICIT"
+          - "-Wno-WIDTH"
+          - "-Wno-UNUSEDPARAM"
+          - "-Wno-UNUSEDSIGNAL"
+          - "-Wno-LATCH"
+          - "-Wno-SYNCASYNCNET"
+          - "-Wno-LITENDIAN"
+          - "-Wno-UNOPTFLAT"
+          - "-Wno-ALWCOMBORDER"
+          - "-Wno-BLKSEQ"
+          # Comment and flag copied from ibex_simple_system.core:
+          # RAM primitives wider than 64bit (required for ECC) fail to build in
+          # Verilator without increasing the unroll count (see Verilator#1266)
+          - "--unroll-count 72"

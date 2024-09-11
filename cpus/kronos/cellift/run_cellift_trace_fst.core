@@ -1,0 +1,67 @@
+CAPI=2:
+# Copyright 2022 Flavien Solt, ETH Zurich.
+# Licensed under the General Public License, Version 3.0, see LICENSE for details.
+# SPDX-License-Identifier: GPL-3.0-only
+name: "::run_cellift_trace_fst:0.1"
+description: "Run CellIFT"
+
+filesets:
+  files_cells:
+    depend:
+    files:
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/src/ift_sram_mem.sv
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/src/custom_irqgen.sv
+      - src/kronos_tiny_soc_taints.sv
+      - generated/out/cellift.sv
+    file_type: systemVerilogSource
+
+  files_dv:
+    files:
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/elf.h : {is_include_file: true}
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/taintloader.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/elfloader.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/common_functions.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/ticks.h : {is_include_file: true}
+      - dv/testbench.h : {is_include_file: true}
+      - dv/toplevel.cc
+    file_type: cppSource
+
+targets:
+  default:
+    default_tool: verilator
+    filesets:
+      - files_cells
+      - files_dv
+    toplevel: kronos_tiny_soc
+    tools:
+      verilator:
+        mode: cc
+        verilator_options:
+          - '--trace'
+          - '--trace-fst'
+          - '--trace-structs'
+          - '--trace-params'
+          - '--trace-max-array 1024'
+          - '-CFLAGS "-std=c++11 -Wall -DTOPLEVEL_NAME=ibex_tiny_soc -g -O0 -DTAINTS"'
+          - '-LDFLAGS "-pthread -lutil"'
+          - "-Wall"
+          - "-Wno-PINCONNECTEMPTY"
+          - "-Wno-fatal"
+          - "-Wno-EOFNEWLINE"
+          - "-Wno-DECLFILENAME"
+          - "-Wno-PINMISSING"
+          - "-Wno-UNUSEDPARAM"
+          - "-Wno-WIDTH"
+          - "-Wno-UNUSEDSIGNAL"
+          - "-Wno-CASEOVERLAP"
+          - "-Wno-CASEINCOMPLETE"
+          - "-Wno-BLKSEQ"
+          - "-Wno-UNDRIVEN"
+          - "-Wno-UNOPTFLAT"
+          - "-Wno-TIMESCALEMOD"
+          - "-Wno-PINNOTFOUND"
+          - "-Wno-UNOPTFLAT"
+          - "-Wno-IMPLICIT"
+          - "-Wno-CMPCONST"
+          - "-Wno-SYNCASYNCNET"
+

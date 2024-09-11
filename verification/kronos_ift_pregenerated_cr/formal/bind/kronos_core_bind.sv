@@ -1,0 +1,1712 @@
+bind kronos_core kronos_core_fpv kronos_core_fpv_bind (
+.clk(
+  clk),
+.rstz(
+  rstz),
+.instr_addr(
+  instr_addr),
+.instr_data(
+  instr_data),
+.instr_req(
+  instr_req),
+.instr_ack(
+  instr_ack),
+.data_addr(
+  data_addr),
+.data_rd_data(
+  data_rd_data),
+.data_wr_data(
+  data_wr_data),
+.data_mask(
+  data_mask),
+.data_wr_en(
+  data_wr_en),
+.data_req(
+  data_req),
+.data_ack(
+  data_ack),
+.software_interrupt(
+  software_interrupt),
+.timer_interrupt(
+  timer_interrupt),
+.external_interrupt(
+  external_interrupt),
+.instr_data_t0(
+  instr_data_t0),
+.instr_ack_t0(
+  instr_ack_t0),
+.instr_addr_t0(
+  instr_addr_t0),
+.instr_req_t0(
+  instr_req_t0),
+.data_ack_t0(
+  data_ack_t0),
+.data_addr_t0(
+  data_addr_t0),
+.data_mask_t0(
+  data_mask_t0),
+.data_rd_data_t0(
+  data_rd_data_t0),
+.data_req_t0(
+  data_req_t0),
+.data_wr_data_t0(
+  data_wr_data_t0),
+.data_wr_en_t0(
+  data_wr_en_t0),
+.external_interrupt_t0(
+  external_interrupt_t0),
+.software_interrupt_t0(
+  software_interrupt_t0),
+.timer_interrupt_t0(
+  timer_interrupt_t0),
+.branch(
+  branch),
+.branch_t0(
+  branch_t0),
+.branch_target(
+  branch_target),
+.branch_target_t0(
+  branch_target_t0),
+.decode_addr(
+  decode_addr),
+.decode_addr_t0(
+  decode_addr_t0),
+.decode_aluop(
+  decode_aluop),
+.decode_aluop_t0(
+  decode_aluop_t0),
+.decode_basic(
+  decode_basic),
+.decode_basic_t0(
+  decode_basic_t0),
+.decode_branch(
+  decode_branch),
+.decode_branch_t0(
+  decode_branch_t0),
+.decode_csr(
+  decode_csr),
+.decode_csr_t0(
+  decode_csr_t0),
+.decode_illegal(
+  decode_illegal),
+.decode_illegal_t0(
+  decode_illegal_t0),
+.decode_ir(
+  decode_ir),
+.decode_ir_t0(
+  decode_ir_t0),
+.decode_jump(
+  decode_jump),
+.decode_jump_t0(
+  decode_jump_t0),
+.decode_load(
+  decode_load),
+.decode_load_t0(
+  decode_load_t0),
+.decode_mask(
+  decode_mask),
+.decode_mask_t0(
+  decode_mask_t0),
+.decode_misaligned_jmp(
+  decode_misaligned_jmp),
+.decode_misaligned_jmp_t0(
+  decode_misaligned_jmp_t0),
+.decode_misaligned_ldst(
+  decode_misaligned_ldst),
+.decode_misaligned_ldst_t0(
+  decode_misaligned_ldst_t0),
+.decode_op1(
+  decode_op1),
+.decode_op1_t0(
+  decode_op1_t0),
+.decode_op2(
+  decode_op2),
+.decode_op2_t0(
+  decode_op2_t0),
+.decode_pc(
+  decode_pc),
+.decode_pc_t0(
+  decode_pc_t0),
+.decode_rdy(
+  decode_rdy),
+.decode_rdy_t0(
+  decode_rdy_t0),
+.decode_regwr_alu(
+  decode_regwr_alu),
+.decode_regwr_alu_t0(
+  decode_regwr_alu_t0),
+.decode_store(
+  decode_store),
+.decode_store_t0(
+  decode_store_t0),
+.decode_sysop(
+  decode_sysop),
+.decode_sysop_t0(
+  decode_sysop_t0),
+.decode_system(
+  decode_system),
+.decode_system_t0(
+  decode_system_t0),
+.decode_vld(
+  decode_vld),
+.decode_vld_t0(
+  decode_vld_t0),
+.fetch_ir(
+  fetch_ir),
+.fetch_ir_t0(
+  fetch_ir_t0),
+.fetch_pc(
+  fetch_pc),
+.fetch_pc_t0(
+  fetch_pc_t0),
+.fetch_rdy(
+  fetch_rdy),
+.fetch_rdy_t0(
+  fetch_rdy_t0),
+.fetch_vld(
+  fetch_vld),
+.fetch_vld_t0(
+  fetch_vld_t0),
+.immediate(
+  immediate),
+.immediate_t0(
+  immediate_t0),
+.regrd_rs1(
+  regrd_rs1),
+.regrd_rs1_en(
+  regrd_rs1_en),
+.regrd_rs1_en_t0(
+  regrd_rs1_en_t0),
+.regrd_rs1_t0(
+  regrd_rs1_t0),
+.regrd_rs2(
+  regrd_rs2),
+.regrd_rs2_en(
+  regrd_rs2_en),
+.regrd_rs2_en_t0(
+  regrd_rs2_en_t0),
+.regrd_rs2_t0(
+  regrd_rs2_t0),
+.regwr_data(
+  regwr_data),
+.regwr_data_t0(
+  regwr_data_t0),
+.regwr_en(
+  regwr_en),
+.regwr_en_t0(
+  regwr_en_t0),
+.regwr_pending(
+  regwr_pending),
+.regwr_pending_t0(
+  regwr_pending_t0),
+.regwr_sel(
+  regwr_sel),
+.regwr_sel_t0(
+  regwr_sel_t0),
+.u_ex__clk(
+  u_ex.clk),
+.u_ex__rstz(
+  u_ex.rstz),
+.u_ex__decode_pc(
+  u_ex.decode_pc),
+.u_ex__decode_ir(
+  u_ex.decode_ir),
+.u_ex__decode_op1(
+  u_ex.decode_op1),
+.u_ex__decode_op2(
+  u_ex.decode_op2),
+.u_ex__decode_addr(
+  u_ex.decode_addr),
+.u_ex__decode_basic(
+  u_ex.decode_basic),
+.u_ex__decode_aluop(
+  u_ex.decode_aluop),
+.u_ex__decode_regwr_alu(
+  u_ex.decode_regwr_alu),
+.u_ex__decode_jump(
+  u_ex.decode_jump),
+.u_ex__decode_branch(
+  u_ex.decode_branch),
+.u_ex__decode_load(
+  u_ex.decode_load),
+.u_ex__decode_store(
+  u_ex.decode_store),
+.u_ex__decode_mask(
+  u_ex.decode_mask),
+.u_ex__decode_csr(
+  u_ex.decode_csr),
+.u_ex__decode_system(
+  u_ex.decode_system),
+.u_ex__decode_sysop(
+  u_ex.decode_sysop),
+.u_ex__decode_illegal(
+  u_ex.decode_illegal),
+.u_ex__decode_misaligned_jmp(
+  u_ex.decode_misaligned_jmp),
+.u_ex__decode_misaligned_ldst(
+  u_ex.decode_misaligned_ldst),
+.u_ex__decode_vld(
+  u_ex.decode_vld),
+.u_ex__decode_rdy(
+  u_ex.decode_rdy),
+.u_ex__regwr_data(
+  u_ex.regwr_data),
+.u_ex__regwr_sel(
+  u_ex.regwr_sel),
+.u_ex__regwr_en(
+  u_ex.regwr_en),
+.u_ex__regwr_pending(
+  u_ex.regwr_pending),
+.u_ex__branch_target(
+  u_ex.branch_target),
+.u_ex__branch(
+  u_ex.branch),
+.u_ex__data_addr(
+  u_ex.data_addr),
+.u_ex__data_rd_data(
+  u_ex.data_rd_data),
+.u_ex__data_wr_data(
+  u_ex.data_wr_data),
+.u_ex__data_mask(
+  u_ex.data_mask),
+.u_ex__data_wr_en(
+  u_ex.data_wr_en),
+.u_ex__data_req(
+  u_ex.data_req),
+.u_ex__data_ack(
+  u_ex.data_ack),
+.u_ex__software_interrupt(
+  u_ex.software_interrupt),
+.u_ex__timer_interrupt(
+  u_ex.timer_interrupt),
+.u_ex__external_interrupt(
+  u_ex.external_interrupt),
+.u_ex__regwr_data_t0(
+  u_ex.regwr_data_t0),
+.u_ex__regwr_en_t0(
+  u_ex.regwr_en_t0),
+.u_ex__regwr_sel_t0(
+  u_ex.regwr_sel_t0),
+.u_ex__branch_t0(
+  u_ex.branch_t0),
+.u_ex__branch_target_t0(
+  u_ex.branch_target_t0),
+.u_ex__decode_rdy_t0(
+  u_ex.decode_rdy_t0),
+.u_ex__decode_vld_t0(
+  u_ex.decode_vld_t0),
+.u_ex__regwr_pending_t0(
+  u_ex.regwr_pending_t0),
+.u_ex__decode_addr_t0(
+  u_ex.decode_addr_t0),
+.u_ex__decode_aluop_t0(
+  u_ex.decode_aluop_t0),
+.u_ex__decode_basic_t0(
+  u_ex.decode_basic_t0),
+.u_ex__decode_branch_t0(
+  u_ex.decode_branch_t0),
+.u_ex__decode_csr_t0(
+  u_ex.decode_csr_t0),
+.u_ex__decode_illegal_t0(
+  u_ex.decode_illegal_t0),
+.u_ex__decode_ir_t0(
+  u_ex.decode_ir_t0),
+.u_ex__decode_jump_t0(
+  u_ex.decode_jump_t0),
+.u_ex__decode_load_t0(
+  u_ex.decode_load_t0),
+.u_ex__decode_mask_t0(
+  u_ex.decode_mask_t0),
+.u_ex__decode_misaligned_jmp_t0(
+  u_ex.decode_misaligned_jmp_t0),
+.u_ex__decode_misaligned_ldst_t0(
+  u_ex.decode_misaligned_ldst_t0),
+.u_ex__decode_op1_t0(
+  u_ex.decode_op1_t0),
+.u_ex__decode_op2_t0(
+  u_ex.decode_op2_t0),
+.u_ex__decode_pc_t0(
+  u_ex.decode_pc_t0),
+.u_ex__decode_regwr_alu_t0(
+  u_ex.decode_regwr_alu_t0),
+.u_ex__decode_store_t0(
+  u_ex.decode_store_t0),
+.u_ex__decode_sysop_t0(
+  u_ex.decode_sysop_t0),
+.u_ex__decode_system_t0(
+  u_ex.decode_system_t0),
+.u_ex__data_ack_t0(
+  u_ex.data_ack_t0),
+.u_ex__data_addr_t0(
+  u_ex.data_addr_t0),
+.u_ex__data_mask_t0(
+  u_ex.data_mask_t0),
+.u_ex__data_rd_data_t0(
+  u_ex.data_rd_data_t0),
+.u_ex__data_req_t0(
+  u_ex.data_req_t0),
+.u_ex__data_wr_data_t0(
+  u_ex.data_wr_data_t0),
+.u_ex__data_wr_en_t0(
+  u_ex.data_wr_en_t0),
+.u_ex__external_interrupt_t0(
+  u_ex.external_interrupt_t0),
+.u_ex__software_interrupt_t0(
+  u_ex.software_interrupt_t0),
+.u_ex__timer_interrupt_t0(
+  u_ex.timer_interrupt_t0),
+.u_ex__activate_trap(
+  u_ex.activate_trap),
+.u_ex__activate_trap_t0(
+  u_ex.activate_trap_t0),
+.u_ex__basic_rdy(
+  u_ex.basic_rdy),
+.u_ex__basic_rdy_t0(
+  u_ex.basic_rdy_t0),
+.u_ex__core_interrupt(
+  u_ex.core_interrupt),
+.u_ex__core_interrupt_cause(
+  u_ex.core_interrupt_cause),
+.u_ex__core_interrupt_cause_t0(
+  u_ex.core_interrupt_cause_t0),
+.u_ex__core_interrupt_t0(
+  u_ex.core_interrupt_t0),
+.u_ex__csr_data(
+  u_ex.csr_data),
+.u_ex__csr_data_t0(
+  u_ex.csr_data_t0),
+.u_ex__csr_rdy(
+  u_ex.csr_rdy),
+.u_ex__csr_rdy_t0(
+  u_ex.csr_rdy_t0),
+.u_ex__csr_vld(
+  u_ex.csr_vld),
+.u_ex__csr_vld_t0(
+  u_ex.csr_vld_t0),
+.u_ex__exception(
+  u_ex.exception),
+.u_ex__exception_t0(
+  u_ex.exception_t0),
+.u_ex__instr_jump(
+  u_ex.instr_jump),
+.u_ex__instr_jump_t0(
+  u_ex.instr_jump_t0),
+.u_ex__instr_vld(
+  u_ex.instr_vld),
+.u_ex__instr_vld_t0(
+  u_ex.instr_vld_t0),
+.u_ex__instret(
+  u_ex.instret),
+.u_ex__instret_t0(
+  u_ex.instret_t0),
+.u_ex__load_data(
+  u_ex.load_data),
+.u_ex__load_data_t0(
+  u_ex.load_data_t0),
+.u_ex__lsu_rdy(
+  u_ex.lsu_rdy),
+.u_ex__lsu_rdy_t0(
+  u_ex.lsu_rdy_t0),
+.u_ex__lsu_vld(
+  u_ex.lsu_vld),
+.u_ex__lsu_vld_t0(
+  u_ex.lsu_vld_t0),
+.u_ex__next_state(
+  u_ex.next_state),
+.u_ex__next_state_t0(
+  u_ex.next_state_t0),
+.u_ex__regwr_csr(
+  u_ex.regwr_csr),
+.u_ex__regwr_csr_t0(
+  u_ex.regwr_csr_t0),
+.u_ex__regwr_lsu(
+  u_ex.regwr_lsu),
+.u_ex__regwr_lsu_t0(
+  u_ex.regwr_lsu_t0),
+.u_ex__regwr_pending_firstcycle(
+  u_ex.regwr_pending_firstcycle),
+.u_ex__regwr_pending_firstcycle_t0(
+  u_ex.regwr_pending_firstcycle_t0),
+.u_ex__regwr_pending_later(
+  u_ex.regwr_pending_later),
+.u_ex__regwr_pending_later_t0(
+  u_ex.regwr_pending_later_t0),
+.u_ex__result(
+  u_ex.result),
+.u_ex__result_t0(
+  u_ex.result_t0),
+.u_ex__return_trap(
+  u_ex.return_trap),
+.u_ex__return_trap_t0(
+  u_ex.return_trap_t0),
+.u_ex__state(
+  u_ex.state),
+.u_ex__state_t0(
+  u_ex.state_t0),
+.u_ex__trap_cause(
+  u_ex.trap_cause),
+.u_ex__trap_cause_t0(
+  u_ex.trap_cause_t0),
+.u_ex__trap_handle(
+  u_ex.trap_handle),
+.u_ex__trap_handle_t0(
+  u_ex.trap_handle_t0),
+.u_ex__trap_jump(
+  u_ex.trap_jump),
+.u_ex__trap_jump_t0(
+  u_ex.trap_jump_t0),
+.u_ex__trap_value(
+  u_ex.trap_value),
+.u_ex__trap_value_t0(
+  u_ex.trap_value_t0),
+.u_ex__u_alu__op1(
+  u_ex.u_alu.op1),
+.u_ex__u_alu__op2(
+  u_ex.u_alu.op2),
+.u_ex__u_alu__aluop(
+  u_ex.u_alu.aluop),
+.u_ex__u_alu__result(
+  u_ex.u_alu.result),
+.u_ex__u_alu__aluop_t0(
+  u_ex.u_alu.aluop_t0),
+.u_ex__u_alu__op1_t0(
+  u_ex.u_alu.op1_t0),
+.u_ex__u_alu__op2_t0(
+  u_ex.u_alu.op2_t0),
+.u_ex__u_alu__result_t0(
+  u_ex.u_alu.result_t0),
+.u_ex__u_alu__R_sign(
+  u_ex.u_alu.R_sign),
+.u_ex__u_alu__R_sign_t0(
+  u_ex.u_alu.R_sign_t0),
+.u_ex__u_alu__adder_B(
+  u_ex.u_alu.adder_B),
+.u_ex__u_alu__adder_B_t0(
+  u_ex.u_alu.adder_B_t0),
+.u_ex__u_alu__cin(
+  u_ex.u_alu.cin),
+.u_ex__u_alu__cin_t0(
+  u_ex.u_alu.cin_t0),
+.u_ex__u_alu__cout(
+  u_ex.u_alu.cout),
+.u_ex__u_alu__cout_t0(
+  u_ex.u_alu.cout_t0),
+.u_ex__u_alu__data(
+  u_ex.u_alu.data),
+.u_ex__u_alu__data_t0(
+  u_ex.u_alu.data_t0),
+.u_ex__u_alu__p0(
+  u_ex.u_alu.p0),
+.u_ex__u_alu__p0_t0(
+  u_ex.u_alu.p0_t0),
+.u_ex__u_alu__p1(
+  u_ex.u_alu.p1),
+.u_ex__u_alu__p1_t0(
+  u_ex.u_alu.p1_t0),
+.u_ex__u_alu__p2(
+  u_ex.u_alu.p2),
+.u_ex__u_alu__p2_t0(
+  u_ex.u_alu.p2_t0),
+.u_ex__u_alu__p3(
+  u_ex.u_alu.p3),
+.u_ex__u_alu__p3_t0(
+  u_ex.u_alu.p3_t0),
+.u_ex__u_alu__p4(
+  u_ex.u_alu.p4),
+.u_ex__u_alu__p4_t0(
+  u_ex.u_alu.p4_t0),
+.u_ex__u_alu__r_adder(
+  u_ex.u_alu.r_adder),
+.u_ex__u_alu__r_adder_t0(
+  u_ex.u_alu.r_adder_t0),
+.u_ex__u_alu__r_and(
+  u_ex.u_alu.r_and),
+.u_ex__u_alu__r_and_t0(
+  u_ex.u_alu.r_and_t0),
+.u_ex__u_alu__r_comp(
+  u_ex.u_alu.r_comp),
+.u_ex__u_alu__r_comp_t0(
+  u_ex.u_alu.r_comp_t0),
+.u_ex__u_alu__r_lt(
+  u_ex.u_alu.r_lt),
+.u_ex__u_alu__r_lt_t0(
+  u_ex.u_alu.r_lt_t0),
+.u_ex__u_alu__r_ltu(
+  u_ex.u_alu.r_ltu),
+.u_ex__u_alu__r_or(
+  u_ex.u_alu.r_or),
+.u_ex__u_alu__r_or_t0(
+  u_ex.u_alu.r_or_t0),
+.u_ex__u_alu__r_shift(
+  u_ex.u_alu.r_shift),
+.u_ex__u_alu__r_shift_t0(
+  u_ex.u_alu.r_shift_t0),
+.u_ex__u_alu__r_xor(
+  u_ex.u_alu.r_xor),
+.u_ex__u_alu__r_xor_t0(
+  u_ex.u_alu.r_xor_t0),
+.u_ex__u_alu__shift_in(
+  u_ex.u_alu.shift_in),
+.u_ex__u_alu__shift_in_t0(
+  u_ex.u_alu.shift_in_t0),
+.u_ex__u_csr__clk(
+  u_ex.u_csr.clk),
+.u_ex__u_csr__rstz(
+  u_ex.u_csr.rstz),
+.u_ex__u_csr__decode_pc(
+  u_ex.u_csr.decode_pc),
+.u_ex__u_csr__decode_ir(
+  u_ex.u_csr.decode_ir),
+.u_ex__u_csr__decode_op1(
+  u_ex.u_csr.decode_op1),
+.u_ex__u_csr__decode_op2(
+  u_ex.u_csr.decode_op2),
+.u_ex__u_csr__decode_addr(
+  u_ex.u_csr.decode_addr),
+.u_ex__u_csr__decode_basic(
+  u_ex.u_csr.decode_basic),
+.u_ex__u_csr__decode_aluop(
+  u_ex.u_csr.decode_aluop),
+.u_ex__u_csr__decode_regwr_alu(
+  u_ex.u_csr.decode_regwr_alu),
+.u_ex__u_csr__decode_jump(
+  u_ex.u_csr.decode_jump),
+.u_ex__u_csr__decode_branch(
+  u_ex.u_csr.decode_branch),
+.u_ex__u_csr__decode_load(
+  u_ex.u_csr.decode_load),
+.u_ex__u_csr__decode_store(
+  u_ex.u_csr.decode_store),
+.u_ex__u_csr__decode_mask(
+  u_ex.u_csr.decode_mask),
+.u_ex__u_csr__decode_csr(
+  u_ex.u_csr.decode_csr),
+.u_ex__u_csr__decode_system(
+  u_ex.u_csr.decode_system),
+.u_ex__u_csr__decode_sysop(
+  u_ex.u_csr.decode_sysop),
+.u_ex__u_csr__decode_illegal(
+  u_ex.u_csr.decode_illegal),
+.u_ex__u_csr__decode_misaligned_jmp(
+  u_ex.u_csr.decode_misaligned_jmp),
+.u_ex__u_csr__decode_misaligned_ldst(
+  u_ex.u_csr.decode_misaligned_ldst),
+.u_ex__u_csr__csr_vld(
+  u_ex.u_csr.csr_vld),
+.u_ex__u_csr__csr_rdy(
+  u_ex.u_csr.csr_rdy),
+.u_ex__u_csr__csr_data(
+  u_ex.u_csr.csr_data),
+.u_ex__u_csr__regwr_csr(
+  u_ex.u_csr.regwr_csr),
+.u_ex__u_csr__instret(
+  u_ex.u_csr.instret),
+.u_ex__u_csr__activate_trap(
+  u_ex.u_csr.activate_trap),
+.u_ex__u_csr__return_trap(
+  u_ex.u_csr.return_trap),
+.u_ex__u_csr__trap_cause(
+  u_ex.u_csr.trap_cause),
+.u_ex__u_csr__trap_value(
+  u_ex.u_csr.trap_value),
+.u_ex__u_csr__trap_handle(
+  u_ex.u_csr.trap_handle),
+.u_ex__u_csr__trap_jump(
+  u_ex.u_csr.trap_jump),
+.u_ex__u_csr__software_interrupt(
+  u_ex.u_csr.software_interrupt),
+.u_ex__u_csr__timer_interrupt(
+  u_ex.u_csr.timer_interrupt),
+.u_ex__u_csr__external_interrupt(
+  u_ex.u_csr.external_interrupt),
+.u_ex__u_csr__core_interrupt(
+  u_ex.u_csr.core_interrupt),
+.u_ex__u_csr__core_interrupt_cause(
+  u_ex.u_csr.core_interrupt_cause),
+.u_ex__u_csr__decode_addr_t0(
+  u_ex.u_csr.decode_addr_t0),
+.u_ex__u_csr__decode_aluop_t0(
+  u_ex.u_csr.decode_aluop_t0),
+.u_ex__u_csr__decode_basic_t0(
+  u_ex.u_csr.decode_basic_t0),
+.u_ex__u_csr__decode_branch_t0(
+  u_ex.u_csr.decode_branch_t0),
+.u_ex__u_csr__decode_csr_t0(
+  u_ex.u_csr.decode_csr_t0),
+.u_ex__u_csr__decode_illegal_t0(
+  u_ex.u_csr.decode_illegal_t0),
+.u_ex__u_csr__decode_ir_t0(
+  u_ex.u_csr.decode_ir_t0),
+.u_ex__u_csr__decode_jump_t0(
+  u_ex.u_csr.decode_jump_t0),
+.u_ex__u_csr__decode_load_t0(
+  u_ex.u_csr.decode_load_t0),
+.u_ex__u_csr__decode_mask_t0(
+  u_ex.u_csr.decode_mask_t0),
+.u_ex__u_csr__decode_misaligned_jmp_t0(
+  u_ex.u_csr.decode_misaligned_jmp_t0),
+.u_ex__u_csr__decode_misaligned_ldst_t0(
+  u_ex.u_csr.decode_misaligned_ldst_t0),
+.u_ex__u_csr__decode_op1_t0(
+  u_ex.u_csr.decode_op1_t0),
+.u_ex__u_csr__decode_op2_t0(
+  u_ex.u_csr.decode_op2_t0),
+.u_ex__u_csr__decode_pc_t0(
+  u_ex.u_csr.decode_pc_t0),
+.u_ex__u_csr__decode_regwr_alu_t0(
+  u_ex.u_csr.decode_regwr_alu_t0),
+.u_ex__u_csr__decode_store_t0(
+  u_ex.u_csr.decode_store_t0),
+.u_ex__u_csr__decode_sysop_t0(
+  u_ex.u_csr.decode_sysop_t0),
+.u_ex__u_csr__decode_system_t0(
+  u_ex.u_csr.decode_system_t0),
+.u_ex__u_csr__activate_trap_t0(
+  u_ex.u_csr.activate_trap_t0),
+.u_ex__u_csr__core_interrupt_t0(
+  u_ex.u_csr.core_interrupt_t0),
+.u_ex__u_csr__core_interrupt_cause_t0(
+  u_ex.u_csr.core_interrupt_cause_t0),
+.u_ex__u_csr__csr_data_t0(
+  u_ex.u_csr.csr_data_t0),
+.u_ex__u_csr__csr_rdy_t0(
+  u_ex.u_csr.csr_rdy_t0),
+.u_ex__u_csr__csr_vld_t0(
+  u_ex.u_csr.csr_vld_t0),
+.u_ex__u_csr__external_interrupt_t0(
+  u_ex.u_csr.external_interrupt_t0),
+.u_ex__u_csr__instret_t0(
+  u_ex.u_csr.instret_t0),
+.u_ex__u_csr__regwr_csr_t0(
+  u_ex.u_csr.regwr_csr_t0),
+.u_ex__u_csr__return_trap_t0(
+  u_ex.u_csr.return_trap_t0),
+.u_ex__u_csr__software_interrupt_t0(
+  u_ex.u_csr.software_interrupt_t0),
+.u_ex__u_csr__timer_interrupt_t0(
+  u_ex.u_csr.timer_interrupt_t0),
+.u_ex__u_csr__trap_cause_t0(
+  u_ex.u_csr.trap_cause_t0),
+.u_ex__u_csr__trap_handle_t0(
+  u_ex.u_csr.trap_handle_t0),
+.u_ex__u_csr__trap_jump_t0(
+  u_ex.u_csr.trap_jump_t0),
+.u_ex__u_csr__trap_value_t0(
+  u_ex.u_csr.trap_value_t0),
+.u_ex__u_csr__core_interrupt_cause_reg_2_(
+  u_ex.u_csr.\core_interrupt_cause_reg[2] ),
+.u_ex__u_csr__core_interrupt_cause_reg_3_(
+  u_ex.u_csr.\core_interrupt_cause_reg[3] ),
+.u_ex__u_csr__core_interrupt_cause_t0_reg_2_(
+  u_ex.u_csr.\core_interrupt_cause_t0_reg[2] ),
+.u_ex__u_csr__core_interrupt_cause_t0_reg_3_(
+  u_ex.u_csr.\core_interrupt_cause_t0_reg[3] ),
+.u_ex__u_csr__csr_rd_data(
+  u_ex.u_csr.csr_rd_data),
+.u_ex__u_csr__csr_rd_data_t0(
+  u_ex.u_csr.csr_rd_data_t0),
+.u_ex__u_csr__csr_rd_en(
+  u_ex.u_csr.csr_rd_en),
+.u_ex__u_csr__csr_rd_en_t0(
+  u_ex.u_csr.csr_rd_en_t0),
+.u_ex__u_csr__csr_rd_vld(
+  u_ex.u_csr.csr_rd_vld),
+.u_ex__u_csr__csr_rd_vld_t0(
+  u_ex.u_csr.csr_rd_vld_t0),
+.u_ex__u_csr__csr_wr_data(
+  u_ex.u_csr.csr_wr_data),
+.u_ex__u_csr__csr_wr_data_t0(
+  u_ex.u_csr.csr_wr_data_t0),
+.u_ex__u_csr__csr_wr_en(
+  u_ex.u_csr.csr_wr_en),
+.u_ex__u_csr__csr_wr_en_t0(
+  u_ex.u_csr.csr_wr_en_t0),
+.u_ex__u_csr__csr_wr_vld(
+  u_ex.u_csr.csr_wr_vld),
+.u_ex__u_csr__csr_wr_vld_t0(
+  u_ex.u_csr.csr_wr_vld_t0),
+.u_ex__u_csr__mcause(
+  u_ex.u_csr.mcause),
+.u_ex__u_csr__mcause_t0(
+  u_ex.u_csr.mcause_t0),
+.u_ex__u_csr__mcycle(
+  u_ex.u_csr.mcycle),
+.u_ex__u_csr__mcycle_rd_vld(
+  u_ex.u_csr.mcycle_rd_vld),
+.u_ex__u_csr__mcycle_rd_vld_t0(
+  u_ex.u_csr.mcycle_rd_vld_t0),
+.u_ex__u_csr__mcycle_t0(
+  u_ex.u_csr.mcycle_t0),
+.u_ex__u_csr__mcycle_wrenh(
+  u_ex.u_csr.mcycle_wrenh),
+.u_ex__u_csr__mcycle_wrenh_t0(
+  u_ex.u_csr.mcycle_wrenh_t0),
+.u_ex__u_csr__mcycle_wrenl(
+  u_ex.u_csr.mcycle_wrenl),
+.u_ex__u_csr__mcycle_wrenl_t0(
+  u_ex.u_csr.mcycle_wrenl_t0),
+.u_ex__u_csr__mepc(
+  u_ex.u_csr.mepc),
+.u_ex__u_csr__mepc_t0(
+  u_ex.u_csr.mepc_t0),
+.u_ex__u_csr__mie(
+  u_ex.u_csr.mie),
+.u_ex__u_csr__mie_t0(
+  u_ex.u_csr.mie_t0),
+.u_ex__u_csr__minstret(
+  u_ex.u_csr.minstret),
+.u_ex__u_csr__minstret_rd_vld(
+  u_ex.u_csr.minstret_rd_vld),
+.u_ex__u_csr__minstret_rd_vld_t0(
+  u_ex.u_csr.minstret_rd_vld_t0),
+.u_ex__u_csr__minstret_t0(
+  u_ex.u_csr.minstret_t0),
+.u_ex__u_csr__minstret_wrenh(
+  u_ex.u_csr.minstret_wrenh),
+.u_ex__u_csr__minstret_wrenh_t0(
+  u_ex.u_csr.minstret_wrenh_t0),
+.u_ex__u_csr__minstret_wrenl(
+  u_ex.u_csr.minstret_wrenl),
+.u_ex__u_csr__minstret_wrenl_t0(
+  u_ex.u_csr.minstret_wrenl_t0),
+.u_ex__u_csr__mip(
+  u_ex.u_csr.mip),
+.u_ex__u_csr__mip_t0(
+  u_ex.u_csr.mip_t0),
+.u_ex__u_csr__mscratch(
+  u_ex.u_csr.mscratch),
+.u_ex__u_csr__mscratch_t0(
+  u_ex.u_csr.mscratch_t0),
+.u_ex__u_csr__mstatus(
+  u_ex.u_csr.mstatus),
+.u_ex__u_csr__mstatus_t0(
+  u_ex.u_csr.mstatus_t0),
+.u_ex__u_csr__mtval(
+  u_ex.u_csr.mtval),
+.u_ex__u_csr__mtval_t0(
+  u_ex.u_csr.mtval_t0),
+.u_ex__u_csr__mtvec(
+  u_ex.u_csr.mtvec),
+.u_ex__u_csr__mtvec_t0(
+  u_ex.u_csr.mtvec_t0),
+.u_ex__u_csr__next_state(
+  u_ex.u_csr.next_state),
+.u_ex__u_csr__next_state_t0(
+  u_ex.u_csr.next_state_t0),
+.u_ex__u_csr__state(
+  u_ex.u_csr.state),
+.u_ex__u_csr__state_t0(
+  u_ex.u_csr.state_t0),
+.u_ex__u_csr__wr_data(
+  u_ex.u_csr.wr_data),
+.u_ex__u_csr__wr_data_t0(
+  u_ex.u_csr.wr_data_t0),
+.u_ex__u_csr__u_hpmcounter0__clk(
+  u_ex.u_csr.u_hpmcounter0.clk),
+.u_ex__u_csr__u_hpmcounter0__rstz(
+  u_ex.u_csr.u_hpmcounter0.rstz),
+.u_ex__u_csr__u_hpmcounter0__incr(
+  u_ex.u_csr.u_hpmcounter0.incr),
+.u_ex__u_csr__u_hpmcounter0__load_data(
+  u_ex.u_csr.u_hpmcounter0.load_data),
+.u_ex__u_csr__u_hpmcounter0__load_low(
+  u_ex.u_csr.u_hpmcounter0.load_low),
+.u_ex__u_csr__u_hpmcounter0__load_high(
+  u_ex.u_csr.u_hpmcounter0.load_high),
+.u_ex__u_csr__u_hpmcounter0__count(
+  u_ex.u_csr.u_hpmcounter0.count),
+.u_ex__u_csr__u_hpmcounter0__count_vld(
+  u_ex.u_csr.u_hpmcounter0.count_vld),
+.u_ex__u_csr__u_hpmcounter0__load_data_t0(
+  u_ex.u_csr.u_hpmcounter0.load_data_t0),
+.u_ex__u_csr__u_hpmcounter0__count_t0(
+  u_ex.u_csr.u_hpmcounter0.count_t0),
+.u_ex__u_csr__u_hpmcounter0__count_vld_t0(
+  u_ex.u_csr.u_hpmcounter0.count_vld_t0),
+.u_ex__u_csr__u_hpmcounter0__incr_t0(
+  u_ex.u_csr.u_hpmcounter0.incr_t0),
+.u_ex__u_csr__u_hpmcounter0__load_high_t0(
+  u_ex.u_csr.u_hpmcounter0.load_high_t0),
+.u_ex__u_csr__u_hpmcounter0__load_low_t0(
+  u_ex.u_csr.u_hpmcounter0.load_low_t0),
+.u_ex__u_csr__u_hpmcounter0__count_high(
+  u_ex.u_csr.u_hpmcounter0.count_high),
+.u_ex__u_csr__u_hpmcounter0__count_high_t0(
+  u_ex.u_csr.u_hpmcounter0.count_high_t0),
+.u_ex__u_csr__u_hpmcounter0__count_low(
+  u_ex.u_csr.u_hpmcounter0.count_low),
+.u_ex__u_csr__u_hpmcounter0__count_low_t0(
+  u_ex.u_csr.u_hpmcounter0.count_low_t0),
+.u_ex__u_csr__u_hpmcounter0__incr_high(
+  u_ex.u_csr.u_hpmcounter0.incr_high),
+.u_ex__u_csr__u_hpmcounter1__clk(
+  u_ex.u_csr.u_hpmcounter1.clk),
+.u_ex__u_csr__u_hpmcounter1__rstz(
+  u_ex.u_csr.u_hpmcounter1.rstz),
+.u_ex__u_csr__u_hpmcounter1__incr(
+  u_ex.u_csr.u_hpmcounter1.incr),
+.u_ex__u_csr__u_hpmcounter1__load_data(
+  u_ex.u_csr.u_hpmcounter1.load_data),
+.u_ex__u_csr__u_hpmcounter1__load_low(
+  u_ex.u_csr.u_hpmcounter1.load_low),
+.u_ex__u_csr__u_hpmcounter1__load_high(
+  u_ex.u_csr.u_hpmcounter1.load_high),
+.u_ex__u_csr__u_hpmcounter1__count(
+  u_ex.u_csr.u_hpmcounter1.count),
+.u_ex__u_csr__u_hpmcounter1__count_vld(
+  u_ex.u_csr.u_hpmcounter1.count_vld),
+.u_ex__u_csr__u_hpmcounter1__load_data_t0(
+  u_ex.u_csr.u_hpmcounter1.load_data_t0),
+.u_ex__u_csr__u_hpmcounter1__count_t0(
+  u_ex.u_csr.u_hpmcounter1.count_t0),
+.u_ex__u_csr__u_hpmcounter1__count_vld_t0(
+  u_ex.u_csr.u_hpmcounter1.count_vld_t0),
+.u_ex__u_csr__u_hpmcounter1__incr_t0(
+  u_ex.u_csr.u_hpmcounter1.incr_t0),
+.u_ex__u_csr__u_hpmcounter1__load_high_t0(
+  u_ex.u_csr.u_hpmcounter1.load_high_t0),
+.u_ex__u_csr__u_hpmcounter1__load_low_t0(
+  u_ex.u_csr.u_hpmcounter1.load_low_t0),
+.u_ex__u_csr__u_hpmcounter1__count_high(
+  u_ex.u_csr.u_hpmcounter1.count_high),
+.u_ex__u_csr__u_hpmcounter1__count_high_t0(
+  u_ex.u_csr.u_hpmcounter1.count_high_t0),
+.u_ex__u_csr__u_hpmcounter1__count_low(
+  u_ex.u_csr.u_hpmcounter1.count_low),
+.u_ex__u_csr__u_hpmcounter1__count_low_t0(
+  u_ex.u_csr.u_hpmcounter1.count_low_t0),
+.u_ex__u_csr__u_hpmcounter1__incr_high(
+  u_ex.u_csr.u_hpmcounter1.incr_high),
+.u_ex__u_lsu__decode_pc(
+  u_ex.u_lsu.decode_pc),
+.u_ex__u_lsu__decode_ir(
+  u_ex.u_lsu.decode_ir),
+.u_ex__u_lsu__decode_op1(
+  u_ex.u_lsu.decode_op1),
+.u_ex__u_lsu__decode_op2(
+  u_ex.u_lsu.decode_op2),
+.u_ex__u_lsu__decode_addr(
+  u_ex.u_lsu.decode_addr),
+.u_ex__u_lsu__decode_basic(
+  u_ex.u_lsu.decode_basic),
+.u_ex__u_lsu__decode_aluop(
+  u_ex.u_lsu.decode_aluop),
+.u_ex__u_lsu__decode_regwr_alu(
+  u_ex.u_lsu.decode_regwr_alu),
+.u_ex__u_lsu__decode_jump(
+  u_ex.u_lsu.decode_jump),
+.u_ex__u_lsu__decode_branch(
+  u_ex.u_lsu.decode_branch),
+.u_ex__u_lsu__decode_load(
+  u_ex.u_lsu.decode_load),
+.u_ex__u_lsu__decode_store(
+  u_ex.u_lsu.decode_store),
+.u_ex__u_lsu__decode_mask(
+  u_ex.u_lsu.decode_mask),
+.u_ex__u_lsu__decode_csr(
+  u_ex.u_lsu.decode_csr),
+.u_ex__u_lsu__decode_system(
+  u_ex.u_lsu.decode_system),
+.u_ex__u_lsu__decode_sysop(
+  u_ex.u_lsu.decode_sysop),
+.u_ex__u_lsu__decode_illegal(
+  u_ex.u_lsu.decode_illegal),
+.u_ex__u_lsu__decode_misaligned_jmp(
+  u_ex.u_lsu.decode_misaligned_jmp),
+.u_ex__u_lsu__decode_misaligned_ldst(
+  u_ex.u_lsu.decode_misaligned_ldst),
+.u_ex__u_lsu__lsu_vld(
+  u_ex.u_lsu.lsu_vld),
+.u_ex__u_lsu__lsu_rdy(
+  u_ex.u_lsu.lsu_rdy),
+.u_ex__u_lsu__load_data(
+  u_ex.u_lsu.load_data),
+.u_ex__u_lsu__regwr_lsu(
+  u_ex.u_lsu.regwr_lsu),
+.u_ex__u_lsu__data_addr(
+  u_ex.u_lsu.data_addr),
+.u_ex__u_lsu__data_rd_data(
+  u_ex.u_lsu.data_rd_data),
+.u_ex__u_lsu__data_wr_data(
+  u_ex.u_lsu.data_wr_data),
+.u_ex__u_lsu__data_mask(
+  u_ex.u_lsu.data_mask),
+.u_ex__u_lsu__data_wr_en(
+  u_ex.u_lsu.data_wr_en),
+.u_ex__u_lsu__data_req(
+  u_ex.u_lsu.data_req),
+.u_ex__u_lsu__data_ack(
+  u_ex.u_lsu.data_ack),
+.u_ex__u_lsu__decode_addr_t0(
+  u_ex.u_lsu.decode_addr_t0),
+.u_ex__u_lsu__decode_aluop_t0(
+  u_ex.u_lsu.decode_aluop_t0),
+.u_ex__u_lsu__decode_basic_t0(
+  u_ex.u_lsu.decode_basic_t0),
+.u_ex__u_lsu__decode_branch_t0(
+  u_ex.u_lsu.decode_branch_t0),
+.u_ex__u_lsu__decode_csr_t0(
+  u_ex.u_lsu.decode_csr_t0),
+.u_ex__u_lsu__decode_illegal_t0(
+  u_ex.u_lsu.decode_illegal_t0),
+.u_ex__u_lsu__decode_ir_t0(
+  u_ex.u_lsu.decode_ir_t0),
+.u_ex__u_lsu__decode_jump_t0(
+  u_ex.u_lsu.decode_jump_t0),
+.u_ex__u_lsu__decode_load_t0(
+  u_ex.u_lsu.decode_load_t0),
+.u_ex__u_lsu__decode_mask_t0(
+  u_ex.u_lsu.decode_mask_t0),
+.u_ex__u_lsu__decode_misaligned_jmp_t0(
+  u_ex.u_lsu.decode_misaligned_jmp_t0),
+.u_ex__u_lsu__decode_misaligned_ldst_t0(
+  u_ex.u_lsu.decode_misaligned_ldst_t0),
+.u_ex__u_lsu__decode_op1_t0(
+  u_ex.u_lsu.decode_op1_t0),
+.u_ex__u_lsu__decode_op2_t0(
+  u_ex.u_lsu.decode_op2_t0),
+.u_ex__u_lsu__decode_pc_t0(
+  u_ex.u_lsu.decode_pc_t0),
+.u_ex__u_lsu__decode_regwr_alu_t0(
+  u_ex.u_lsu.decode_regwr_alu_t0),
+.u_ex__u_lsu__decode_store_t0(
+  u_ex.u_lsu.decode_store_t0),
+.u_ex__u_lsu__decode_sysop_t0(
+  u_ex.u_lsu.decode_sysop_t0),
+.u_ex__u_lsu__decode_system_t0(
+  u_ex.u_lsu.decode_system_t0),
+.u_ex__u_lsu__data_ack_t0(
+  u_ex.u_lsu.data_ack_t0),
+.u_ex__u_lsu__data_addr_t0(
+  u_ex.u_lsu.data_addr_t0),
+.u_ex__u_lsu__data_mask_t0(
+  u_ex.u_lsu.data_mask_t0),
+.u_ex__u_lsu__data_rd_data_t0(
+  u_ex.u_lsu.data_rd_data_t0),
+.u_ex__u_lsu__data_req_t0(
+  u_ex.u_lsu.data_req_t0),
+.u_ex__u_lsu__data_wr_data_t0(
+  u_ex.u_lsu.data_wr_data_t0),
+.u_ex__u_lsu__data_wr_en_t0(
+  u_ex.u_lsu.data_wr_en_t0),
+.u_ex__u_lsu__load_data_t0(
+  u_ex.u_lsu.load_data_t0),
+.u_ex__u_lsu__lsu_rdy_t0(
+  u_ex.u_lsu.lsu_rdy_t0),
+.u_ex__u_lsu__lsu_vld_t0(
+  u_ex.u_lsu.lsu_vld_t0),
+.u_ex__u_lsu__regwr_lsu_t0(
+  u_ex.u_lsu.regwr_lsu_t0),
+.u_ex__u_lsu__byte_data(
+  u_ex.u_lsu.byte_data),
+.u_ex__u_lsu__byte_data_t0(
+  u_ex.u_lsu.byte_data_t0),
+.u_ex__u_lsu__half_data(
+  u_ex.u_lsu.half_data),
+.u_ex__u_lsu__half_data_t0(
+  u_ex.u_lsu.half_data_t0),
+.u_ex__u_lsu__word_data(
+  u_ex.u_lsu.word_data),
+.u_ex__u_lsu__word_data_t0(
+  u_ex.u_lsu.word_data_t0),
+.u_id__clk(
+  u_id.clk),
+.u_id__rstz(
+  u_id.rstz),
+.u_id__flush(
+  u_id.flush),
+.u_id__fetch_pc(
+  u_id.fetch_pc),
+.u_id__fetch_ir(
+  u_id.fetch_ir),
+.u_id__immediate(
+  u_id.immediate),
+.u_id__regrd_rs1(
+  u_id.regrd_rs1),
+.u_id__regrd_rs2(
+  u_id.regrd_rs2),
+.u_id__regrd_rs1_en(
+  u_id.regrd_rs1_en),
+.u_id__regrd_rs2_en(
+  u_id.regrd_rs2_en),
+.u_id__fetch_vld(
+  u_id.fetch_vld),
+.u_id__fetch_rdy(
+  u_id.fetch_rdy),
+.u_id__decode_pc(
+  u_id.decode_pc),
+.u_id__decode_ir(
+  u_id.decode_ir),
+.u_id__decode_op1(
+  u_id.decode_op1),
+.u_id__decode_op2(
+  u_id.decode_op2),
+.u_id__decode_addr(
+  u_id.decode_addr),
+.u_id__decode_basic(
+  u_id.decode_basic),
+.u_id__decode_aluop(
+  u_id.decode_aluop),
+.u_id__decode_regwr_alu(
+  u_id.decode_regwr_alu),
+.u_id__decode_jump(
+  u_id.decode_jump),
+.u_id__decode_branch(
+  u_id.decode_branch),
+.u_id__decode_load(
+  u_id.decode_load),
+.u_id__decode_store(
+  u_id.decode_store),
+.u_id__decode_mask(
+  u_id.decode_mask),
+.u_id__decode_csr(
+  u_id.decode_csr),
+.u_id__decode_system(
+  u_id.decode_system),
+.u_id__decode_sysop(
+  u_id.decode_sysop),
+.u_id__decode_illegal(
+  u_id.decode_illegal),
+.u_id__decode_misaligned_jmp(
+  u_id.decode_misaligned_jmp),
+.u_id__decode_misaligned_ldst(
+  u_id.decode_misaligned_ldst),
+.u_id__decode_vld(
+  u_id.decode_vld),
+.u_id__decode_rdy(
+  u_id.decode_rdy),
+.u_id__regwr_data(
+  u_id.regwr_data),
+.u_id__regwr_sel(
+  u_id.regwr_sel),
+.u_id__regwr_en(
+  u_id.regwr_en),
+.u_id__regwr_pending(
+  u_id.regwr_pending),
+.u_id__fetch_rdy_t0(
+  u_id.fetch_rdy_t0),
+.u_id__regrd_rs2_en_t0(
+  u_id.regrd_rs2_en_t0),
+.u_id__immediate_t0(
+  u_id.immediate_t0),
+.u_id__regrd_rs1_t0(
+  u_id.regrd_rs1_t0),
+.u_id__regrd_rs2_t0(
+  u_id.regrd_rs2_t0),
+.u_id__regrd_rs1_en_t0(
+  u_id.regrd_rs1_en_t0),
+.u_id__regwr_data_t0(
+  u_id.regwr_data_t0),
+.u_id__regwr_en_t0(
+  u_id.regwr_en_t0),
+.u_id__regwr_sel_t0(
+  u_id.regwr_sel_t0),
+.u_id__fetch_ir_t0(
+  u_id.fetch_ir_t0),
+.u_id__fetch_pc_t0(
+  u_id.fetch_pc_t0),
+.u_id__fetch_vld_t0(
+  u_id.fetch_vld_t0),
+.u_id__decode_rdy_t0(
+  u_id.decode_rdy_t0),
+.u_id__decode_vld_t0(
+  u_id.decode_vld_t0),
+.u_id__flush_t0(
+  u_id.flush_t0),
+.u_id__regwr_pending_t0(
+  u_id.regwr_pending_t0),
+.u_id__decode_addr_t0(
+  u_id.decode_addr_t0),
+.u_id__decode_aluop_t0(
+  u_id.decode_aluop_t0),
+.u_id__decode_basic_t0(
+  u_id.decode_basic_t0),
+.u_id__decode_branch_t0(
+  u_id.decode_branch_t0),
+.u_id__decode_csr_t0(
+  u_id.decode_csr_t0),
+.u_id__decode_illegal_t0(
+  u_id.decode_illegal_t0),
+.u_id__decode_ir_t0(
+  u_id.decode_ir_t0),
+.u_id__decode_jump_t0(
+  u_id.decode_jump_t0),
+.u_id__decode_load_t0(
+  u_id.decode_load_t0),
+.u_id__decode_mask_t0(
+  u_id.decode_mask_t0),
+.u_id__decode_misaligned_jmp_t0(
+  u_id.decode_misaligned_jmp_t0),
+.u_id__decode_misaligned_ldst_t0(
+  u_id.decode_misaligned_ldst_t0),
+.u_id__decode_op1_t0(
+  u_id.decode_op1_t0),
+.u_id__decode_op2_t0(
+  u_id.decode_op2_t0),
+.u_id__decode_pc_t0(
+  u_id.decode_pc_t0),
+.u_id__decode_regwr_alu_t0(
+  u_id.decode_regwr_alu_t0),
+.u_id__decode_store_t0(
+  u_id.decode_store_t0),
+.u_id__decode_sysop_t0(
+  u_id.decode_sysop_t0),
+.u_id__decode_system_t0(
+  u_id.decode_system_t0),
+.u_id__addr(
+  u_id.addr),
+.u_id__addr_t0(
+  u_id.addr_t0),
+.u_id__aluop(
+  u_id.aluop),
+.u_id__aluop_t0(
+  u_id.aluop_t0),
+.u_id__base(
+  u_id.base),
+.u_id__base_t0(
+  u_id.base_t0),
+.u_id__branch(
+  u_id.branch),
+.u_id__branch_t0(
+  u_id.branch_t0),
+.u_id__csr(
+  u_id.csr),
+.u_id__csr_t0(
+  u_id.csr_t0),
+.u_id__illegal(
+  u_id.illegal),
+.u_id__illegal_opcode(
+  u_id.illegal_opcode),
+.u_id__illegal_opcode_t0(
+  u_id.illegal_opcode_t0),
+.u_id__illegal_t0(
+  u_id.illegal_t0),
+.u_id__instr_valid(
+  u_id.instr_valid),
+.u_id__instr_valid_t0(
+  u_id.instr_valid_t0),
+.u_id__is_fencei(
+  u_id.is_fencei),
+.u_id__is_fencei_t0(
+  u_id.is_fencei_t0),
+.u_id__misaligned_jmp(
+  u_id.misaligned_jmp),
+.u_id__misaligned_jmp_t0(
+  u_id.misaligned_jmp_t0),
+.u_id__misaligned_ldst(
+  u_id.misaligned_ldst),
+.u_id__misaligned_ldst_t0(
+  u_id.misaligned_ldst_t0),
+.u_id__offset(
+  u_id.offset),
+.u_id__offset_t0(
+  u_id.offset_t0),
+.u_id__op1(
+  u_id.op1),
+.u_id__op1_t0(
+  u_id.op1_t0),
+.u_id__op2(
+  u_id.op2),
+.u_id__op2_t0(
+  u_id.op2_t0),
+.u_id__regwr_alu(
+  u_id.regwr_alu),
+.u_id__regwr_alu_t0(
+  u_id.regwr_alu_t0),
+.u_id__rs1_data(
+  u_id.rs1_data),
+.u_id__rs1_data_t0(
+  u_id.rs1_data_t0),
+.u_id__rs1_forward(
+  u_id.rs1_forward),
+.u_id__rs1_forward_t0(
+  u_id.rs1_forward_t0),
+.u_id__rs2_data(
+  u_id.rs2_data),
+.u_id__rs2_data_t0(
+  u_id.rs2_data_t0),
+.u_id__rs2_forward(
+  u_id.rs2_forward),
+.u_id__rs2_forward_t0(
+  u_id.rs2_forward_t0),
+.u_id__stall(
+  u_id.stall),
+.u_id__stall_t0(
+  u_id.stall_t0),
+.u_id__store_data(
+  u_id.store_data),
+.u_id__store_data_t0(
+  u_id.store_data_t0),
+.u_id__u_agu__instr(
+  u_id.u_agu.instr),
+.u_id__u_agu__base(
+  u_id.u_agu.base),
+.u_id__u_agu__offset(
+  u_id.u_agu.offset),
+.u_id__u_agu__addr(
+  u_id.u_agu.addr),
+.u_id__u_agu__misaligned_jmp(
+  u_id.u_agu.misaligned_jmp),
+.u_id__u_agu__misaligned_ldst(
+  u_id.u_agu.misaligned_ldst),
+.u_id__u_agu__instr_t0(
+  u_id.u_agu.instr_t0),
+.u_id__u_agu__addr_t0(
+  u_id.u_agu.addr_t0),
+.u_id__u_agu__base_t0(
+  u_id.u_agu.base_t0),
+.u_id__u_agu__misaligned_jmp_t0(
+  u_id.u_agu.misaligned_jmp_t0),
+.u_id__u_agu__misaligned_ldst_t0(
+  u_id.u_agu.misaligned_ldst_t0),
+.u_id__u_agu__offset_t0(
+  u_id.u_agu.offset_t0),
+.u_id__u_agu__addr_raw(
+  u_id.u_agu.addr_raw),
+.u_id__u_agu__addr_raw_t0(
+  u_id.u_agu.addr_raw_t0),
+.u_id__u_agu__align(
+  u_id.u_agu.align),
+.u_id__u_agu__align_t0(
+  u_id.u_agu.align_t0),
+.u_id__u_branch__op(
+  u_id.u_branch.op),
+.u_id__u_branch__rs1(
+  u_id.u_branch.rs1),
+.u_id__u_branch__rs2(
+  u_id.u_branch.rs2),
+.u_id__u_branch__branch(
+  u_id.u_branch.branch),
+.u_id__u_branch__branch_t0(
+  u_id.u_branch.branch_t0),
+.u_id__u_branch__op_t0(
+  u_id.u_branch.op_t0),
+.u_id__u_branch__rs1_t0(
+  u_id.u_branch.rs1_t0),
+.u_id__u_branch__rs2_t0(
+  u_id.u_branch.rs2_t0),
+.u_id__u_branch__eq(
+  u_id.u_branch.eq),
+.u_id__u_branch__eq_t0(
+  u_id.u_branch.eq_t0),
+.u_id__u_branch__lt(
+  u_id.u_branch.lt),
+.u_id__u_branch__lt_t0(
+  u_id.u_branch.lt_t0),
+.u_id__u_hcu__clk(
+  u_id.u_hcu.clk),
+.u_id__u_hcu__rstz(
+  u_id.u_hcu.rstz),
+.u_id__u_hcu__flush(
+  u_id.u_hcu.flush),
+.u_id__u_hcu__instr(
+  u_id.u_hcu.instr),
+.u_id__u_hcu__regrd_rs1_en(
+  u_id.u_hcu.regrd_rs1_en),
+.u_id__u_hcu__regrd_rs2_en(
+  u_id.u_hcu.regrd_rs2_en),
+.u_id__u_hcu__fetch_vld(
+  u_id.u_hcu.fetch_vld),
+.u_id__u_hcu__fetch_rdy(
+  u_id.u_hcu.fetch_rdy),
+.u_id__u_hcu__decode_vld(
+  u_id.u_hcu.decode_vld),
+.u_id__u_hcu__decode_rdy(
+  u_id.u_hcu.decode_rdy),
+.u_id__u_hcu__regwr_sel(
+  u_id.u_hcu.regwr_sel),
+.u_id__u_hcu__regwr_en(
+  u_id.u_hcu.regwr_en),
+.u_id__u_hcu__regwr_pending(
+  u_id.u_hcu.regwr_pending),
+.u_id__u_hcu__stall(
+  u_id.u_hcu.stall),
+.u_id__u_hcu__fetch_rdy_t0(
+  u_id.u_hcu.fetch_rdy_t0),
+.u_id__u_hcu__regrd_rs2_en_t0(
+  u_id.u_hcu.regrd_rs2_en_t0),
+.u_id__u_hcu__regrd_rs1_en_t0(
+  u_id.u_hcu.regrd_rs1_en_t0),
+.u_id__u_hcu__regwr_en_t0(
+  u_id.u_hcu.regwr_en_t0),
+.u_id__u_hcu__regwr_sel_t0(
+  u_id.u_hcu.regwr_sel_t0),
+.u_id__u_hcu__fetch_vld_t0(
+  u_id.u_hcu.fetch_vld_t0),
+.u_id__u_hcu__decode_rdy_t0(
+  u_id.u_hcu.decode_rdy_t0),
+.u_id__u_hcu__decode_vld_t0(
+  u_id.u_hcu.decode_vld_t0),
+.u_id__u_hcu__flush_t0(
+  u_id.u_hcu.flush_t0),
+.u_id__u_hcu__instr_t0(
+  u_id.u_hcu.instr_t0),
+.u_id__u_hcu__regwr_pending_t0(
+  u_id.u_hcu.regwr_pending_t0),
+.u_id__u_hcu__stall_t0(
+  u_id.u_hcu.stall_t0),
+.u_id__u_hcu__rpend(
+  u_id.u_hcu.rpend),
+.u_id__u_hcu__rpend_t0(
+  u_id.u_hcu.rpend_t0),
+.u_id__u_hcu__rs1_hazard(
+  u_id.u_hcu.rs1_hazard),
+.u_id__u_hcu__rs1_hazard_t0(
+  u_id.u_hcu.rs1_hazard_t0),
+.u_id__u_hcu__rs2_hazard(
+  u_id.u_hcu.rs2_hazard),
+.u_id__u_hcu__rs2_hazard_t0(
+  u_id.u_hcu.rs2_hazard_t0),
+.u_if__clk(
+  u_if.clk),
+.u_if__rstz(
+  u_if.rstz),
+.u_if__instr_addr(
+  u_if.instr_addr),
+.u_if__instr_data(
+  u_if.instr_data),
+.u_if__instr_req(
+  u_if.instr_req),
+.u_if__instr_ack(
+  u_if.instr_ack),
+.u_if__fetch_pc(
+  u_if.fetch_pc),
+.u_if__fetch_ir(
+  u_if.fetch_ir),
+.u_if__immediate(
+  u_if.immediate),
+.u_if__regrd_rs1(
+  u_if.regrd_rs1),
+.u_if__regrd_rs2(
+  u_if.regrd_rs2),
+.u_if__regrd_rs1_en(
+  u_if.regrd_rs1_en),
+.u_if__regrd_rs2_en(
+  u_if.regrd_rs2_en),
+.u_if__fetch_vld(
+  u_if.fetch_vld),
+.u_if__fetch_rdy(
+  u_if.fetch_rdy),
+.u_if__branch_target(
+  u_if.branch_target),
+.u_if__branch(
+  u_if.branch),
+.u_if__regwr_data(
+  u_if.regwr_data),
+.u_if__regwr_sel(
+  u_if.regwr_sel),
+.u_if__regwr_en(
+  u_if.regwr_en),
+.u_if__fetch_rdy_t0(
+  u_if.fetch_rdy_t0),
+.u_if__regrd_rs2_en_t0(
+  u_if.regrd_rs2_en_t0),
+.u_if__immediate_t0(
+  u_if.immediate_t0),
+.u_if__instr_data_t0(
+  u_if.instr_data_t0),
+.u_if__regrd_rs1_t0(
+  u_if.regrd_rs1_t0),
+.u_if__regrd_rs2_t0(
+  u_if.regrd_rs2_t0),
+.u_if__regrd_rs1_en_t0(
+  u_if.regrd_rs1_en_t0),
+.u_if__regwr_data_t0(
+  u_if.regwr_data_t0),
+.u_if__regwr_en_t0(
+  u_if.regwr_en_t0),
+.u_if__regwr_sel_t0(
+  u_if.regwr_sel_t0),
+.u_if__branch_t0(
+  u_if.branch_t0),
+.u_if__branch_target_t0(
+  u_if.branch_target_t0),
+.u_if__fetch_ir_t0(
+  u_if.fetch_ir_t0),
+.u_if__fetch_pc_t0(
+  u_if.fetch_pc_t0),
+.u_if__fetch_vld_t0(
+  u_if.fetch_vld_t0),
+.u_if__instr_ack_t0(
+  u_if.instr_ack_t0),
+.u_if__instr_addr_t0(
+  u_if.instr_addr_t0),
+.u_if__instr_req_t0(
+  u_if.instr_req_t0),
+.u_if__instr_vld(
+  u_if.instr_vld),
+.u_if__instr_vld_t0(
+  u_if.instr_vld_t0),
+.u_if__next_instr(
+  u_if.next_instr),
+.u_if__next_instr_t0(
+  u_if.next_instr_t0),
+.u_if__next_state(
+  u_if.next_state),
+.u_if__next_state_t0(
+  u_if.next_state_t0),
+.u_if__pc(
+  u_if.pc),
+.u_if__pc_last(
+  u_if.pc_last),
+.u_if__pc_last_t0(
+  u_if.pc_last_t0),
+.u_if__pc_t0(
+  u_if.pc_t0),
+.u_if__pipe_rdy(
+  u_if.pipe_rdy),
+.u_if__pipe_rdy_t0(
+  u_if.pipe_rdy_t0),
+.u_if__skid_buffer(
+  u_if.skid_buffer),
+.u_if__skid_buffer_t0(
+  u_if.skid_buffer_t0),
+.u_if__state(
+  u_if.state),
+.u_if__state_t0(
+  u_if.state_t0),
+.u_if__u_rf__clk(
+  u_if.u_rf.clk),
+.u_if__u_rf__rstz(
+  u_if.u_rf.rstz),
+.u_if__u_rf__instr_data(
+  u_if.u_rf.instr_data),
+.u_if__u_rf__instr_vld(
+  u_if.u_rf.instr_vld),
+.u_if__u_rf__fetch_rdy(
+  u_if.u_rf.fetch_rdy),
+.u_if__u_rf__immediate(
+  u_if.u_rf.immediate),
+.u_if__u_rf__regrd_rs1(
+  u_if.u_rf.regrd_rs1),
+.u_if__u_rf__regrd_rs2(
+  u_if.u_rf.regrd_rs2),
+.u_if__u_rf__regrd_rs1_en(
+  u_if.u_rf.regrd_rs1_en),
+.u_if__u_rf__regrd_rs2_en(
+  u_if.u_rf.regrd_rs2_en),
+.u_if__u_rf__regwr_data(
+  u_if.u_rf.regwr_data),
+.u_if__u_rf__regwr_sel(
+  u_if.u_rf.regwr_sel),
+.u_if__u_rf__regwr_en(
+  u_if.u_rf.regwr_en),
+.u_if__u_rf__fetch_rdy_t0(
+  u_if.u_rf.fetch_rdy_t0),
+.u_if__u_rf__instr_vld_t0(
+  u_if.u_rf.instr_vld_t0),
+.u_if__u_rf__regrd_rs2_en_t0(
+  u_if.u_rf.regrd_rs2_en_t0),
+.u_if__u_rf__immediate_t0(
+  u_if.u_rf.immediate_t0),
+.u_if__u_rf__instr_data_t0(
+  u_if.u_rf.instr_data_t0),
+.u_if__u_rf__regrd_rs1_t0(
+  u_if.u_rf.regrd_rs1_t0),
+.u_if__u_rf__regrd_rs2_t0(
+  u_if.u_rf.regrd_rs2_t0),
+.u_if__u_rf__regrd_rs1_en_t0(
+  u_if.u_rf.regrd_rs1_en_t0),
+.u_if__u_rf__regwr_data_t0(
+  u_if.u_rf.regwr_data_t0),
+.u_if__u_rf__regwr_en_t0(
+  u_if.u_rf.regwr_en_t0),
+.u_if__u_rf__regwr_sel_t0(
+  u_if.u_rf.regwr_sel_t0),
+.u_if__u_rf__ImmA(
+  u_if.u_rf.ImmA),
+.u_if__u_rf__ImmA_t0(
+  u_if.u_rf.ImmA_t0),
+.u_if__u_rf__ImmE(
+  u_if.u_rf.ImmE),
+.u_if__u_rf__ImmE_t0(
+  u_if.u_rf.ImmE_t0),
+.u_if__u_rf__ImmF(
+  u_if.u_rf.ImmF),
+.u_if__u_rf__ImmF_t0(
+  u_if.u_rf.ImmF_t0),
+.u_if__u_rf__REG_0_(
+  u_if.u_rf.\REG[0] ),
+.u_if__u_rf__REG_0__t0(
+  u_if.u_rf.\REG[0]_t0 ),
+.u_if__u_rf__REG_10_(
+  u_if.u_rf.\REG[10] ),
+.u_if__u_rf__REG_10__t0(
+  u_if.u_rf.\REG[10]_t0 ),
+.u_if__u_rf__REG_11_(
+  u_if.u_rf.\REG[11] ),
+.u_if__u_rf__REG_11__t0(
+  u_if.u_rf.\REG[11]_t0 ),
+.u_if__u_rf__REG_12_(
+  u_if.u_rf.\REG[12] ),
+.u_if__u_rf__REG_12__t0(
+  u_if.u_rf.\REG[12]_t0 ),
+.u_if__u_rf__REG_13_(
+  u_if.u_rf.\REG[13] ),
+.u_if__u_rf__REG_13__t0(
+  u_if.u_rf.\REG[13]_t0 ),
+.u_if__u_rf__REG_14_(
+  u_if.u_rf.\REG[14] ),
+.u_if__u_rf__REG_14__t0(
+  u_if.u_rf.\REG[14]_t0 ),
+.u_if__u_rf__REG_15_(
+  u_if.u_rf.\REG[15] ),
+.u_if__u_rf__REG_15__t0(
+  u_if.u_rf.\REG[15]_t0 ),
+.u_if__u_rf__REG_16_(
+  u_if.u_rf.\REG[16] ),
+.u_if__u_rf__REG_16__t0(
+  u_if.u_rf.\REG[16]_t0 ),
+.u_if__u_rf__REG_17_(
+  u_if.u_rf.\REG[17] ),
+.u_if__u_rf__REG_17__t0(
+  u_if.u_rf.\REG[17]_t0 ),
+.u_if__u_rf__REG_18_(
+  u_if.u_rf.\REG[18] ),
+.u_if__u_rf__REG_18__t0(
+  u_if.u_rf.\REG[18]_t0 ),
+.u_if__u_rf__REG_19_(
+  u_if.u_rf.\REG[19] ),
+.u_if__u_rf__REG_19__t0(
+  u_if.u_rf.\REG[19]_t0 ),
+.u_if__u_rf__REG_1_(
+  u_if.u_rf.\REG[1] ),
+.u_if__u_rf__REG_1__t0(
+  u_if.u_rf.\REG[1]_t0 ),
+.u_if__u_rf__REG_20_(
+  u_if.u_rf.\REG[20] ),
+.u_if__u_rf__REG_20__t0(
+  u_if.u_rf.\REG[20]_t0 ),
+.u_if__u_rf__REG_21_(
+  u_if.u_rf.\REG[21] ),
+.u_if__u_rf__REG_21__t0(
+  u_if.u_rf.\REG[21]_t0 ),
+.u_if__u_rf__REG_22_(
+  u_if.u_rf.\REG[22] ),
+.u_if__u_rf__REG_22__t0(
+  u_if.u_rf.\REG[22]_t0 ),
+.u_if__u_rf__REG_23_(
+  u_if.u_rf.\REG[23] ),
+.u_if__u_rf__REG_23__t0(
+  u_if.u_rf.\REG[23]_t0 ),
+.u_if__u_rf__REG_24_(
+  u_if.u_rf.\REG[24] ),
+.u_if__u_rf__REG_24__t0(
+  u_if.u_rf.\REG[24]_t0 ),
+.u_if__u_rf__REG_25_(
+  u_if.u_rf.\REG[25] ),
+.u_if__u_rf__REG_25__t0(
+  u_if.u_rf.\REG[25]_t0 ),
+.u_if__u_rf__REG_26_(
+  u_if.u_rf.\REG[26] ),
+.u_if__u_rf__REG_26__t0(
+  u_if.u_rf.\REG[26]_t0 ),
+.u_if__u_rf__REG_27_(
+  u_if.u_rf.\REG[27] ),
+.u_if__u_rf__REG_27__t0(
+  u_if.u_rf.\REG[27]_t0 ),
+.u_if__u_rf__REG_28_(
+  u_if.u_rf.\REG[28] ),
+.u_if__u_rf__REG_28__t0(
+  u_if.u_rf.\REG[28]_t0 ),
+.u_if__u_rf__REG_29_(
+  u_if.u_rf.\REG[29] ),
+.u_if__u_rf__REG_29__t0(
+  u_if.u_rf.\REG[29]_t0 ),
+.u_if__u_rf__REG_2_(
+  u_if.u_rf.\REG[2] ),
+.u_if__u_rf__REG_2__t0(
+  u_if.u_rf.\REG[2]_t0 ),
+.u_if__u_rf__REG_30_(
+  u_if.u_rf.\REG[30] ),
+.u_if__u_rf__REG_30__t0(
+  u_if.u_rf.\REG[30]_t0 ),
+.u_if__u_rf__REG_31_(
+  u_if.u_rf.\REG[31] ),
+.u_if__u_rf__REG_31__t0(
+  u_if.u_rf.\REG[31]_t0 ),
+.u_if__u_rf__REG_3_(
+  u_if.u_rf.\REG[3] ),
+.u_if__u_rf__REG_3__t0(
+  u_if.u_rf.\REG[3]_t0 ),
+.u_if__u_rf__REG_4_(
+  u_if.u_rf.\REG[4] ),
+.u_if__u_rf__REG_4__t0(
+  u_if.u_rf.\REG[4]_t0 ),
+.u_if__u_rf__REG_5_(
+  u_if.u_rf.\REG[5] ),
+.u_if__u_rf__REG_5__t0(
+  u_if.u_rf.\REG[5]_t0 ),
+.u_if__u_rf__REG_6_(
+  u_if.u_rf.\REG[6] ),
+.u_if__u_rf__REG_6__t0(
+  u_if.u_rf.\REG[6]_t0 ),
+.u_if__u_rf__REG_7_(
+  u_if.u_rf.\REG[7] ),
+.u_if__u_rf__REG_7__t0(
+  u_if.u_rf.\REG[7]_t0 ),
+.u_if__u_rf__REG_8_(
+  u_if.u_rf.\REG[8] ),
+.u_if__u_rf__REG_8__t0(
+  u_if.u_rf.\REG[8]_t0 ),
+.u_if__u_rf__REG_9_(
+  u_if.u_rf.\REG[9] ),
+.u_if__u_rf__REG_9__t0(
+  u_if.u_rf.\REG[9]_t0 ),
+.u_if__u_rf__csr_regrd(
+  u_if.u_rf.csr_regrd),
+.u_if__u_rf__csr_regrd_t0(
+  u_if.u_rf.csr_regrd_t0),
+.u_if__u_rf__format_B(
+  u_if.u_rf.format_B),
+.u_if__u_rf__format_B_t0(
+  u_if.u_rf.format_B_t0),
+.u_if__u_rf__format_I(
+  u_if.u_rf.format_I),
+.u_if__u_rf__format_I_t0(
+  u_if.u_rf.format_I_t0),
+.u_if__u_rf__format_J(
+  u_if.u_rf.format_J),
+.u_if__u_rf__format_J_t0(
+  u_if.u_rf.format_J_t0),
+.u_if__u_rf__format_S(
+  u_if.u_rf.format_S),
+.u_if__u_rf__format_S_t0(
+  u_if.u_rf.format_S_t0),
+.u_if__u_rf__format_U(
+  u_if.u_rf.format_U),
+.u_if__u_rf__format_U_t0(
+  u_if.u_rf.format_U_t0),
+.u_if__u_rf__instr_rdy(
+  u_if.u_rf.instr_rdy),
+.u_if__u_rf__instr_rdy_t0(
+  u_if.u_rf.instr_rdy_t0),
+.u_if__u_rf__is_regrd_rs1_en(
+  u_if.u_rf.is_regrd_rs1_en),
+.u_if__u_rf__is_regrd_rs1_en_t0(
+  u_if.u_rf.is_regrd_rs1_en_t0),
+.u_if__u_rf__is_regrd_rs2_en(
+  u_if.u_rf.is_regrd_rs2_en),
+.u_if__u_rf__is_regrd_rs2_en_t0(
+  u_if.u_rf.is_regrd_rs2_en_t0),
+.u_if__u_rf__reg_rs1(
+  u_if.u_rf.reg_rs1),
+.u_if__u_rf__reg_rs1_t0(
+  u_if.u_rf.reg_rs1_t0),
+.u_if__u_rf__reg_rs2(
+  u_if.u_rf.reg_rs2),
+.u_if__u_rf__reg_rs2_t0(
+  u_if.u_rf.reg_rs2_t0),
+.u_if__u_rf__reg_vld(
+  u_if.u_rf.reg_vld),
+.u_if__u_rf__reg_vld_t0(
+  u_if.u_rf.reg_vld_t0),
+.u_ex__u_csr___2528_(
+  u_ex.u_csr._2528_),
+.u_ex__u_csr___2532_(
+  u_ex.u_csr._2532_),
+.u_if__u_rf___2406_(
+  u_if.u_rf._2406_),
+.u_if__u_rf___3286_(
+  u_if.u_rf._3286_)
+);

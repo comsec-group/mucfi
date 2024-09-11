@@ -1,0 +1,2445 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.29+11 (git sha1 , gcc 12.3.0-1ubuntu1~22.04 -Og -fPIC)
+
+1. Executing Verilog-2005 frontend: /data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v
+Parsing SystemVerilog input from `/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v' to AST representation.
+Storing AST representation for module `$abstract\kronos_alu'.
+Storing AST representation for module `$abstract\kronos_branch'.
+Storing AST representation for module `$abstract\kronos_core'.
+Storing AST representation for module `$abstract\kronos_counter64'.
+Storing AST representation for module `$abstract\kronos_csr'.
+Storing AST representation for module `$abstract\kronos_EX'.
+Storing AST representation for module `$abstract\kronos_hcu'.
+Storing AST representation for module `$abstract\kronos_ID'.
+Storing AST representation for module `$abstract\kronos_IF'.
+Storing AST representation for module `$abstract\kronos_lsu'.
+Storing AST representation for module `$abstract\kronos_RF'.
+Storing AST representation for module `$abstract\kronos_agu'.
+Storing AST representation for module `$abstract\kronos_mem_top'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+3. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_core'.
+Generating RTLIL representation for module `\kronos_core'.
+
+3.1. Analyzing design hierarchy..
+Top module:  \kronos_core
+Parameter \BOOT_ADDR = 0
+Parameter \EN_COUNTERS = 1
+Parameter \EN_COUNTERS64B = 1
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_EX'.
+Parameter \BOOT_ADDR = 0
+Parameter \EN_COUNTERS = 1
+Parameter \EN_COUNTERS64B = 1
+Generating RTLIL representation for module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Parameter \CATCH_ILLEGAL_INSTR = 1
+Parameter \CATCH_MISALIGNED_JMP = 1
+Parameter \CATCH_MISALIGNED_LDST = 1
+
+3.3. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_ID'.
+Parameter \CATCH_ILLEGAL_INSTR = 1
+Parameter \CATCH_MISALIGNED_JMP = 1
+Parameter \CATCH_MISALIGNED_LDST = 1
+Generating RTLIL representation for module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+Parameter \BOOT_ADDR = 0
+Parameter \FAST_BRANCH = 1
+
+3.4. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_IF'.
+Parameter \BOOT_ADDR = 0
+Parameter \FAST_BRANCH = 1
+Generating RTLIL representation for module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+
+3.5. Analyzing design hierarchy..
+Top module:  \kronos_core
+Used module:     $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX
+Used module:     $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID
+Used module:     $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF
+
+3.6. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_RF'.
+Generating RTLIL representation for module `\kronos_RF'.
+
+3.7. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_hcu'.
+Generating RTLIL representation for module `\kronos_hcu'.
+
+3.8. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_branch'.
+Generating RTLIL representation for module `\kronos_branch'.
+Parameter \CATCH_MISALIGNED_JMP = 1
+Parameter \CATCH_MISALIGNED_LDST = 1
+
+3.9. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_agu'.
+Parameter \CATCH_MISALIGNED_JMP = 1
+Parameter \CATCH_MISALIGNED_LDST = 1
+Generating RTLIL representation for module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Parameter \BOOT_ADDR = 0
+Parameter \EN_COUNTERS = 1
+Parameter \EN_COUNTERS64B = 1
+
+3.10. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_csr'.
+Parameter \BOOT_ADDR = 0
+Parameter \EN_COUNTERS = 1
+Parameter \EN_COUNTERS64B = 1
+Generating RTLIL representation for module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+
+3.11. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_lsu'.
+Generating RTLIL representation for module `\kronos_lsu'.
+
+3.12. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_alu'.
+Generating RTLIL representation for module `\kronos_alu'.
+
+3.13. Analyzing design hierarchy..
+Top module:  \kronos_core
+Used module:     $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX
+Used module:         $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr
+Used module:         \kronos_lsu
+Used module:         \kronos_alu
+Used module:     $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID
+Used module:         \kronos_hcu
+Used module:         \kronos_branch
+Used module:         $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu
+Used module:     $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF
+Used module:         \kronos_RF
+Parameter \EN_COUNTERS = 1
+Parameter \EN_COUNTERS64B = 1
+
+3.14. Executing AST frontend in derive mode using pre-parsed AST for module `\kronos_counter64'.
+Parameter \EN_COUNTERS = 1
+Parameter \EN_COUNTERS64B = 1
+Generating RTLIL representation for module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Parameter \EN_COUNTERS = 1
+Parameter \EN_COUNTERS64B = 1
+Found cached RTLIL representation for module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+
+3.15. Analyzing design hierarchy..
+Top module:  \kronos_core
+Used module:     $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX
+Used module:         $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr
+Used module:             $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64
+Used module:         \kronos_lsu
+Used module:         \kronos_alu
+Used module:     $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID
+Used module:         \kronos_hcu
+Used module:         \kronos_branch
+Used module:         $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu
+Used module:     $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF
+Used module:         \kronos_RF
+
+3.16. Analyzing design hierarchy..
+Top module:  \kronos_core
+Used module:     $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX
+Used module:         $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr
+Used module:             $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64
+Used module:         \kronos_lsu
+Used module:         \kronos_alu
+Used module:     $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID
+Used module:         \kronos_hcu
+Used module:         \kronos_branch
+Used module:         $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu
+Used module:     $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF
+Used module:         \kronos_RF
+Removing unused module `$abstract\kronos_mem_top'.
+Removing unused module `$abstract\kronos_agu'.
+Removing unused module `$abstract\kronos_RF'.
+Removing unused module `$abstract\kronos_lsu'.
+Removing unused module `$abstract\kronos_IF'.
+Removing unused module `$abstract\kronos_ID'.
+Removing unused module `$abstract\kronos_hcu'.
+Removing unused module `$abstract\kronos_EX'.
+Removing unused module `$abstract\kronos_csr'.
+Removing unused module `$abstract\kronos_counter64'.
+Removing unused module `$abstract\kronos_core'.
+Removing unused module `$abstract\kronos_branch'.
+Removing unused module `$abstract\kronos_alu'.
+Removed 13 unused modules.
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1509$156'.
+Cleaned up 1 empty switch.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:89$418 in module kronos_alu.
+Removed 1 dead cases from process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407 in module kronos_alu.
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407 in module kronos_alu.
+Marked 2 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1715$389 in module kronos_lsu.
+Marked 2 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1703$388 in module kronos_lsu.
+Removed 1 dead cases from process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1696$387 in module kronos_lsu.
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1696$387 in module kronos_lsu.
+Marked 3 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:639$367 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Marked 3 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:585$355 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:554$354 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Marked 3 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:529$352 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Marked 2 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:512$333 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Marked 3 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:500$331 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:495$329 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Marked 3 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1919$317 in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:119$302 in module kronos_branch.
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1868$248 in module kronos_RF.
+Marked 7 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231 in module kronos_RF.
+Marked 10 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193 in module kronos_RF.
+Marked 2 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1585$184 in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1579$175 in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Marked 5 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1557$164 in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Removed 1 dead cases from process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1533$163 in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Marked 6 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1533$163 in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Marked 2 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1526$161 in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Marked 2 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1509$156 in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Marked 3 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122 in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Removed 3 dead cases from process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80 in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Marked 33 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80 in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:999$55 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Marked 7 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:917$42 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Marked 4 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:881$24 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Removed 1 dead cases from process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:802$4 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Marked 12 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:802$4 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Marked 1 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:793$2 in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Marked 3 switch rules as full_case in process $proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:343$431 in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Removed a total of 7 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 9 redundant assignments.
+Promoted 129 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~146 debug messages>
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$425'.
+Creating decoders for process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$419'.
+Creating decoders for process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:89$418'.
+     1/1: $1\result[31:0]
+Creating decoders for process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407'.
+     1/1: $1\r_lt[0:0]
+Creating decoders for process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:54$403'.
+Creating decoders for process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:49$398'.
+Creating decoders for process `\kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1715$389'.
+     1/2: $2\load_data[31:0]
+     2/2: $1\load_data[31:0]
+Creating decoders for process `\kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1703$388'.
+     1/2: $1\half_data[31:0]
+     2/2: $1\byte_data[31:0]
+Creating decoders for process `\kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1696$387'.
+     1/1: $1\word_data[31:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:639$367'.
+     1/2: $0\core_interrupt[0:0]
+     2/2: $0\core_interrupt_cause[3:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+     1/15: $0\mie[2:0] [2]
+     2/15: $0\mie[2:0] [1]
+     3/15: $0\mie[2:0] [0]
+     4/15: $0\mip[2:0] [1]
+     5/15: $0\mip[2:0] [0]
+     6/15: $0\mtvec[31:0] [1:0]
+     7/15: $0\mstatus[3:0] [3:2]
+     8/15: $0\mstatus[3:0] [1]
+     9/15: $0\mstatus[3:0] [0]
+    10/15: $0\mcause[31:0]
+    11/15: $0\mepc[31:0]
+    12/15: $0\mscratch[31:0]
+    13/15: $0\mtvec[31:0] [31:2]
+    14/15: $0\mip[2:0] [2]
+    15/15: $0\mtval[31:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:585$355'.
+     1/1: $1\csr_wr_data[31:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:554$354'.
+     1/8: $1\csr_rd_data[31:0] [31:13]
+     2/8: $1\csr_rd_data[31:0] [2:0]
+     3/8: $1\csr_rd_data[31:0] [11]
+     4/8: $1\csr_rd_data[31:0] [3]
+     5/8: $1\csr_rd_data[31:0] [6:4]
+     6/8: $1\csr_rd_data[31:0] [12]
+     7/8: $1\csr_rd_data[31:0] [10:8]
+     8/8: $1\csr_rd_data[31:0] [7]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:529$352'.
+     1/2: $0\trap_jump[0:0]
+     2/2: $0\trap_handle[31:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:526$351'.
+     1/1: $0\csr_data[31:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:512$333'.
+     1/2: $0\csr_wr_vld[0:0]
+     2/2: $0\regwr_csr[0:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:500$331'.
+     1/3: $3\next_state[1:0]
+     2/3: $2\next_state[1:0]
+     3/3: $1\next_state[1:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:495$329'.
+     1/1: $0\state[1:0]
+Creating decoders for process `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1919$317'.
+     1/3: $3\misaligned_ldst[0:0]
+     2/3: $2\misaligned_ldst[0:0]
+     3/3: $1\misaligned_ldst[0:0]
+Creating decoders for process `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1897$306'.
+Creating decoders for process `\kronos_branch.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:119$302'.
+     1/1: $1\branch[0:0]
+Creating decoders for process `\kronos_hcu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1063$296'.
+     1/1: $0\rpend[4:0]
+Creating decoders for process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1868$248'.
+     1/3: $1$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_EN[31:0]$254
+     2/3: $1$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$253
+     3/3: $1$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_ADDR[4:0]$252
+Creating decoders for process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+     1/8: $0\reg_rs2[4:0]
+     2/8: $0\reg_rs1[4:0]
+     3/8: $0\reg_vld[0:0]
+     4/8: $0\regrd_rs2_en[0:0]
+     5/8: $0\regrd_rs1_en[0:0]
+     6/8: $0\regrd_rs2[31:0]
+     7/8: $0\regrd_rs1[31:0]
+     8/8: $0\immediate[31:0]
+Creating decoders for process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+     1/10: $1\ImmF[11:0]
+     2/10: $1\ImmE[7:0]
+     3/10: $3\ImmD[0:0]
+     4/10: $2\ImmD[0:0]
+     5/10: $1\ImmD[0:0]
+     6/10: $1\ImmC[5:0]
+     7/10: $2\ImmB[3:0]
+     8/10: $1\ImmB[3:0]
+     9/10: $2\ImmA[0:0]
+    10/10: $1\ImmA[0:0]
+Creating decoders for process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1585$184'.
+     1/4: $2\next_instr[31:0]
+     2/4: $2\instr_vld[0:0]
+     3/4: $1\next_instr[31:0]
+     4/4: $1\instr_vld[0:0]
+Creating decoders for process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1579$175'.
+     1/1: $1\instr_addr[31:0]
+Creating decoders for process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1557$164'.
+     1/4: $0\skid_buffer[31:0]
+     2/4: $0\fetch_vld[0:0]
+     3/4: $0\fetch_ir[31:0]
+     4/4: $0\fetch_pc[31:0]
+Creating decoders for process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1533$163'.
+     1/6: $6\next_state[1:0]
+     2/6: $5\next_state[1:0]
+     3/6: $4\next_state[1:0]
+     4/6: $3\next_state[1:0]
+     5/6: $2\next_state[1:0]
+     6/6: $1\next_state[1:0]
+Creating decoders for process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1526$161'.
+     1/1: $0\state[1:0]
+Creating decoders for process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1509$156'.
+     1/2: $0\pc_last[31:0]
+     2/2: $0\pc[31:0]
+Creating decoders for process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+     1/20: $0\decode_vld[0:0]
+     2/20: $0\decode_misaligned_ldst[0:0]
+     3/20: $0\decode_misaligned_jmp[0:0]
+     4/20: $0\decode_illegal[0:0]
+     5/20: $0\decode_sysop[1:0]
+     6/20: $0\decode_system[0:0]
+     7/20: $0\decode_csr[0:0]
+     8/20: $0\decode_mask[3:0]
+     9/20: $0\decode_store[0:0]
+    10/20: $0\decode_load[0:0]
+    11/20: $0\decode_branch[0:0]
+    12/20: $0\decode_jump[0:0]
+    13/20: $0\decode_regwr_alu[0:0]
+    14/20: $0\decode_aluop[3:0]
+    15/20: $0\decode_basic[0:0]
+    16/20: $0\decode_addr[31:0]
+    17/20: $0\decode_op2[31:0]
+    18/20: $0\decode_op1[31:0]
+    19/20: $0\decode_ir[31:0]
+    20/20: $0\decode_pc[31:0]
+Creating decoders for process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+     1/51: $28\instr_valid[0:0]
+     2/51: $7\sysop[1:0]
+     3/51: $27\instr_valid[0:0]
+     4/51: $6\sysop[1:0]
+     5/51: $26\instr_valid[0:0]
+     6/51: $5\sysop[1:0]
+     7/51: $25\instr_valid[0:0]
+     8/51: $4\sysop[1:0]
+     9/51: $24\instr_valid[0:0]
+    10/51: $3\sysop[1:0]
+    11/51: $23\instr_valid[0:0]
+    12/51: $2\sysop[1:0]
+    13/51: $2\csr[0:0]
+    14/51: $2\op1[31:0]
+    15/51: $22\instr_valid[0:0]
+    16/51: $3\is_fencei[0:0]
+    17/51: $21\instr_valid[0:0]
+    18/51: $20\instr_valid[0:0]
+    19/51: $2\is_fencei[0:0]
+    20/51: $19\instr_valid[0:0]
+    21/51: $18\instr_valid[0:0]
+    22/51: $17\instr_valid[0:0]
+    23/51: $16\instr_valid[0:0]
+    24/51: $15\instr_valid[0:0]
+    25/51: $14\instr_valid[0:0]
+    26/51: $13\instr_valid[0:0]
+    27/51: $12\instr_valid[0:0]
+    28/51: $11\instr_valid[0:0]
+    29/51: $10\instr_valid[0:0]
+    30/51: $9\instr_valid[0:0]
+    31/51: $8\instr_valid[0:0]
+    32/51: $7\instr_valid[0:0]
+    33/51: $6\instr_valid[0:0]
+    34/51: $5\instr_valid[0:0]
+    35/51: $2\aluop[3:0]
+    36/51: $4\instr_valid[0:0]
+    37/51: $3\instr_valid[0:0]
+    38/51: $2\instr_valid[0:0]
+    39/51: $1\instr_valid[0:0]
+    40/51: $1\op2[31:0]
+    41/51: $1\op1[31:0]
+    42/51: $1\offset[31:0]
+    43/51: $1\base[31:0]
+    44/51: $1\is_fencei[0:0]
+    45/51: $1\sysop[1:0]
+    46/51: $1\csr[0:0]
+    47/51: $1\aluop[3:0]
+    48/51: $3\mask[3:0]
+    49/51: $2\mask[3:0]
+    50/51: $1\mask[3:0]
+    51/51: $1\store_data[31:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:999$55'.
+     1/1: $0\instret[0:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:917$42'.
+     1/2: $0\trap_value[31:0]
+     2/2: $0\trap_cause[31:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:881$24'.
+     1/4: $0\regwr_en[0:0]
+     2/4: $0\regwr_pending_later[0:0]
+     3/4: $0\regwr_sel[4:0]
+     4/4: $0\regwr_data[31:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:802$4'.
+     1/12: $12\next_state[2:0]
+     2/12: $11\next_state[2:0]
+     3/12: $10\next_state[2:0]
+     4/12: $9\next_state[2:0]
+     5/12: $8\next_state[2:0]
+     6/12: $7\next_state[2:0]
+     7/12: $6\next_state[2:0]
+     8/12: $5\next_state[2:0]
+     9/12: $4\next_state[2:0]
+    10/12: $3\next_state[2:0]
+    11/12: $2\next_state[2:0]
+    12/12: $1\next_state[2:0]
+Creating decoders for process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:793$2'.
+     1/1: $0\state[2:0]
+Creating decoders for process `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:343$431'.
+     1/3: $0\incr_high[0:0]
+     2/3: $0\count_high[31:0]
+     3/3: $0\count_low[31:0]
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\kronos_alu.\reverse_bits$func$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:80$393.$result' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$425'.
+No latch inferred for signal `\kronos_alu.\reverse_bits$func$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:80$395.$result' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$425'.
+No latch inferred for signal `\kronos_alu.\reverse_bits$func$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:80$395.value' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$425'.
+No latch inferred for signal `\kronos_alu.\reverse_bits$func$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:80$395.reversed_value' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$425'.
+No latch inferred for signal `\kronos_alu.\reverse_bits$func$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:80$395.i' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$425'.
+No latch inferred for signal `\kronos_alu.\reverse_bits$func$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:72$392.$result' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$419'.
+No latch inferred for signal `\kronos_alu.\reverse_bits$func$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:72$394.$result' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$419'.
+No latch inferred for signal `\kronos_alu.\reverse_bits$func$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:72$394.value' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$419'.
+No latch inferred for signal `\kronos_alu.\reverse_bits$func$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:72$394.reversed_value' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$419'.
+No latch inferred for signal `\kronos_alu.\reverse_bits$func$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:72$394.i' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$419'.
+No latch inferred for signal `\kronos_alu.\result' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:89$418'.
+No latch inferred for signal `\kronos_alu.\A_sign' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407'.
+No latch inferred for signal `\kronos_alu.\B_sign' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407'.
+No latch inferred for signal `\kronos_alu.\R_sign' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407'.
+No latch inferred for signal `\kronos_alu.\r_lt' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407'.
+No latch inferred for signal `\kronos_alu.\r_ltu' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407'.
+No latch inferred for signal `\kronos_alu.\r_comp' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407'.
+No latch inferred for signal `\kronos_alu.\r_and' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:54$403'.
+No latch inferred for signal `\kronos_alu.\r_or' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:54$403'.
+No latch inferred for signal `\kronos_alu.\r_xor' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:54$403'.
+No latch inferred for signal `\kronos_alu.\r_adder' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:49$398'.
+No latch inferred for signal `\kronos_alu.\adder_A' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:49$398'.
+No latch inferred for signal `\kronos_alu.\adder_B' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:49$398'.
+No latch inferred for signal `\kronos_alu.\cout' from process `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:49$398'.
+No latch inferred for signal `\kronos_lsu.\load_data' from process `\kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1715$389'.
+No latch inferred for signal `\kronos_lsu.\half_data' from process `\kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1703$388'.
+No latch inferred for signal `\kronos_lsu.\byte_data' from process `\kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1703$388'.
+No latch inferred for signal `\kronos_lsu.\word_data' from process `\kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1696$387'.
+No latch inferred for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\csr_wr_data' from process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:585$355'.
+No latch inferred for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\csr_rd_data' from process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:554$354'.
+No latch inferred for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\next_state' from process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:500$331'.
+No latch inferred for signal `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.\misaligned_ldst' from process `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1919$317'.
+No latch inferred for signal `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.\addr' from process `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1897$306'.
+No latch inferred for signal `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.\addr_raw' from process `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1897$306'.
+No latch inferred for signal `\kronos_branch.\branch' from process `\kronos_branch.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:119$302'.
+No latch inferred for signal `\kronos_RF.\ImmA' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `\kronos_RF.\ImmB' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `\kronos_RF.\ImmC' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `\kronos_RF.\ImmD' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `\kronos_RF.\ImmE' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `\kronos_RF.\ImmF' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `\kronos_RF.\format_I' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `\kronos_RF.\format_J' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `\kronos_RF.\format_S' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `\kronos_RF.\format_B' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `\kronos_RF.\format_U' from process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+No latch inferred for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\instr_vld' from process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1585$184'.
+No latch inferred for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\next_instr' from process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1585$184'.
+No latch inferred for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\instr_addr' from process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1579$175'.
+No latch inferred for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\next_state' from process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1533$163'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\op1' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\op2' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\aluop' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\csr' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\sysop' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\is_fencei' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\instr_valid' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\base' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\offset' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\mask' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\byte_addr' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\sdata' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\store_data' from process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+No latch inferred for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.\next_state' from process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:802$4'.
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\core_interrupt' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:639$367'.
+  created $dff cell `$procdff$2173' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\core_interrupt_cause' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:639$367'.
+  created $dff cell `$procdff$2174' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\mstatus' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+  created $dff cell `$procdff$2175' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\mie' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+  created $dff cell `$procdff$2176' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\mip' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+  created $dff cell `$procdff$2177' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\mtvec' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+  created $dff cell `$procdff$2178' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\mscratch' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+  created $dff cell `$procdff$2179' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\mepc' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+  created $dff cell `$procdff$2180' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\mcause' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+  created $dff cell `$procdff$2181' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\mtval' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+  created $dff cell `$procdff$2182' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\trap_handle' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:529$352'.
+  created $dff cell `$procdff$2183' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\trap_jump' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:529$352'.
+  created $dff cell `$procdff$2184' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\csr_data' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:526$351'.
+  created $dff cell `$procdff$2185' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\regwr_csr' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:512$333'.
+  created $dff cell `$procdff$2186' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\csr_wr_vld' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:512$333'.
+  created $dff cell `$procdff$2187' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.\state' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:495$329'.
+  created $dff cell `$procdff$2188' with positive edge clock.
+Creating register for signal `\kronos_hcu.\rpend' using process `\kronos_hcu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1063$296'.
+  created $dff cell `$procdff$2189' with positive edge clock.
+Creating register for signal `\kronos_RF.$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_ADDR' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1868$248'.
+  created $dff cell `$procdff$2190' with positive edge clock.
+Creating register for signal `\kronos_RF.$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1868$248'.
+  created $dff cell `$procdff$2191' with positive edge clock.
+Creating register for signal `\kronos_RF.$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_EN' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1868$248'.
+  created $dff cell `$procdff$2192' with positive edge clock.
+Creating register for signal `\kronos_RF.\immediate' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+  created $dff cell `$procdff$2193' with positive edge clock.
+Creating register for signal `\kronos_RF.\regrd_rs1' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+  created $dff cell `$procdff$2194' with positive edge clock.
+Creating register for signal `\kronos_RF.\regrd_rs2' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+  created $dff cell `$procdff$2195' with positive edge clock.
+Creating register for signal `\kronos_RF.\regrd_rs1_en' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+  created $dff cell `$procdff$2196' with positive edge clock.
+Creating register for signal `\kronos_RF.\regrd_rs2_en' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+  created $dff cell `$procdff$2197' with positive edge clock.
+Creating register for signal `\kronos_RF.\reg_vld' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+  created $dff cell `$procdff$2198' with positive edge clock.
+Creating register for signal `\kronos_RF.\reg_rs1' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+  created $dff cell `$procdff$2199' with positive edge clock.
+Creating register for signal `\kronos_RF.\reg_rs2' using process `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+  created $dff cell `$procdff$2200' with positive edge clock.
+Creating register for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\fetch_pc' using process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1557$164'.
+  created $dff cell `$procdff$2201' with positive edge clock.
+Creating register for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\fetch_ir' using process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1557$164'.
+  created $dff cell `$procdff$2202' with positive edge clock.
+Creating register for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\fetch_vld' using process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1557$164'.
+  created $dff cell `$procdff$2203' with positive edge clock.
+Creating register for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\skid_buffer' using process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1557$164'.
+  created $dff cell `$procdff$2204' with positive edge clock.
+Creating register for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\state' using process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1526$161'.
+  created $dff cell `$procdff$2205' with positive edge clock.
+Creating register for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\pc' using process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1509$156'.
+  created $dff cell `$procdff$2206' with positive edge clock.
+Creating register for signal `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.\pc_last' using process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1509$156'.
+  created $dff cell `$procdff$2207' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_pc' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2208' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_ir' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2209' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_op1' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2210' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_op2' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2211' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_addr' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2212' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_basic' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2213' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_aluop' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2214' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_regwr_alu' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2215' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_jump' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2216' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_branch' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2217' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_load' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2218' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_store' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2219' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_mask' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2220' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_csr' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2221' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_system' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2222' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_sysop' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2223' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_illegal' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2224' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_misaligned_jmp' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2225' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_misaligned_ldst' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2226' with positive edge clock.
+Creating register for signal `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.\decode_vld' using process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+  created $dff cell `$procdff$2227' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.\instret' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:999$55'.
+  created $dff cell `$procdff$2228' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.\trap_cause' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:917$42'.
+  created $dff cell `$procdff$2229' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.\trap_value' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:917$42'.
+  created $dff cell `$procdff$2230' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.\regwr_data' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:881$24'.
+  created $dff cell `$procdff$2231' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.\regwr_sel' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:881$24'.
+  created $dff cell `$procdff$2232' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.\regwr_en' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:881$24'.
+  created $dff cell `$procdff$2233' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.\regwr_pending_later' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:881$24'.
+  created $dff cell `$procdff$2234' with positive edge clock.
+Creating register for signal `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.\state' using process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:793$2'.
+  created $dff cell `$procdff$2235' with positive edge clock.
+Creating register for signal `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.\count_low' using process `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:343$431'.
+  created $dff cell `$procdff$2236' with positive edge clock.
+Creating register for signal `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.\count_high' using process `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:343$431'.
+  created $dff cell `$procdff$2237' with positive edge clock.
+Creating register for signal `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.\incr_high' using process `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:343$431'.
+  created $dff cell `$procdff$2238' with positive edge clock.
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$425'.
+Removing empty process `kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:0$419'.
+Found and cleaned up 1 empty switch in `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:89$418'.
+Removing empty process `kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:89$418'.
+Found and cleaned up 1 empty switch in `\kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407'.
+Removing empty process `kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:59$407'.
+Removing empty process `kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:54$403'.
+Removing empty process `kronos_alu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:49$398'.
+Found and cleaned up 2 empty switches in `\kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1715$389'.
+Removing empty process `kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1715$389'.
+Found and cleaned up 2 empty switches in `\kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1703$388'.
+Removing empty process `kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1703$388'.
+Found and cleaned up 1 empty switch in `\kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1696$387'.
+Removing empty process `kronos_lsu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1696$387'.
+Found and cleaned up 4 empty switches in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:639$367'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:639$367'.
+Found and cleaned up 5 empty switches in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:593$359'.
+Found and cleaned up 1 empty switch in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:585$355'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:585$355'.
+Found and cleaned up 1 empty switch in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:554$354'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:554$354'.
+Found and cleaned up 3 empty switches in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:529$352'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:529$352'.
+Found and cleaned up 1 empty switch in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:526$351'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:526$351'.
+Found and cleaned up 3 empty switches in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:512$333'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:512$333'.
+Found and cleaned up 3 empty switches in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:500$331'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:500$331'.
+Found and cleaned up 1 empty switch in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:495$329'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:495$329'.
+Found and cleaned up 3 empty switches in `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1919$317'.
+Removing empty process `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1919$317'.
+Removing empty process `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1897$306'.
+Found and cleaned up 1 empty switch in `\kronos_branch.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:119$302'.
+Removing empty process `kronos_branch.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:119$302'.
+Found and cleaned up 1 empty switch in `\kronos_hcu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1063$296'.
+Removing empty process `kronos_hcu.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1063$296'.
+Found and cleaned up 1 empty switch in `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1868$248'.
+Removing empty process `kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1868$248'.
+Found and cleaned up 10 empty switches in `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+Removing empty process `kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1836$231'.
+Found and cleaned up 10 empty switches in `\kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+Removing empty process `kronos_RF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1790$193'.
+Found and cleaned up 2 empty switches in `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1585$184'.
+Removing empty process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1585$184'.
+Found and cleaned up 1 empty switch in `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1579$175'.
+Removing empty process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1579$175'.
+Found and cleaned up 6 empty switches in `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1557$164'.
+Removing empty process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1557$164'.
+Found and cleaned up 6 empty switches in `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1533$163'.
+Removing empty process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1533$163'.
+Found and cleaned up 2 empty switches in `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1526$161'.
+Removing empty process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1526$161'.
+Found and cleaned up 3 empty switches in `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1509$156'.
+Removing empty process `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1509$156'.
+Found and cleaned up 4 empty switches in `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+Removing empty process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1426$122'.
+Found and cleaned up 33 empty switches in `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+Removing empty process `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1223$80'.
+Found and cleaned up 1 empty switch in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:999$55'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:999$55'.
+Found and cleaned up 10 empty switches in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:917$42'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:917$42'.
+Found and cleaned up 5 empty switches in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:881$24'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:881$24'.
+Found and cleaned up 12 empty switches in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:802$4'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:802$4'.
+Found and cleaned up 1 empty switch in `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:793$2'.
+Removing empty process `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:793$2'.
+Found and cleaned up 5 empty switches in `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:343$431'.
+Removing empty process `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.$proc$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:343$431'.
+Cleaned up 146 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kronos_alu.
+<suppressed ~3 debug messages>
+Optimizing module kronos_lsu.
+<suppressed ~3 debug messages>
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+<suppressed ~27 debug messages>
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+<suppressed ~4 debug messages>
+Optimizing module kronos_branch.
+<suppressed ~1 debug messages>
+Optimizing module kronos_hcu.
+<suppressed ~2 debug messages>
+Optimizing module kronos_RF.
+<suppressed ~12 debug messages>
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+<suppressed ~10 debug messages>
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+<suppressed ~69 debug messages>
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+<suppressed ~18 debug messages>
+Optimizing module kronos_core.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+<suppressed ~3 debug messages>
+
+5. Executing OPT pass (performing simple optimizations).
+
+5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kronos_alu.
+Optimizing module kronos_lsu.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module kronos_branch.
+Optimizing module kronos_hcu.
+Optimizing module kronos_RF.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module kronos_core.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+
+5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_lsu'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+<suppressed ~285 debug messages>
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_RF'.
+<suppressed ~24 debug messages>
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+<suppressed ~57 debug messages>
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+<suppressed ~516 debug messages>
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+<suppressed ~81 debug messages>
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Removed a total of 324 cells.
+
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kronos_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_lsu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$453.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$783.
+    dead port 2/2 on $mux $procmux$775.
+Running muxtree optimizer on module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$800.
+    dead port 1/2 on $mux $procmux$798.
+    dead port 2/2 on $mux $procmux$806.
+Running muxtree optimizer on module \kronos_branch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_hcu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_RF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$942.
+    dead port 1/2 on $mux $procmux$933.
+    dead port 1/2 on $mux $procmux$921.
+    dead port 1/2 on $mux $procmux$915.
+    dead port 1/2 on $mux $procmux$912.
+Running muxtree optimizer on module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$1055.
+    dead port 2/2 on $mux $procmux$1053.
+    dead port 2/2 on $mux $procmux$1045.
+    dead port 2/2 on $mux $procmux$1039.
+    dead port 2/2 on $mux $procmux$1037.
+    dead port 2/2 on $mux $procmux$1030.
+    dead port 1/2 on $mux $procmux$957.
+    dead port 1/2 on $mux $procmux$951.
+    dead port 2/2 on $mux $procmux$1062.
+Running muxtree optimizer on module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$1565.
+    dead port 2/2 on $mux $procmux$1563.
+    dead port 2/2 on $mux $procmux$1553.
+    dead port 2/2 on $mux $procmux$1551.
+    dead port 1/2 on $mux $procmux$1549.
+    dead port 2/2 on $mux $procmux$1538.
+    dead port 2/2 on $mux $procmux$1536.
+    dead port 2/2 on $mux $procmux$1763.
+    dead port 2/2 on $mux $procmux$1527.
+    dead port 2/2 on $mux $procmux$1525.
+    dead port 2/2 on $mux $procmux$1517.
+    dead port 2/2 on $mux $procmux$1510.
+    dead port 2/2 on $mux $procmux$1502.
+    dead port 2/2 on $mux $procmux$1500.
+    dead port 2/2 on $mux $procmux$1491.
+    dead port 2/2 on $mux $procmux$1751.
+    dead port 2/2 on $mux $procmux$1489.
+    dead port 2/2 on $mux $procmux$1481.
+    dead port 2/2 on $mux $procmux$1479.
+    dead port 2/2 on $mux $procmux$1471.
+    dead port 2/2 on $mux $procmux$1842.
+    dead port 2/2 on $mux $procmux$1464.
+    dead port 2/2 on $mux $procmux$1740.
+    dead port 2/2 on $mux $procmux$1836.
+    dead port 1/2 on $mux $procmux$1834.
+    dead port 2/2 on $mux $procmux$1457.
+    dead port 2/2 on $mux $procmux$1730.
+    dead port 2/2 on $mux $procmux$1449.
+    dead port 2/2 on $mux $procmux$1576.
+    dead port 2/2 on $mux $procmux$1721.
+    dead port 2/2 on $mux $procmux$1441.
+    dead port 2/2 on $mux $procmux$1439.
+    dead port 2/2 on $mux $procmux$1430.
+    dead port 2/2 on $mux $procmux$1428.
+    dead port 2/2 on $mux $procmux$1419.
+    dead port 2/2 on $mux $procmux$1417.
+    dead port 2/2 on $mux $procmux$1415.
+    dead port 2/2 on $mux $procmux$1405.
+    dead port 2/2 on $mux $procmux$1711.
+    dead port 2/2 on $mux $procmux$1403.
+    dead port 2/2 on $mux $procmux$1401.
+    dead port 2/2 on $mux $procmux$1391.
+    dead port 2/2 on $mux $procmux$1709.
+    dead port 2/2 on $mux $procmux$1389.
+    dead port 2/2 on $mux $procmux$1387.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1374.
+    dead port 2/2 on $mux $procmux$1372.
+    dead port 2/2 on $mux $procmux$1699.
+    dead port 2/2 on $mux $procmux$1370.
+    dead port 1/2 on $mux $procmux$1368.
+    dead port 2/2 on $mux $procmux$1357.
+    dead port 2/2 on $mux $procmux$1355.
+    dead port 2/2 on $mux $procmux$1697.
+    dead port 2/2 on $mux $procmux$1353.
+    dead port 1/2 on $mux $procmux$1351.
+    dead port 1/2 on $mux $procmux$1348.
+    dead port 2/2 on $mux $procmux$1337.
+    dead port 2/2 on $mux $procmux$1335.
+    dead port 2/2 on $mux $procmux$1333.
+    dead port 1/2 on $mux $procmux$1331.
+    dead port 1/2 on $mux $procmux$1328.
+    dead port 2/2 on $mux $procmux$1317.
+    dead port 2/2 on $mux $procmux$1688.
+    dead port 2/2 on $mux $procmux$1315.
+    dead port 2/2 on $mux $procmux$1313.
+    dead port 1/2 on $mux $procmux$1311.
+    dead port 1/2 on $mux $procmux$1308.
+    dead port 1/2 on $mux $procmux$1305.
+    dead port 2/2 on $mux $procmux$1294.
+    dead port 2/2 on $mux $procmux$1686.
+    dead port 2/2 on $mux $procmux$1292.
+    dead port 2/2 on $mux $procmux$1290.
+    dead port 1/2 on $mux $procmux$1288.
+    dead port 1/2 on $mux $procmux$1285.
+    dead port 1/2 on $mux $procmux$1282.
+    dead port 1/2 on $mux $procmux$1684.
+    dead port 2/2 on $mux $procmux$1674.
+    dead port 2/2 on $mux $procmux$1660.
+    dead port 2/2 on $mux $procmux$1658.
+    dead port 2/2 on $mux $procmux$1643.
+    dead port 2/2 on $mux $procmux$1641.
+    dead port 1/2 on $mux $procmux$1639.
+    dead port 2/2 on $mux $procmux$1623.
+    dead port 2/2 on $mux $procmux$1621.
+    dead port 2/2 on $mux $procmux$1607.
+    dead port 2/2 on $mux $procmux$1605.
+    dead port 2/2 on $mux $procmux$1592.
+    dead port 2/2 on $mux $procmux$1590.
+    dead port 2/2 on $mux $procmux$1578.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$2095.
+    dead port 2/2 on $mux $procmux$2081.
+    dead port 2/2 on $mux $procmux$2079.
+    dead port 1/2 on $mux $procmux$2077.
+    dead port 1/2 on $mux $procmux$2074.
+    dead port 2/2 on $mux $procmux$2060.
+    dead port 2/2 on $mux $procmux$2058.
+    dead port 1/2 on $mux $procmux$2056.
+    dead port 1/2 on $mux $procmux$2053.
+    dead port 2/2 on $mux $procmux$2050.
+    dead port 2/2 on $mux $procmux$2035.
+    dead port 2/2 on $mux $procmux$2033.
+    dead port 1/2 on $mux $procmux$2031.
+    dead port 1/2 on $mux $procmux$2028.
+    dead port 1/2 on $mux $procmux$2025.
+    dead port 2/2 on $mux $procmux$2011.
+    dead port 2/2 on $mux $procmux$2009.
+    dead port 1/2 on $mux $procmux$2007.
+    dead port 1/2 on $mux $procmux$2004.
+    dead port 1/2 on $mux $procmux$2001.
+    dead port 1/2 on $mux $procmux$1998.
+    dead port 2/2 on $mux $procmux$1984.
+    dead port 2/2 on $mux $procmux$1973.
+    dead port 2/2 on $mux $procmux$1963.
+    dead port 2/2 on $mux $procmux$1954.
+    dead port 2/2 on $mux $procmux$2126.
+    dead port 2/2 on $mux $procmux$2114.
+    dead port 2/2 on $mux $procmux$2112.
+    dead port 2/2 on $mux $procmux$2097.
+    dead port 2/2 on $mux $procmux$2099.
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 140 multiplexer ports.
+<suppressed ~95 debug messages>
+
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kronos_alu.
+    New ctrl vector for $pmux cell $procmux$444: { $procmux$447_CMP $procmux$446_CMP $auto$opt_reduce.cc:134:opt_pmux$2241 }
+  Optimizing cells in module \kronos_alu.
+  Optimizing cells in module \kronos_lsu.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+  Optimizing cells in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+  Optimizing cells in module \kronos_branch.
+  Optimizing cells in module \kronos_hcu.
+  Optimizing cells in module \kronos_RF.
+    Consolidated identical input bits for $mux cell $procmux$819:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$procmux$819_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$819_Y [0]
+      New connections: $procmux$819_Y [31:1] = { $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] $procmux$819_Y [0] }
+  Optimizing cells in module \kronos_RF.
+  Optimizing cells in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+    New ctrl vector for $pmux cell $procmux$1766: { $auto$opt_reduce.cc:134:opt_pmux$2243 $procmux$1812_CMP $procmux$1801_CMP $procmux$1811_CMP $procmux$1810_CMP $procmux$1828_CMP $procmux$1827_CMP $procmux$1816_CMP $procmux$1822_CMP }
+    New ctrl vector for $pmux cell $procmux$1809: $auto$opt_reduce.cc:134:opt_pmux$2245
+    New ctrl vector for $pmux cell $procmux$1461: $auto$opt_reduce.cc:134:opt_pmux$2247
+    New ctrl vector for $pmux cell $procmux$1445: { $procmux$1762_CMP [0] $auto$opt_reduce.cc:134:opt_pmux$2249 }
+    New ctrl vector for $pmux cell $procmux$1798: $auto$opt_reduce.cc:134:opt_pmux$2251
+    New ctrl vector for $pmux cell $procmux$1788: { $procmux$1792_CMP $auto$opt_reduce.cc:134:opt_pmux$2253 $procmux$1822_CMP }
+    New ctrl vector for $pmux cell $procmux$1781: { $procmux$1810_CMP $auto$opt_reduce.cc:134:opt_pmux$2255 $procmux$1827_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$2246: { $procmux$1762_CMP [5:3] $procmux$1762_CMP [1] $procmux$1750_CMP [2] $procmux$1720_CMP [2] }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$2248: { $procmux$1762_CMP [5:3] $procmux$1762_CMP [1] $procmux$1750_CMP [2] $procmux$1720_CMP [2] }
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+    New ctrl vector for $pmux cell $procmux$2129: { $procmux$2136_CMP $procmux$2135_CMP $procmux$2134_CMP $procmux$2133_CMP $auto$opt_reduce.cc:134:opt_pmux$2257 $procmux$2130_CMP }
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+  Optimizing cells in module \kronos_core.
+  Optimizing cells in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Performed a total of 12 changes.
+
+5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_lsu'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_RF'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+<suppressed ~36 debug messages>
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Removed a total of 13 cells.
+
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$2187 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$757_Y, Q = \csr_wr_vld, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$2258 ($sdff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $not$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:518$343_Y, Q = \csr_wr_vld).
+Adding SRST signal on $procdff$2188 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = \next_state, Q = \state, rval = 2'00).
+Adding SRST signal on $procdff$2173 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $reduce_or$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:643$369_Y, Q = \core_interrupt, rval = 1'0).
+Adding EN signal on $procdff$2174 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$478_Y, Q = \core_interrupt_cause).
+Adding SRST signal on $auto$ff.cc:266:slice$2262 ($dffe) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = 2'x, Q = \core_interrupt_cause [1:0], rval = 2'11).
+Adding SRST signal on $auto$ff.cc:266:slice$2262 ($dffe) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$472_Y [2], Q = \core_interrupt_cause [2], rval = 1'0).
+Adding SRST signal on $auto$ff.cc:266:slice$2262 ($dffe) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$475_Y [3], Q = \core_interrupt_cause [3], rval = 1'1).
+Adding SRST signal on $procdff$2175 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = { $procmux$548_Y $procmux$567_Y }, Q = \mstatus [1:0], rval = 2'00).
+Adding EN signal on $procdff$2175 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = 2'11, Q = \mstatus [3:2]).
+Adding EN signal on $auto$ff.cc:266:slice$2274 ($sdff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = { $procmux$548_Y $procmux$567_Y }, Q = \mstatus [1:0]).
+Adding SRST signal on $procdff$2176 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = { $procmux$491_Y $procmux$504_Y $procmux$517_Y }, Q = \mie, rval = 3'000).
+Adding EN signal on $auto$ff.cc:266:slice$2284 ($sdff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = \csr_wr_data [11], Q = \mie [2]).
+Adding EN signal on $auto$ff.cc:266:slice$2284 ($sdff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = \csr_wr_data [7], Q = \mie [1]).
+Adding EN signal on $auto$ff.cc:266:slice$2284 ($sdff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = \csr_wr_data [3], Q = \mie [0]).
+Adding SRST signal on $procdff$2177 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = { $and$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:634$366_Y $and$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:633$364_Y $and$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:632$362_Y }, Q = \mip, rval = 3'000).
+Adding SRST signal on $procdff$2178 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$615_Y, Q = \mtvec [31:2], rval = 30'000000000000000000000000000000).
+Adding EN signal on $procdff$2178 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = 2'00, Q = \mtvec [1:0]).
+Adding EN signal on $auto$ff.cc:266:slice$2295 ($sdff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = \csr_wr_data [31:2], Q = \mtvec [31:2]).
+Adding EN signal on $procdff$2179 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = \csr_wr_data, Q = \mscratch).
+Adding EN signal on $procdff$2180 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$592_Y, Q = \mepc).
+Adding EN signal on $procdff$2181 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$579_Y, Q = \mcause).
+Adding EN signal on $procdff$2182 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$629_Y, Q = \mtval).
+Adding EN signal on $procdff$2183 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$749_Y, Q = \trap_handle).
+Adding SRST signal on $procdff$2184 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$740_Y, Q = \trap_jump, rval = 1'0).
+Adding EN signal on $procdff$2185 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = \csr_rd_data, Q = \csr_data).
+Adding SRST signal on $procdff$2186 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$765_Y, Q = \regwr_csr, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$2332 ($sdff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$765_Y, Q = \regwr_csr).
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$2267 ($sdffce) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Setting constant 1-bit at position 1 on $auto$ff.cc:266:slice$2267 ($sdffce) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$2297 ($dffe) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$2297 ($dffe) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$2276 ($dffe) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Setting constant 1-bit at position 1 on $auto$ff.cc:266:slice$2276 ($dffe) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Adding EN signal on $procdff$2189 ($dff) from module kronos_hcu (D = \instr [11:7], Q = \rpend).
+Adding EN signal on $procdff$2194 ($dff) from module kronos_RF (D = $procmux$891_Y, Q = \regrd_rs1).
+Adding EN signal on $procdff$2195 ($dff) from module kronos_RF (D = $procmux$874_Y, Q = \regrd_rs2).
+Adding EN signal on $procdff$2196 ($dff) from module kronos_RF (D = $logic_or$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1833$225_Y, Q = \regrd_rs1_en).
+Adding EN signal on $procdff$2197 ($dff) from module kronos_RF (D = $logic_or$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1834$230_Y, Q = \regrd_rs2_en).
+Adding SRST signal on $procdff$2198 ($dff) from module kronos_RF (D = $procmux$845_Y, Q = \reg_vld, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$2357 ($sdff) from module kronos_RF (D = $procmux$845_Y, Q = \reg_vld).
+Adding EN signal on $procdff$2199 ($dff) from module kronos_RF (D = \instr_data [19:15], Q = \reg_rs1).
+Adding EN signal on $procdff$2200 ($dff) from module kronos_RF (D = \instr_data [24:20], Q = \reg_rs2).
+Adding EN signal on $procdff$2193 ($dff) from module kronos_RF (D = { \ImmF \ImmE \ImmD \ImmC \ImmB \ImmA }, Q = \immediate).
+Adding SRST signal on $procdff$2207 ($dff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = $procmux$1078_Y, Q = \pc_last, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$2374 ($sdff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = $procmux$1078_Y, Q = \pc_last).
+Adding SRST signal on $procdff$2206 ($dff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = $procmux$1086_Y, Q = \pc, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$2378 ($sdff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = $procmux$1086_Y, Q = \pc).
+Adding SRST signal on $procdff$2203 ($dff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = $procmux$989_Y, Q = \fetch_vld, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$2382 ($sdff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = $procmux$989_Y, Q = \fetch_vld).
+Adding SRST signal on $procdff$2205 ($dff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = $procmux$1070_Y [0], Q = \state [0], rval = 1'0).
+Adding SRST signal on $procdff$2205 ($dff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = \next_state [1], Q = \state [1], rval = 1'0).
+Adding EN signal on $procdff$2201 ($dff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = $procmux$1019_Y, Q = \fetch_pc).
+Adding EN signal on $procdff$2204 ($dff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = \instr_data, Q = \skid_buffer).
+Adding EN signal on $procdff$2202 ($dff) from module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF (D = $procmux$1004_Y, Q = \fetch_ir).
+Adding EN signal on $procdff$2208 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \fetch_pc, Q = \decode_pc).
+Adding EN signal on $procdff$2212 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \addr, Q = \decode_addr).
+Adding EN signal on $procdff$2213 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $logic_or$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1435$139_Y, Q = \decode_basic).
+Adding EN signal on $procdff$2214 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \aluop, Q = \decode_aluop).
+Adding EN signal on $procdff$2215 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $logic_and$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$73_Y, Q = \decode_regwr_alu).
+Adding EN signal on $procdff$2216 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $logic_or$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1441$143_Y, Q = \decode_jump).
+Adding EN signal on $procdff$2217 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $logic_and$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1442$145_Y, Q = \decode_branch).
+Adding SRST signal on $procdff$2227 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $procmux$1094_Y, Q = \decode_vld, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$2460 ($sdff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $procmux$1094_Y, Q = \decode_vld).
+Adding EN signal on $procdff$2218 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1443$146_Y, Q = \decode_load).
+Adding EN signal on $procdff$2219 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1444$147_Y, Q = \decode_store).
+Adding EN signal on $procdff$2220 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \mask, Q = \decode_mask).
+Adding EN signal on $procdff$2221 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \csr, Q = \decode_csr).
+Adding EN signal on $procdff$2222 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $logic_and$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1447$150_Y, Q = \decode_system).
+Adding EN signal on $procdff$2223 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \sysop, Q = \decode_sysop).
+Adding EN signal on $procdff$2224 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $or$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1392$121_Y, Q = \decode_illegal).
+Adding EN signal on $procdff$2225 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \misaligned_jmp, Q = \decode_misaligned_jmp).
+Adding EN signal on $procdff$2210 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \op1, Q = \decode_op1).
+Adding EN signal on $procdff$2226 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \misaligned_ldst, Q = \decode_misaligned_ldst).
+Adding EN signal on $procdff$2209 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \fetch_ir, Q = \decode_ir).
+Adding EN signal on $procdff$2211 ($dff) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = \op2, Q = \decode_op2).
+Adding SRST signal on $procdff$2233 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX (D = $procmux$1916_Y, Q = \regwr_en, rval = 1'0).
+Adding EN signal on $procdff$2229 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX (D = $procmux$1907_Y, Q = \trap_cause).
+Adding SRST signal on $procdff$2234 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX (D = $procmux$1930_Y, Q = \regwr_pending_later, rval = 1'0).
+Adding SRST signal on $procdff$2235 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX (D = \next_state, Q = \state, rval = 3'000).
+Adding EN signal on $procdff$2231 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX (D = $procmux$1945_Y, Q = \regwr_data).
+Adding EN signal on $procdff$2232 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX (D = \decode_ir [11:7], Q = \regwr_sel).
+Adding SRST signal on $procdff$2228 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX (D = $logic_or$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1003$59_Y, Q = \instret, rval = 1'0).
+Adding EN signal on $procdff$2230 ($dff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX (D = $procmux$1880_Y, Q = \trap_value).
+Adding SRST signal on $procdff$2236 ($dff) from module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64 (D = $procmux$2168_Y, Q = \count_low, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$2556 ($sdff) from module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64 (D = $procmux$2168_Y, Q = \count_low).
+Adding SRST signal on $procdff$2237 ($dff) from module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64 (D = $procmux$2157_Y, Q = \count_high, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$2564 ($sdff) from module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64 (D = $procmux$2154_Y, Q = \count_high).
+Adding SRST signal on $procdff$2238 ($dff) from module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64 (D = $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:358$434_Y, Q = \incr_high, rval = 1'0).
+
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_lsu..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Removed 175 unused cells and 1373 unused wires.
+<suppressed ~239 debug messages>
+
+5.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+<suppressed ~5 debug messages>
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+<suppressed ~3 debug messages>
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+<suppressed ~7 debug messages>
+Optimizing module kronos_RF.
+<suppressed ~3 debug messages>
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+5.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_RF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_branch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_hcu..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_lsu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~77 debug messages>
+
+5.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+  Optimizing cells in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+    New ctrl vector for $pmux cell $procmux$1665: { $auto$opt_reduce.cc:134:opt_pmux$2582 $auto$opt_reduce.cc:134:opt_pmux$2580 }
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+  Optimizing cells in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+  Optimizing cells in module \kronos_RF.
+  Optimizing cells in module \kronos_alu.
+  Optimizing cells in module \kronos_branch.
+  Optimizing cells in module \kronos_core.
+  Optimizing cells in module \kronos_hcu.
+  Optimizing cells in module \kronos_lsu.
+Performed a total of 1 changes.
+
+5.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+<suppressed ~27 debug messages>
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+<suppressed ~108 debug messages>
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+<suppressed ~12 debug messages>
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+<suppressed ~12 debug messages>
+Finding identical cells in module `\kronos_RF'.
+<suppressed ~15 debug messages>
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_lsu'.
+Removed a total of 58 cells.
+
+5.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$2493 ($dffe) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $6\sysop[1:0] [1], Q = \decode_sysop [1], rval = 1'0).
+Adding SRST signal on $auto$ff.cc:266:slice$2493 ($dffe) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $5\sysop[1:0] [0], Q = \decode_sysop [0], rval = 1'0).
+Adding SRST signal on $auto$ff.cc:266:slice$2478 ($dffe) from module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID (D = $2\mask[3:0], Q = \decode_mask, rval = 4'1111).
+Adding EN signal on $auto$ff.cc:266:slice$2539 ($sdff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX (D = \next_state, Q = \state).
+Adding SRST signal on $auto$ff.cc:266:slice$2325 ($dffe) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = $procmux$746_Y [1:0], Q = \trap_handle [1:0], rval = 2'00).
+Adding EN signal on $auto$ff.cc:266:slice$2260 ($sdff) from module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr (D = \next_state, Q = \state).
+Adding SRST signal on $auto$ff.cc:266:slice$2371 ($dffe) from module kronos_RF (D = { $2\ImmD[0:0] \instr_data [30:25] $2\ImmB[3:0] }, Q = \immediate [11:1], rval = 11'00000000000).
+
+5.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_lsu..
+Removed 8 unused cells and 66 unused wires.
+<suppressed ~18 debug messages>
+
+5.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+<suppressed ~1 debug messages>
+Optimizing module kronos_RF.
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+5.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_RF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_branch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_hcu..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_lsu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~78 debug messages>
+
+5.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+  Optimizing cells in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+  Optimizing cells in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+  Optimizing cells in module \kronos_RF.
+  Optimizing cells in module \kronos_alu.
+  Optimizing cells in module \kronos_branch.
+  Optimizing cells in module \kronos_core.
+  Optimizing cells in module \kronos_hcu.
+  Optimizing cells in module \kronos_lsu.
+Performed a total of 0 changes.
+
+5.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+Finding identical cells in module `\kronos_RF'.
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_lsu'.
+Removed a total of 3 cells.
+
+5.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_lsu..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+5.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module kronos_RF.
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+5.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_RF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_branch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_hcu..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_lsu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~78 debug messages>
+
+5.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+  Optimizing cells in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+  Optimizing cells in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+  Optimizing cells in module \kronos_RF.
+  Optimizing cells in module \kronos_alu.
+  Optimizing cells in module \kronos_branch.
+  Optimizing cells in module \kronos_core.
+  Optimizing cells in module \kronos_hcu.
+  Optimizing cells in module \kronos_lsu.
+Performed a total of 0 changes.
+
+5.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+Finding identical cells in module `\kronos_RF'.
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_lsu'.
+Removed a total of 0 cells.
+
+5.27. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_lsu..
+
+5.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module kronos_RF.
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+5.30. Finished OPT passes. (There is nothing left to do.)
+
+6. Executing MEMORY pass.
+
+6.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+6.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+6.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing kronos_RF.REG write port 0.
+
+6.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+6.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\REG'[0] in module `\kronos_RF': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port `\REG'[1] in module `\kronos_RF': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port address `\REG'[0] in module `\kronos_RF': no address FF found.
+Checking read port address `\REG'[1] in module `\kronos_RF': no address FF found.
+
+6.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_lsu..
+
+6.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory kronos_RF.REG by address:
+
+6.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+6.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_lsu..
+
+6.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+6.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \REG in module \kronos_RF:
+  created 32 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 62 $mux cells.
+  write interface: 32 write mux blocks.
+
+7. Executing PROC pass (convert processes to netlists).
+
+7.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+7.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+7.4. Executing PROC_INIT pass (extract init attributes).
+
+7.5. Executing PROC_ARST pass (detect async resets in processes).
+
+7.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+7.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+7.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+7.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+7.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+7.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module kronos_RF.
+<suppressed ~10 debug messages>
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module kronos_RF.
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+Finding identical cells in module `\kronos_RF'.
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_lsu'.
+Removed a total of 0 cells.
+
+8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_RF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_branch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_hcu..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_lsu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~110 debug messages>
+
+8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+  Optimizing cells in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+  Optimizing cells in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+  Optimizing cells in module \kronos_RF.
+  Optimizing cells in module \kronos_alu.
+  Optimizing cells in module \kronos_branch.
+  Optimizing cells in module \kronos_core.
+  Optimizing cells in module \kronos_hcu.
+  Optimizing cells in module \kronos_lsu.
+Performed a total of 0 changes.
+
+8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+Finding identical cells in module `\kronos_RF'.
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_lsu'.
+Removed a total of 0 cells.
+
+8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_lsu..
+Removed 0 unused cells and 101 unused wires.
+<suppressed ~1 debug messages>
+
+8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module kronos_RF.
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_RF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_branch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_hcu..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_lsu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~110 debug messages>
+
+8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+  Optimizing cells in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+  Optimizing cells in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+  Optimizing cells in module \kronos_RF.
+  Optimizing cells in module \kronos_alu.
+  Optimizing cells in module \kronos_branch.
+  Optimizing cells in module \kronos_core.
+  Optimizing cells in module \kronos_hcu.
+  Optimizing cells in module \kronos_lsu.
+Performed a total of 0 changes.
+
+8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+Finding identical cells in module `\kronos_RF'.
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_lsu'.
+Removed a total of 0 cells.
+
+8.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\REG[9]$2654 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[9]).
+Adding EN signal on $memory\REG[8]$2652 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[8]).
+Adding EN signal on $memory\REG[7]$2650 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[7]).
+Adding EN signal on $memory\REG[6]$2648 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[6]).
+Adding EN signal on $memory\REG[5]$2646 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[5]).
+Adding EN signal on $memory\REG[4]$2644 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[4]).
+Adding EN signal on $memory\REG[3]$2642 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[3]).
+Adding EN signal on $memory\REG[31]$2698 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[31]).
+Adding EN signal on $memory\REG[30]$2696 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[30]).
+Adding EN signal on $memory\REG[2]$2640 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[2]).
+Adding EN signal on $memory\REG[29]$2694 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[29]).
+Adding EN signal on $memory\REG[28]$2692 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[28]).
+Adding EN signal on $memory\REG[27]$2690 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[27]).
+Adding EN signal on $memory\REG[26]$2688 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[26]).
+Adding EN signal on $memory\REG[25]$2686 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[25]).
+Adding EN signal on $memory\REG[24]$2684 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[24]).
+Adding EN signal on $memory\REG[23]$2682 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[23]).
+Adding EN signal on $memory\REG[22]$2680 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[22]).
+Adding EN signal on $memory\REG[21]$2678 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[21]).
+Adding EN signal on $memory\REG[20]$2676 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[20]).
+Adding EN signal on $memory\REG[1]$2638 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[1]).
+Adding EN signal on $memory\REG[19]$2674 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[19]).
+Adding EN signal on $memory\REG[18]$2672 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[18]).
+Adding EN signal on $memory\REG[17]$2670 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[17]).
+Adding EN signal on $memory\REG[16]$2668 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[16]).
+Adding EN signal on $memory\REG[15]$2666 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[15]).
+Adding EN signal on $memory\REG[14]$2664 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[14]).
+Adding EN signal on $memory\REG[13]$2662 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[13]).
+Adding EN signal on $memory\REG[12]$2660 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[12]).
+Adding EN signal on $memory\REG[11]$2658 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[11]).
+Adding EN signal on $memory\REG[10]$2656 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[10]).
+Adding EN signal on $memory\REG[0]$2636 ($dff) from module kronos_RF (D = $0$memwr$\REG$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1870$192_DATA[31:0]$250, Q = \REG[0]).
+
+8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_lsu..
+Removed 32 unused cells and 32 unused wires.
+<suppressed ~33 debug messages>
+
+8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module kronos_RF.
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_RF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_branch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_hcu..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_lsu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~78 debug messages>
+
+8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+  Optimizing cells in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+  Optimizing cells in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+  Optimizing cells in module \kronos_RF.
+  Optimizing cells in module \kronos_alu.
+  Optimizing cells in module \kronos_branch.
+  Optimizing cells in module \kronos_core.
+  Optimizing cells in module \kronos_hcu.
+  Optimizing cells in module \kronos_lsu.
+Performed a total of 0 changes.
+
+8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+Finding identical cells in module `\kronos_RF'.
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_lsu'.
+Removed a total of 0 cells.
+
+8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_lsu..
+
+8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module kronos_RF.
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+8.23. Finished OPT passes. (There is nothing left to do.)
+
+9. Executing PMUXTREE pass.
+
+10. Executing OPT pass (performing simple optimizations).
+
+10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module kronos_RF.
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+<suppressed ~90 debug messages>
+Finding identical cells in module `\kronos_RF'.
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_lsu'.
+Removed a total of 31 cells.
+
+10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_RF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_branch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_hcu..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_lsu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~78 debug messages>
+
+10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+  Optimizing cells in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+    New input vector for $reduce_or cell $auto$pmuxtree.cc:100:execute$3170: { $procmux$1447_CMP [2:1] $procmux$1446_CMP [2:1] $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1294$88_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1294$87_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1270$86_Y }
+    New input vector for $reduce_or cell $auto$pmuxtree.cc:100:execute$3192: { $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1447$148_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1443$146_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1435$138_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1435$132_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1241$81_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$71_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$69_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$67_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$65_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$63_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$62_Y }
+    New input vector for $reduce_or cell $auto$pmuxtree.cc:100:execute$3220: { $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1241$81_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$71_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$69_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$63_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$62_Y }
+    New input vector for $reduce_or cell $auto$pmuxtree.cc:100:execute$3232: { $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1447$148_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$71_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$69_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:1198$62_Y }
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+  Optimizing cells in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+    New input vector for $reduce_or cell $auto$pmuxtree.cc:37:or_generator$3272: { $procmux$1955_CMP $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:948$50_Y \return_trap \activate_trap }
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+    New input vector for $reduce_or cell $auto$pmuxtree.cc:37:or_generator$3530: { $procmux$666_CMP $procmux$628_CMP $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:667$376_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:666$374_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:652$372_Y $eq$/data/kceesay/workspace/mucfi/cpus/kronos/cellift/generated/sv2v_out.v:651$370_Y }
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+  Optimizing cells in module \kronos_RF.
+  Optimizing cells in module \kronos_alu.
+    New input vector for $reduce_or cell $auto$pmuxtree.cc:100:execute$3538: { $procmux$443_CMP $procmux$442_CMP $procmux$441_CMP $procmux$440_CMP $procmux$439_CMP }
+    New input vector for $reduce_or cell $auto$pmuxtree.cc:37:or_generator$3550: { $procmux$441_CMP $procmux$440_CMP $procmux$439_CMP }
+  Optimizing cells in module \kronos_alu.
+  Optimizing cells in module \kronos_branch.
+    New input vector for $reduce_or cell $auto$pmuxtree.cc:100:execute$3558: { $procmux$815_CMP $procmux$814_CMP $procmux$813_CMP }
+  Optimizing cells in module \kronos_branch.
+  Optimizing cells in module \kronos_core.
+  Optimizing cells in module \kronos_hcu.
+  Optimizing cells in module \kronos_lsu.
+Performed a total of 9 changes.
+
+10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\kronos_RF'.
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_lsu'.
+Removed a total of 1 cells.
+
+10.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_lsu..
+Removed 30 unused cells and 88 unused wires.
+<suppressed ~37 debug messages>
+
+10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module kronos_RF.
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_RF..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_branch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_hcu..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kronos_lsu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~79 debug messages>
+
+10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+  Optimizing cells in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+  Optimizing cells in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+  Optimizing cells in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+  Optimizing cells in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+  Optimizing cells in module \kronos_RF.
+  Optimizing cells in module \kronos_alu.
+  Optimizing cells in module \kronos_branch.
+  Optimizing cells in module \kronos_core.
+  Optimizing cells in module \kronos_hcu.
+  Optimizing cells in module \kronos_lsu.
+Performed a total of 0 changes.
+
+10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu'.
+Finding identical cells in module `$paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF'.
+Finding identical cells in module `$paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID'.
+Finding identical cells in module `$paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX'.
+Finding identical cells in module `$paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr'.
+Finding identical cells in module `\kronos_RF'.
+Finding identical cells in module `\kronos_alu'.
+Finding identical cells in module `\kronos_branch'.
+Finding identical cells in module `\kronos_core'.
+Finding identical cells in module `\kronos_hcu'.
+Finding identical cells in module `\kronos_lsu'.
+Removed a total of 0 cells.
+
+10.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu..
+Finding unused cells or wires in module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF..
+Finding unused cells or wires in module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID..
+Finding unused cells or wires in module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX..
+Finding unused cells or wires in module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr..
+Finding unused cells or wires in module \kronos_RF..
+Finding unused cells or wires in module \kronos_alu..
+Finding unused cells or wires in module \kronos_branch..
+Finding unused cells or wires in module \kronos_core..
+Finding unused cells or wires in module \kronos_hcu..
+Finding unused cells or wires in module \kronos_lsu..
+
+10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Optimizing module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Optimizing module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Optimizing module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Optimizing module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Optimizing module kronos_RF.
+Optimizing module kronos_alu.
+Optimizing module kronos_branch.
+Optimizing module kronos_core.
+Optimizing module kronos_hcu.
+Optimizing module kronos_lsu.
+
+10.16. Finished OPT passes. (There is nothing left to do.)
+tstpstart_opt_tstpend: 1726662963318.
+
+11. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$18af26cedc4b6bb625254872dcfca9175553c879\kronos_agu.
+Deleting now unused module $paramod$1ca75966b4f30b3101fd28577b3b4df6f149242a\kronos_IF.
+Deleting now unused module $paramod$7ba81c6d179a62ecfdf087977491187ed598ce2e\kronos_ID.
+Deleting now unused module $paramod$7f28a733942cfa68708efb963cc03bff51aab720\kronos_counter64.
+Deleting now unused module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_EX.
+Deleting now unused module $paramod$d40b5217feec905a1dfc70aea45d76e33142502f\kronos_csr.
+Deleting now unused module kronos_RF.
+Deleting now unused module kronos_alu.
+Deleting now unused module kronos_branch.
+Deleting now unused module kronos_hcu.
+Deleting now unused module kronos_lsu.
+<suppressed ~12 debug messages>
+
+12. Executing update condition pass.
+Parsing csv: u_if.u_rf.instr_data of size 20
+Adding u_if.u_rf.instr_data to list
+Signal \u_if.u_rf.reg_rs1  found in top module
+UpdateConditionDebug: Generating update condition for signal \u_if.u_rf.reg_rs1.
+Visited signal: \u_if.u_rf.reg_rs1
+UpdateConditionDebug: Found signal  \u_if.u_rf.reg_rs1 at cell $flatten\u_if.\u_rf.$auto$ff.cc:266:slice$2365, port Q.
+UC_COND: (
+UpdateConditionDebug: Generating update condition for signal \u_if.u_rf.instr_data.
+Checking included signal \u_if.u_rf.instr_data against signal \u_if.u_rf.instr_data
+UpdateConditionDebug: Signal \u_if.u_rf.instr_data was specified to be included. Returning 1.
+UC_COND: 1
+UC_COND: $past($flatten\u_if.\u_rf.$auto$opt_dff.cc:219:make_patterns_logic$2352 && 1'1)
+UC_COND: )
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kronos_core.
+<suppressed ~6 debug messages>
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kronos_core'.
+<suppressed ~69 debug messages>
+Removed a total of 23 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~79 debug messages>
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kronos_core.
+    New input vector for $reduce_or cell $flatten\u_ex.\u_csr.\u_hpmcounter0.$auto$opt_dff.cc:254:combine_resets$2578: { $flatten\u_ex.\u_csr.\u_hpmcounter0.$auto$$auto$opt_dff.cc:250:combine_resets$2573:0:$2574 \u_ex.u_csr.mcycle_wrenh \u_ex.u_csr.mcycle_wrenl }
+  Optimizing cells in module \kronos_core.
+Performed a total of 1 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kronos_core'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kronos_core..
+Removed 0 unused cells and 253 unused wires.
+<suppressed ~226 debug messages>
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kronos_core.
+
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~79 debug messages>
+
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kronos_core.
+Performed a total of 0 changes.
+
+13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kronos_core'.
+Removed a total of 0 cells.
+
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $flatten\u_id.$auto$ff.cc:266:slice$2513 ($dffe) from module kronos_core (D = $flatten\u_id.\u_agu.$2\misaligned_ldst[0:0], Q = \u_ex.decode_misaligned_ldst, rval = 1'0).
+
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kronos_core..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kronos_core.
+
+13.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kronos_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~79 debug messages>
+
+13.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kronos_core.
+Performed a total of 0 changes.
+
+13.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kronos_core'.
+Removed a total of 0 cells.
+
+13.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kronos_core..
+
+13.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kronos_core.
+
+13.23. Finished OPT passes. (There is nothing left to do.)
+
+14. Executing Verilog backend.
+
+14.1. Executing BMUXMAP pass.
+
+14.2. Executing DEMUXMAP pass.
+Dumping module `\kronos_core'.
+tstpstart_end_tstpend: 1726662963739.
+
+End of script. Logfile hash: 2631d9b188, CPU: user 1.50s system 0.02s, MEM: 33.38 MB peak
+Yosys 0.29+11 (git sha1 , gcc 12.3.0-1ubuntu1~22.04 -Og -fPIC)
+Time spent: 25% 18x opt_expr (0 sec), 20% 12x opt_dff (0 sec), ...

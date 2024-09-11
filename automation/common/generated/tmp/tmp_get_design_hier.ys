@@ -1,0 +1,4 @@
+yosys read_verilog -sv MUCFI_PATH/verification/picorv32_ift/designs/cellift.v
+yosys hierarchy -top picorv32
+yosys proc
+yosys write_json MUCFI_PATH/automation/common/generated/tmp/picorv32.json

@@ -1,0 +1,67 @@
+CAPI=2:
+# Copyright 2022 Flavien Solt, ETH Zurich.
+# Licensed under the General Public License, Version 3.0, see LICENSE for details.
+# SPDX-License-Identifier: GPL-3.0-only
+name: "::run_vanilla_trace:0.1"
+description: "Run on vanilla"
+
+filesets:
+  files_cells:
+    depend:
+    files:
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/src/ift_sram_mem_notaint.sv
+      - src/scarv_tiny_soc.sv
+      - generated/frv_common.vh : {is_include_file: true}
+      - generated/frv_pipeline_decode.vh : {is_include_file: true}
+      - generated/out/vanilla.sv
+    file_type: systemVerilogSource
+
+  files_dv:
+    files:
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/elf.h : {is_include_file: true}
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/taintloader.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/elfloader.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/common_functions.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/ticks.h : {is_include_file: true}
+      - dv/testbench.h : {is_include_file: true}
+      - dv/toplevel.cc
+    file_type: cppSource
+
+targets:
+  default:
+    default_tool: verilator
+    filesets:
+      - files_cells
+      - files_dv
+    toplevel: scarv_tiny_soc
+    tools:
+      verilator:
+        mode: cc
+        verilator_options:
+          - '--trace'
+          - '--trace-structs'
+          - '--trace-params'
+          - '--trace-max-array 1024'
+          - '-CFLAGS "-std=c++11 -Wall -DIS_VANILLA -DTOPLEVEL_NAME=ibex_tiny_soc -g -O0"'
+          - '-LDFLAGS "-pthread -lutil"'
+          - "-Wall"
+          - "-Wno-PINCONNECTEMPTY"
+          - "-Wno-fatal"
+          - "-Wno-EOFNEWLINE"
+          - "-Wno-DECLFILENAME"
+          - "-Wno-PINMISSING"
+          - "-Wno-UNUSEDPARAM"
+          - "-Wno-WIDTH"
+          - "-Wno-UNUSEDSIGNAL"
+          - "-Wno-CASEOVERLAP"
+          - "-Wno-CASEINCOMPLETE"
+          - "-Wno-BLKSEQ"
+          - "-Wno-UNDRIVEN"
+          - "-Wno-UNOPTFLAT"
+          - "-Wno-TIMESCALEMOD"
+          - "-Wno-PINNOTFOUND"
+          - "-Wno-UNOPTFLAT"
+          - "-Wno-IMPLICIT"
+          - "-Wno-CMPCONST"
+
+

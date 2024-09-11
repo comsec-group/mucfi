@@ -1,0 +1,109 @@
+CAPI=2:
+# Copyright 2022 Flavien Solt, ETH Zurich.
+# Licensed under the General Public License, Version 3.0, see LICENSE for details.
+# SPDX-License-Identifier: GPL-3.0-only
+name: "::run_vanilla_notrace_pkg:0.1"
+description: "Run on vanilla Ibex"
+
+filesets:
+  files_cells:
+    depend:
+      # Dependences of rv_core_ibex.
+     #- lowrisc:ibex:ibex_top
+     #- lowrisc:prim:all
+     #- lowrisc:prim:clock_gating
+     #- lowrisc:ip:tlul
+     #- lowrisc:tlul:adapter_host
+     #- lowrisc:ip:lc_ctrl_pkg
+     #- lowrisc:prim:lc_sync
+     #- lowrisc:ip:pwrmgr_pkg:0.1
+     #- lowrisc:ip:edn_pkg
+     #- lowrisc:ip:otp_ctrl_pkg:1.0
+     #- lowrisc:ip_interfaces:alert_handler_reg
+     #- lowrisc:ip:rv_core_ibex_pkg:0.1
+     #- lowrisc:ip:rv_core_ibex:0.1
+    files:
+      - generated/sv_sources/alert_handler_reg_pkg.sv
+      - generated/sv_sources/top_pkg.sv
+      - generated/sv_sources/prim_mubi_pkg.sv
+
+      - generated/sv_sources/tlul_pkg.sv
+      - generated/sv_sources/prim_subreg_pkg.sv
+      - generated/sv_sources/ibex_pkg.sv
+      - generated/sv_sources/prim_ram_1p_pkg.sv
+      - generated/sv_sources/prim_secded_pkg.sv
+      - generated/sv_sources/rv_core_ibex_pkg.sv
+      - generated/sv_sources/prim_esc_pkg.sv
+      - generated/sv_sources/lc_ctrl_pkg.sv
+      - generated/sv_sources/pwrmgr_pkg.sv
+      - generated/sv_sources/edn_pkg.sv
+      - generated/sv_sources/otp_ctrl_pkg.sv
+      - generated/sv_sources/prim_alert_pkg.sv
+      - generated/sv_sources/prim_util_pkg.sv
+      - generated/sv_sources/prim_pkg.sv
+      - generated/sv_sources/prim_cipher_pkg.sv
+      - generated/sv_sources/prim_pad_wrapper_pkg.sv
+      - generated/sv_sources/pwrmgr_reg_pkg.sv
+
+
+
+
+
+
+      # - generated/sv_sources/entropy_src_pkg.sv
+      # - generated/sv_sources/csrng_pkg.sv
+      # - generated/sv_sources/csrng_reg_pkg.sv
+      # - generated/sv_sources/edn_reg_pkg.sv
+
+      # - generated/sv_sources/lc_ctrl_reg_pkg.sv
+      # - generated/sv_sources/lc_ctrl_state_pkg.sv
+      # - generated/sv_sources/otp_ctrl_part_pkg.sv
+      # - generated/sv_sources/otp_ctrl_reg_pkg.sv
+
+      # - generated/sv_sources/rv_core_ibex_reg_pkg.sv
+
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/src/ift_sram_mem_notaint.sv
+      - src/ibex_tiny_soc.sv
+      - generated/out/vanilla.sv
+    file_type: systemVerilogSource
+
+  files_dv:
+    files:
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/elf.h : {is_include_file: true}
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/taintloader.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/elfloader.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/common_functions.cc
+      - $CELLIFT_DESIGN_PROCESSING_ROOT/common/dv/ticks.h : {is_include_file: true}
+      - dv/testbench.h : {is_include_file: true}
+      - dv/toplevel.cc
+    file_type: cppSource
+
+targets:
+  default:
+    default_tool: verilator
+    filesets:
+      - files_cells
+      - files_dv
+    toplevel: ibex_tiny_soc
+    tools:
+      verilator:
+        mode: cc
+        verilator_options:
+          - '-CFLAGS "-std=c++11 -Wall -DIS_VANILLA -DTOPLEVEL_NAME=ibex_tiny_soc -g -O0"'
+          - '-LDFLAGS "-pthread -lutil"'
+          - "-Wall"
+          - "-Wno-PINCONNECTEMPTY"
+          - "-Wno-fatal"
+          - "-Wno-DECLFILENAME"
+          - "-Wno-PINMISSING"
+          - "-Wno-VARHIDDEN"
+          - "-Wno-IMPLICIT"
+          - "-Wno-WIDTH"
+          - "-Wno-UNUSEDPARAM"
+          - "-Wno-UNUSEDSIGNAL"
+          - "-Wno-LATCH"
+          - "-Wno-SYNCASYNCNET"
+          - "-Wno-LITENDIAN"
+          - "-Wno-UNOPTFLAT"
+          - "-Wno-ALWCOMBORDER"
+          - "-Wno-BLKSEQ"

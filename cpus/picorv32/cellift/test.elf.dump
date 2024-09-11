@@ -1,0 +1,117 @@
+
+/scratch/flsolt/data/python-tmp/spikedoublecheck430965_picorv32_437501_3.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text.init:
+
+80000000 <.text.init>:
+80000000:	80000fb7          	lui	t6,0x80000
+80000004:	000f8f93          	addi	t6,t6,0 # 0x80000000
+80000008:	01f006b3          	add	a3,zero,t6
+8000000c:	04068693          	addi	a3,a3,64
+80000010:	0006a083          	lw	ra,0(a3)
+80000014:	0086a103          	lw	sp,8(a3)
+80000018:	0106a183          	lw	gp,16(a3)
+8000001c:	0186a203          	lw	tp,24(a3)
+80000020:	0206a283          	lw	t0,32(a3)
+80000024:	0286a303          	lw	t1,40(a3)
+80000028:	0306a383          	lw	t2,48(a3)
+8000002c:	0386a403          	lw	s0,56(a3)
+80000030:	0406a483          	lw	s1,64(a3)
+80000034:	0486a503          	lw	a0,72(a3)
+80000038:	0506a583          	lw	a1,80(a3)
+8000003c:	0586a603          	lw	a2,88(a3)
+80000040:	0606a683          	lw	a3,96(a3)
+80000044:	10d0b4ef          	jal	s1,0x8000b950
+80000048:	0000                	c.unimp
+8000004a:	0000                	c.unimp
+8000004c:	a833daf7          	0xa833daf7
+80000050:	6a07a163          	0x6a07a163
+80000054:	097a                	c.slli	s2,0x1e
+80000056:	5df9                	c.li	s11,-2
+80000058:	ee5a                	c.fswsp	fs6,28(sp)
+8000005a:	8bc5                	c.andi	a5,17
+8000005c:	4c92                	c.lwsp	s9,4(sp)
+8000005e:	df9d                	c.beqz	a5,0x7fffff9c
+80000060:	4e5a                	c.lwsp	t3,148(sp)
+80000062:	1e0d                	c.addi	t3,-29
+	...
+80000074:	723f06f7          	0x723f06f7
+80000078:	7b4d                	c.lui	s6,0xffff3
+8000007a:	5146                	c.lwsp	sp,112(sp)
+8000007c:	dfce                	c.swsp	s3,252(sp)
+8000007e:	01e82fbf aa5e7de4 	0xaa5e7de401e82fbf
+80000086:	0fda                	c.slli	t6,0x16
+80000088:	f98ff4fb          	0xf98ff4fb
+8000008c:	3390                	c.fld	fa2,32(a5)
+8000008e:	f485                	c.bnez	s1,0x7fffffb6
+80000090:	c88e                	c.swsp	gp,80(sp)
+80000092:	431e                	c.lwsp	t1,196(sp)
+80000094:	e218                	c.fsw	fa4,0(a2)
+80000096:	5c6a9783          	lh	a5,1478(s5)
+8000009a:	68c1                	c.lui	a7,0x10
+8000009c:	8bdd                	c.andi	a5,23
+8000009e:	9bd4a747          	fmsub.d	fa4,fs1,ft9,fs3,rdn
+800000a2:	fd02                	c.fswsp	ft0,184(sp)
+	...
+800000ac:	994c                	0x994c
+800000ae:	ff556beb          	0xff556beb
+800000b2:	8bb1                	c.andi	a5,12
+	...
+8000b950:	00000f37          	lui	t5,0x0
+8000b954:	010f0f13          	addi	t5,t5,16 # 0x10
+8000b958:	0ff0000f          	fence	iorw,iorw
+8000b95c:	001f2023          	sw	ra,0(t5)
+8000b960:	0ff0000f          	fence	iorw,iorw
+8000b964:	002f2023          	sw	sp,0(t5)
+8000b968:	0ff0000f          	fence	iorw,iorw
+8000b96c:	003f2023          	sw	gp,0(t5)
+8000b970:	0ff0000f          	fence	iorw,iorw
+8000b974:	004f2023          	sw	tp,0(t5)
+8000b978:	0ff0000f          	fence	iorw,iorw
+8000b97c:	005f2023          	sw	t0,0(t5)
+8000b980:	0ff0000f          	fence	iorw,iorw
+8000b984:	006f2023          	sw	t1,0(t5)
+8000b988:	0ff0000f          	fence	iorw,iorw
+8000b98c:	007f2023          	sw	t2,0(t5)
+8000b990:	0ff0000f          	fence	iorw,iorw
+8000b994:	008f2023          	sw	s0,0(t5)
+8000b998:	0ff0000f          	fence	iorw,iorw
+8000b99c:	009f2023          	sw	s1,0(t5)
+8000b9a0:	0ff0000f          	fence	iorw,iorw
+8000b9a4:	00af2023          	sw	a0,0(t5)
+8000b9a8:	0ff0000f          	fence	iorw,iorw
+8000b9ac:	00bf2023          	sw	a1,0(t5)
+8000b9b0:	0ff0000f          	fence	iorw,iorw
+8000b9b4:	00cf2023          	sw	a2,0(t5)
+8000b9b8:	0ff0000f          	fence	iorw,iorw
+8000b9bc:	00df2023          	sw	a3,0(t5)
+8000b9c0:	0ff0000f          	fence	iorw,iorw
+8000b9c4:	00ef2023          	sw	a4,0(t5)
+8000b9c8:	0ff0000f          	fence	iorw,iorw
+8000b9cc:	00ff2023          	sw	a5,0(t5)
+8000b9d0:	0ff0000f          	fence	iorw,iorw
+8000b9d4:	010f2023          	sw	a6,0(t5)
+8000b9d8:	0ff0000f          	fence	iorw,iorw
+8000b9dc:	011f2023          	sw	a7,0(t5)
+8000b9e0:	0ff0000f          	fence	iorw,iorw
+8000b9e4:	012f2023          	sw	s2,0(t5)
+8000b9e8:	0ff0000f          	fence	iorw,iorw
+8000b9ec:	013f2023          	sw	s3,0(t5)
+8000b9f0:	0ff0000f          	fence	iorw,iorw
+8000b9f4:	014f2023          	sw	s4,0(t5)
+8000b9f8:	0ff0000f          	fence	iorw,iorw
+8000b9fc:	015f2023          	sw	s5,0(t5)
+8000ba00:	0ff0000f          	fence	iorw,iorw
+8000ba04:	016f2023          	sw	s6,0(t5)
+8000ba08:	0ff0000f          	fence	iorw,iorw
+8000ba0c:	017f2023          	sw	s7,0(t5)
+8000ba10:	0ff0000f          	fence	iorw,iorw
+8000ba14:	018f2023          	sw	s8,0(t5)
+8000ba18:	0ff0000f          	fence	iorw,iorw
+8000ba1c:	00000f37          	lui	t5,0x0
+8000ba20:	000f0f13          	addi	t5,t5,0 # 0x0
+8000ba24:	000f2023          	sw	zero,0(t5)
+8000ba28:	0ff0000f          	fence	iorw,iorw
+8000ba2c:	0000006f          	jal	zero,0x8000ba2c
+	...

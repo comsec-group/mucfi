@@ -1,0 +1,3 @@
+yosys read_verilog -sv sv2v_out.v
+yosys hierarchy -top cellift_scarv
+yosys write_rtlil scarv_rtlil.txt

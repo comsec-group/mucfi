@@ -1,0 +1,175 @@
+# Copyright 2022 Flavien Solt, ETH Zurich.
+# Licensed under the General Public License, Version 3.0, see LICENSE for details.
+# SPDX-License-Identifier: GPL-3.0-only
+
+package:
+  name: ibex_cellift
+  authors:
+    - "Flavien Solt <flsolt@ethz.ch>"
+
+export_include_dirs:
+    - generated/sv_sources/
+    - ../ibex/vendor/lowrisc_ip/ip/prim/rtl
+    - ../ibex/vendor/lowrisc_ip/dv/sv/dv_utils
+
+sources:
+    files:
+      - generated/sv_sources/prim_alert_pkg.sv
+      #- generated/sv_sources/alert_handler_reg_pkg.sv
+      - generated/sv_sources/prim_cipher_pkg.sv
+      - generated/sv_sources/prim_secded_pkg.sv
+      - generated/sv_sources/prim_pad_wrapper_pkg.sv
+      - generated/sv_sources/prim_esc_pkg.sv
+      - generated/sv_sources/pwrmgr_pkg.sv
+      - generated/sv_sources/edn_pkg.sv
+      - generated/sv_sources/otp_ctrl_pkg.sv
+      - generated/sv_sources/ibex_pkg.sv
+      - generated/sv_sources/prim_pkg.sv
+      - generated/sv_sources/prim_ram_1p_pkg.sv
+      - generated/sv_sources/prim_util_pkg.sv
+      - generated/sv_sources/lc_ctrl_reg_pkg.sv
+      - generated/sv_sources/lc_ctrl_state_pkg.sv
+      - generated/sv_sources/lc_ctrl_pkg.sv
+      - generated/sv_sources/top_pkg.sv
+      - generated/sv_sources/tlul_pkg.sv
+
+      - generated/sv_sources/ibex_alu.sv
+      - generated/sv_sources/prim_flop.sv
+      - generated/sv_sources/prim_secded_28_22_dec.sv
+
+      - generated/sv_sources/ibex_branch_predict.sv
+      - generated/sv_sources/prim_gate_gen.sv
+      - generated/sv_sources/prim_secded_28_22_enc.sv
+
+      - generated/sv_sources/ibex_compressed_decoder.sv
+      - generated/sv_sources/prim_generic_buf.sv
+      - generated/sv_sources/prim_secded_39_32_dec.sv
+
+      - generated/sv_sources/ibex_controller.sv
+      - generated/sv_sources/pins_if.sv
+      - generated/sv_sources/prim_generic_clock_gating.sv
+      - generated/sv_sources/prim_secded_39_32_enc.sv
+
+      - generated/sv_sources/ibex_core.sv
+      - generated/sv_sources/prim_generic_clock_mux2.sv
+      - generated/sv_sources/prim_secded_64_57_dec.sv
+
+      - generated/sv_sources/ibex_counter.sv
+      - generated/sv_sources/prim_alert_receiver.sv
+      - generated/sv_sources/prim_generic_flop_2sync.sv
+      - generated/sv_sources/prim_secded_64_57_enc.sv
+
+      - generated/sv_sources/ibex_cs_registers.sv
+      - generated/sv_sources/prim_alert_sender.sv
+      - generated/sv_sources/prim_generic_flop_en.sv
+      - generated/sv_sources/prim_secded_72_64_dec.sv
+      - generated/sv_sources/prim_xor2.sv
+
+      - generated/sv_sources/ibex_csr.sv
+      - generated/sv_sources/prim_arbiter_fixed.sv
+      - generated/sv_sources/prim_generic_flop.sv
+      - generated/sv_sources/prim_secded_72_64_enc.sv
+      - generated/sv_sources/rv_core_ibex_mem_top.sv
+
+      - generated/sv_sources/ibex_decoder.sv
+      - generated/sv_sources/prim_arbiter_ppc.sv
+      - generated/sv_sources/prim_secded_hamming_22_16_dec.sv
+      - generated/sv_sources/rv_core_ibex.sv
+
+      - generated/sv_sources/ibex_dummy_instr.sv
+      - generated/sv_sources/prim_arbiter_tree.sv
+      - generated/sv_sources/prim_generic_ram_1p.sv
+      - generated/sv_sources/prim_secded_hamming_22_16_enc.sv
+      - generated/sv_sources/sram2tlul.sv
+
+      - generated/sv_sources/ibex_ex_block.sv
+      - generated/sv_sources/prim_assert.sv
+      - generated/sv_sources/prim_generic_xor2.sv
+      - generated/sv_sources/prim_secded_hamming_39_32_dec.sv
+      - generated/sv_sources/tlul_adapter_host.sv
+
+      - generated/sv_sources/ibex_fetch_fifo.sv
+      - generated/sv_sources/prim_badbit_ram_1p.sv
+      - generated/sv_sources/prim_intr_hw.sv
+      - generated/sv_sources/prim_secded_hamming_39_32_enc.sv
+      - generated/sv_sources/tlul_adapter_reg.sv
+
+      - generated/sv_sources/ibex_icache.sv
+      - generated/sv_sources/prim_buf.sv
+      - generated/sv_sources/prim_keccak.sv
+      - generated/sv_sources/prim_secded_hamming_72_64_dec.sv
+      - generated/sv_sources/tlul_adapter_sram.sv
+
+      - generated/sv_sources/ibex_id_stage.sv
+      - generated/sv_sources/prim_lc_sync.sv
+      - generated/sv_sources/prim_secded_hamming_72_64_enc.sv
+      - generated/sv_sources/tlul_assert_multiple.sv
+
+      - generated/sv_sources/ibex_if_stage.sv
+      - generated/sv_sources/prim_clock_gating.sv
+      - generated/sv_sources/prim_lfsr.sv
+      - generated/sv_sources/tlul_assert.sv
+
+      - generated/sv_sources/ibex_load_store_unit.sv
+      - generated/sv_sources/prim_clock_gating_sync.sv
+      - generated/sv_sources/prim_packer_fifo.sv
+      - generated/sv_sources/prim_slicer.sv
+      - generated/sv_sources/tlul_cmd_intg_chk.sv
+
+      - generated/sv_sources/ibex_lockstep.sv
+      - generated/sv_sources/prim_clock_mux2.sv
+      - generated/sv_sources/prim_packer.sv
+      - generated/sv_sources/prim_sram_arbiter.sv
+      - generated/sv_sources/tlul_cmd_intg_gen.sv
+
+      - generated/sv_sources/ibex_multdiv_fast.sv
+      - generated/sv_sources/prim_diff_decode.sv
+      - generated/sv_sources/prim_subreg_arb.sv
+      - generated/sv_sources/tlul_err_resp.sv
+
+      - generated/sv_sources/ibex_multdiv_slow.sv
+      - generated/sv_sources/prim_pad_wrapper.sv
+      - generated/sv_sources/prim_subreg_ext.sv
+      - generated/sv_sources/tlul_err.sv
+
+      - generated/sv_sources/prim_esc_receiver.sv
+      - generated/sv_sources/prim_subreg_shadow.sv
+      - generated/sv_sources/tlul_fifo_async.sv
+
+      - generated/sv_sources/ibex_pmp.sv
+      - generated/sv_sources/prim_esc_sender.sv
+      - generated/sv_sources/prim_present.sv
+      - generated/sv_sources/prim_subreg.sv
+      - generated/sv_sources/tlul_fifo_sync.sv
+
+      - generated/sv_sources/ibex_prefetch_buffer.sv
+      - generated/sv_sources/prim_fifo_async.sv
+      - generated/sv_sources/prim_prince.sv
+      - generated/sv_sources/prim_subst_perm.sv
+
+      - generated/sv_sources/ibex_register_file_ff.sv
+      - generated/sv_sources/prim_fifo_sync.sv
+      - generated/sv_sources/prim_pulse_sync.sv
+      - generated/sv_sources/prim_sync_reqack_data.sv
+      - generated/sv_sources/tlul_rsp_intg_chk.sv
+
+      - generated/sv_sources/ibex_register_file_fpga.sv
+      - generated/sv_sources/prim_filter_ctr.sv
+      - generated/sv_sources/prim_sync_reqack.sv
+      - generated/sv_sources/tlul_rsp_intg_gen.sv
+
+      - generated/sv_sources/ibex_register_file_latch.sv
+      - generated/sv_sources/prim_filter.sv
+      - generated/sv_sources/prim_ram_1p.sv
+      - generated/sv_sources/prim_sync_slow_fast.sv
+      - generated/sv_sources/tlul_socket_1n.sv
+
+      - generated/sv_sources/ibex_top.sv
+      - generated/sv_sources/prim_flop_2sync.sv
+      - generated/sv_sources/prim_secded_22_16_dec.sv
+      - generated/sv_sources/tlul_socket_m1.sv
+
+      - generated/sv_sources/ibex_wb_stage.sv
+      - generated/sv_sources/prim_flop_en.sv
+      - generated/sv_sources/prim_secded_22_16_enc.sv
+      - generated/sv_sources/prim_xilinx_buf.sv

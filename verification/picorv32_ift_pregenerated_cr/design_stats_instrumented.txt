@@ -1,0 +1,82 @@
+Jasper Apps 2022.09p001 64 bits 2022.10.25 11:32:28 UTC
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2022 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc.
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+Jasper Apps Analysis Session - /data/kceesay/workspace/cellift-formal/pc_taint_check/picorv32_ift_w_compressed/jgproject/sessionLogs/session_0
+
+INFO: successfully checked out license "jasper_fao".
+INFO: reading configuration file "/home/kceesay/.config/cadence/jasper.conf".
+% session -refresh
+%% set designFile /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/cellift.sv
+/data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/cellift.sv
+%% set top cellift_picorv32
+cellift_picorv32
+% analyze -sv12 $designFile
+[-- (VERI-1482)] Analyzing Verilog file '/usr/pack/cadence_jasper-22.09.001-zr/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '/data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/cellift.sv'
+% elaborate -top $top
+INFO (ISW003): Top module name is "cellift_picorv32".
+[INFO (HIER-8002)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/cellift.sv(20077): Disabling old hierarchical reference handler
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/cellift.sv(21722): compiling module 'picorv32_pcpi_mul'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/cellift.sv(20559): compiling module 'picorv32_pcpi_div'
+[INFO (VERI-1018)] /data/kceesay/workspace/cellift-formal//pc_taint_check/picorv32_ift_w_compressed/designs/cellift.sv(20): compiling module 'cellift_picorv32'
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          3 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (3 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      4 (3 synthesized)
+  Number of analyzed VHDL entities        0 (0 synthesized)
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+cellift_picorv32
+[<embedded>] % get_design_info
+Statistics [for instance "cellift_picorv32"]
+---------------------------
+# Flops:         412 (5338) (0 property flop bits)
+# Latches:       0 (0)
+# Gates:         9535 (114338)
+# Nets:          9528
+# Ports:         110
+# RTL Lines:     22694
+# RTL Instances: 3
+# Embedded Assumptions: 0
+# Embedded Assertions:  0
+# Embedded Covers:      0
+5338
+[<embedded>] % exit -force
+[<embedded>] % INFO (IPL005): Received request to exit from the console.
+INFO (IPL018): The peak resident set memory use for this session was 0.592 GB.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.

@@ -1,0 +1,30 @@
+uc_rs2
+real	0m4.905s
+user	0m4.441s
+sys	0m0.176s
+
+uc_rs1
+real	0m5.021s
+user	0m4.484s
+sys	0m0.223s
+
+regrd_rs1
+
+real	0m4.901s
+user	0m4.419s
+sys	0m0.189s
+
+
+regrd_rs2
+
+real	0m5.050s
+user	0m4.450s
+sys	0m0.182s
+
+reg address reading:
+real	0m4.897s
+user	0m4.434s
+sys	0m0.172s
+
+
+

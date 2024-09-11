@@ -1,0 +1,4 @@
+experiments/
+jgproject/
+*.sig
+__pycache__/

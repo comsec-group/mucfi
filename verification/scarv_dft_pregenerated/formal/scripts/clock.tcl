@@ -1,0 +1,1 @@
+clock g_clk
