@@ -2,7 +2,7 @@
 
 Welcome to the 𝜇CFI - Microarchitectural Control-flow Integrity - project.
 𝜇CFI verifies whether instructions leak information about their operand data via timing side-channels, also known as constant time violation.
-𝜇CFI further verfies whether instructions are manipulating the architectural control flow in a data-dependent way. Take a look at the paper [here](https://comsec.ethz.ch/wp-content/files/mucfi_ccs24.pdf)
+𝜇CFI further verfies whether instructions are manipulating the architectural control flow in a data-dependent way. Take a look at the paper [here](https://comsec.ethz.ch/wp-content/files/mucfi_ccs24.pdf).
 
 This repository contains the Yosys passes and formal properties for verifying 𝜇CFI.
 We also provide verification setup generation scripts and templates, as well as copies of the RISC-V CPUs that were verified to reproduce the results of our paper:
