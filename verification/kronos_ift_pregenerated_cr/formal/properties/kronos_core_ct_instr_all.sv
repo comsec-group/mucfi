@@ -28,9 +28,6 @@ assign fpv_resetn = rstz;
 
 // Configure the design specific signals
 
-// We neet to keep track of how long we are looking into the past when injecting taint
-// For this period we must set taint_active to 0 in the task's assumptions
-`define MAX_PAST_VAL_TAINT_INJECTION 1
 
 `include "formal/properties/taint_conditions/generated_taint_conditions.sv"
 
@@ -44,6 +41,8 @@ always @(posedge fpv_clk) begin
     instr_word <= u_if__next_instr;
   end
 end
+
+
 
 bit rs1_reg_reading_cond = gen_regrd_rs1 || gen_fwdrd_rs1;
 bit rs2_reg_reading_cond = gen_regrd_rs2 || gen_fwdrd_rs2;

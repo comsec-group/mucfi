@@ -5,8 +5,8 @@
 
 // Experiment 2
 // ACK always high violates the pipelined mode of Wishbone. This scenario could happen if Kronos is mistakenly integrated with a classic Wishbone counterpart. Alternatively, it could happen if fault injections on the bus interface occur.
-// asm_di_instr_ack_high: assume property(instr_ack);
-// asm_di_data_ack_high: assume property(data_ack);
+ asm_di_instr_ack_high: assume property(instr_ack);
+ asm_di_data_ack_high: assume property(data_ack);
 
 
 // Experiment 3

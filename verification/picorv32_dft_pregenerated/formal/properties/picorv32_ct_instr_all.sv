@@ -29,13 +29,32 @@ default disable iff (!resetn);
 
  `include "formal/properties/taint_conditions/generated_taint_conditions.sv"
 
+
   reg [31:0] instr_word;
 
+  reg [31:0] instr_word_d;
+
+  // We sample the past instruction word, because the gen_instr_word_sampling condition also looks into the past.
+  // Warning: This is a dangerous coding style that generates a latch.
+  // Your formal verification tool may only reset registers and not latches, so instr_word_d has a random value in the first clock cycle.
+  // A safer option is to remove the $past from the generated gen_instr_word_sampling_cond and sample mem_rdata_latched in an always block.
+  // For our property, it does not matter.
+  // The property may only fail 'unexpectedly' if there is a read happening before mem_rdata_latched was ever sampled, which is probably a bug (or some sort of speculation).
+  assign instr_word = gen_instr_word_sampling_cond ? $past(mem_rdata_latched) : instr_word_d;
+
   always @(posedge fpv_clk) begin
-    if (gen_instr_word_sampling_cond)
-      instr_word <= mem_rdata_latched;
+    instr_word_d <= instr_word;
   end
 
+  // If you remove the $past from the generated condition gen_instr_word_sampling_cond, you can use the following:
+
+  // always @(posedge fpv_clk) begin
+  //   if (!fpv_resetn) begin
+  //     instr_word <= '0;
+  //   else if (gen_instr_word_sampling_cond) begin
+  //     instr_word <= mem_rdata_latched;
+  //   end
+  // end
 
   bit cpuregs_rs1_start_cond;
   assign cpuregs_rs1_start_cond = gen_regrd_rs1;;
