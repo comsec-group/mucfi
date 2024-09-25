@@ -62,7 +62,7 @@ Adapt the paths in verification/common/local_config.mk.
 
 There are two main parts to reproduce.
 1. The formal setup generation, including taint condition generation.
-2. Formal verification, which requires Jasper Gold.
+2. Formal verification, which requires Jasper Gold (or any other formal property verification tool that can proof SystemVerilog Assertions).
 
 ### Preparation
 First, we need to prepare the design sources in a format as the CellIFT Yosys pass supports, ie. we need to translate it to Verilog.
