@@ -1,5 +1,8 @@
 # 𝜇CFI Formal Verification
 
+The 𝜇CFI property and verification are implemented in verification/common and verification/<cpu_design>/formal.
+Below we explain how to run the setup and how to navigate the verification files.
+
 ## Execution
 
 ### Run
