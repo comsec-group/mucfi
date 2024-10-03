@@ -48,9 +48,15 @@ prerequisites for building yosys and running our Python scripts:
 Our verification setup generation flow expects a single Verilog source file where all the sources of the CPU are collected (e.g. cpus/<design_name>/cellift/generated/sv2v_out.v).
 The easiest way to reproduce our results is to use the sv2v_out.v file from a pregenerated directory. In that case you do not need to install cellift-meta tools.
 
+##### Instrumenting your own CPU
 If you also want to generate this file (e.g., for verifying another CPU), install cellift-meta, following the instructions in `https://github.com/comsec-group/cellift-meta`.
 
 Alternatively, for only installing the minimum necessary tools, replicate the instructions in our Dockerfile, section 'CellIFT meta and tools'. The docker file expects that mucfi directory is placed next to it and certain sub-directories are zipped.
+
+If you use the original cellift-meta, we need to make some modifications in cellift-meta:
+- Make sure that the cellift setup uses our Yosys version mucfi_yosys. Our version has a small modification in the Veriolog backend (write_verilog), that prints some needed information about taint states.
+- In cellift-meta/design-processing/common/yosys/instrument.ys.tcl, replace the "yosys write_verilog ..." command with this one: "yosys write_verilog -sv -attr2comment $VERILOG_OUTPUT". This adds comments to the output Verilog file with information about module names and taint states.
+- For CellDFT, you need to pass the -data-flow flag to the cellift Yosys command.
 
 ### Building from source
 First, our Yosys version needs to be compiled (type `make yosys` in directory 'mucfi').
