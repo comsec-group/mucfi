@@ -27,6 +27,17 @@ keywords = {Hardware security; formal hardware verification; side-channels}
 }
 ```
 
+# Abstract
+Formal verification of hardware often requires the creation of clock-cycle accurate properties that need tedious and error-prone adaptations for each design. Property violations further require attention from verification engineers to identify affected instructions. This oftentimes manual effort hinders the adoption of formal verification at scale. This paper introduces Microarchitectural Control-Flow Integrity (𝜇CFI), a new general security property that can capture multiple classes of vulnerabilities under different threat
+models, most notably the microarchitectural violation of constanttime execution and (micro-)architectural vulnerabilities that allow
+an attacker to hijack the (architectural) control flow. We show a novel approach for the verification of 𝜇CFI using a single property
+that checks for information flows from instruction operands to the program counter by injecting taint at appropriate clock cycles. To
+check arbitrary sequences of instructions and associate property violations to a specific Instruction Under Verification (IUV), we
+propose techniques for declassifying tainted data when it is being written to registers and forwarded from the IUV through architecturally known paths. We show that our verification approach is low effort (e.g., requires tagging six signals) while capturing all interactions between unbounded sequences of instructions in the extended
+threat model of 𝜇CFI. We verify four RISC-V CPUs against 𝜇CFI and prove that 𝜇CFI is satisfied in many cases while detecting five
+new security vulnerabilities (4 CVEs), three of which are in Ibex, which has already been checked by state-of-the-art verification
+approaches.
+
 # Artifact reproduction
 
 ## Setup
