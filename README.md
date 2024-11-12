@@ -55,6 +55,9 @@ prerequisites for building yosys and running our Python scripts:
 		graphviz xdot pkg-config python3.9 libboost-system-dev \
 		libboost-python-dev libboost-filesystem-dev zlib1g-dev
 
+#### Python
+regex==2024.5.15
+
 #### Collecting CPU sources
 Our verification setup generation flow expects a single Verilog source file where all the sources of the CPU are collected (e.g. cpus/<design_name>/cellift/generated/sv2v_out.v).
 The easiest way to reproduce our results is to use the sv2v_out.v file from a pregenerated directory. In that case you do not need to install cellift-meta tools.
