@@ -13,7 +13,7 @@ bit taint_start_cond_DIVU_op1;
 assign taint_start_cond_DIVU_op1 = cpuregs_rs1_start_cond && DIVU(instr_word);
 
 bit taint_start_cond_DIVU_op2;
-assign taint_start_cond_DIVU_op2 = cpuregs_rs2_start_cond && DIV(instr_word);
+assign taint_start_cond_DIVU_op2 = cpuregs_rs2_start_cond && DIVU(instr_word);
 
 bit taint_start_cond_MUL_op1;
 assign taint_start_cond_MUL_op1 = cpuregs_rs1_start_cond && MUL(instr_word);
