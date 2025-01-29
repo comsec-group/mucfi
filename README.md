@@ -52,10 +52,11 @@ prerequisites for building yosys and running our Python scripts:
 
 	$ sudo apt-get install build-essential clang bison flex \
 		libreadline-dev gawk tcl-dev libffi-dev git \
-		graphviz xdot pkg-config python3.9 libboost-system-dev \
+		graphviz xdot pkg-config python3.12 libboost-system-dev \
 		libboost-python-dev libboost-filesystem-dev zlib1g-dev
 
-#### Python
+#### Python prerequisites
+Python 3.12.3
 regex==2024.5.15
 
 #### Collecting CPU sources
