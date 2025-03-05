@@ -41,9 +41,12 @@ The configuration that is loaded by the Makefile of a core, e.g. [here](picorv32
 ### SVA files
 The common main property file is [here](common/formal/properties/prop_ct_instr.sv).
 
-The 𝜇CFI property is defined [here](common/formal/properties/prop_pc_taint_check.sv).
+The 𝜇CFI property is defined [here](common/formal/properties/prop_pc_taint_check.sv). It is satisfied if the PC is never tainted.
 
-It is used by the SystemVerilog Checkers [here](common/formal/assumptions/asm_taint_inj_once.sv), which also define the taint injection assumptions. These checkers are instantiated per CPU by passing taint conditions and the instruction operand as operand source to them.
+It is used by the SystemVerilog Checkers [here](common/formal/assumptions/asm_taint_inj_once.sv), which also define the taint injection assumptions. These checkers are instantiated per CPU by passing taint conditions and the instruction operand as operand source to them. Details about the assumptions can also be found in the Appendix of the paper. The assumptions achieve that taint is injected only for one instruction at a time, while injecting (once) at every possible clock cycle in which any instruction could read from the register. 
+That means, we verify every possible infinitely long instruction sequence, and consider every possible position of every instruction, and for each of them inject taint once per verified instruction sequence. Since the signal 'tainted_once' ensures that there is no second taint injection happening in any sequence, we need to somehow ensure that we are not just always tainting the first appearance of an instruction after the reset. The 'free' (undriven) signal 'taint_optional' ensures that. The model checker will consider every possible value (1,0) of this signal at every clock cycle, i.e., it verifies all scenarios where this signal is 0 or 1 for the first clock cycle, then the opposite, then the scenario where it is 0 or 1 for the next clock cycle, and so on. Thus, taint is injected (once per sequence) at every possible clock cycle where 'taint_optional' can be true (which is every clock cycle).
+While using 'tainted_once' means we never let more than one instruction per sequence read tainted data, we are still guaranteed to find any taint flow that would appear by multiple instructions reading tainted data. This is due to a property fo CellIFT, which we prove in the Appendix of the paper. Intuitively, letting more taint enter the CPU design will never block any other taint flow.
+
 
 Operand definitions for a specific core are e.g. [here](picorv32_ift_pregenerated/formal/signal_defs/operand_assignments_first.sv)
 
