@@ -12,7 +12,7 @@ endproperty
 
 property p_no_pc_taint_ever(bit taint_inject_start);
   $rose(taint_inject_start) // The property would be wrongly satisified if taint_inject_start never rises. (We 
-                            // have the sanity checkers to indicate that).
+                            // have the sanity checkers to indicate that). The check for taint_injection_start is not necessary, but slightly reduced proof runtime.
   |->
   always 
   !pc_t0;
