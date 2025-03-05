@@ -11,13 +11,10 @@ property p_no_pc_taint_100clk(bit taint_inject_start);
 endproperty
 
 property p_no_pc_taint_ever(bit taint_inject_start);
-  // $rose(taint_inject_start) // Whith this precondition, proofs were slightly faster, 
-                               // but adding it could lead to missed taint flows that taint the PC in the same 
-                               // clock cycle as taint injection. 
-                               // Plus, the property would be satisified if taint_inject_start never rises. (But we 
-                               // have the sanity checkers to indicate that as well).
-  // |->
-  // always 
+  $rose(taint_inject_start) // The property would be wrongly satisified if taint_inject_start never rises. (We 
+                            // have the sanity checkers to indicate that).
+  |->
+  always 
   !pc_t0;
 endproperty
 
