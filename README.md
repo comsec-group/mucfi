@@ -264,9 +264,21 @@ FWD_MUX_SELECTS will be filled by the Yosys pass find_fwd_mux_selects.
 ## FAQ
 
 ### Do I need a specific formal verification tool to prove 𝜇CFI?
-Our works with any formal verification tool that can prove SystemVerilog Assertions. You only need to adapt tool-specific commands (replace the placeholder YOUR_FORMAL_TOOL_CMD in the scripts in verification/common/formal/scripts). Using open-source tools like SymbiYosys requires you to translate the main 𝜇CFI property into an immediate assertion.
+Our setup works with any formal verification tool that can prove SystemVerilog Assertions. You only need to adapt tool-specific commands (replace the placeholder YOUR_FORMAL_TOOL_CMD in the scripts in verification/common/formal/scripts). 
 
-To use the setup with Yosys, you would need to translate the concurrent SVA assertions into immediate ones.
+### Can I use open-source tools to prove 𝜇CFI?
+Unfortunately, we have not yet ported the 𝜇CFI setup to open-source tools. If you would like to do so in a public repository, we are happy to help.
+
+Using open-source tools like SymbiYosys requires you to translate the main 𝜇CFI property into an immediate assertion.
+You would need to translate the concurrent SVA assertions into immediate ones.
+
+You need to take care at least of the following:
+- Add logic abstractions for the same signals as in μCFI (operands and these signals: https://github.com/comsec-group/mucfi/blob/main/verification/kronos_ift_pregenerated/formal/scripts/declass.tcl)
+- Include all assumptions (https://github.com/comsec-group/mucfi/blob/main/verification/kronos_ift_pregenerated/formal/assumptions/kronos_core_i_asm.sv)
+- Extract the code from this checker: https://github.com/comsec-group/mucfi/blob/c5c16a6e67e8bc3a316b2658f1105aff6626a59c/verification/common/formal/assumptions/asm_taint_inj_once.sv#L15 It contains the main taint injection assumptions and PC taint assertion. Place them somewhere where Yosys can process them.
+The tcl files create one Jasper task per instruction. That means we taint inject only into one signal per task. You need to model this setup in Yosys. As a start I would suggest you create a top module per instruction and run one verification attempt per instruction. 
+
+These are some ideas and there could be more to do. Feel free to create an issue if you have questions regarding the abstractions/assumptions/assertions that we use.
 
 ### Setup troubleshooting
 
